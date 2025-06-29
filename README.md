@@ -4,7 +4,7 @@ M0dular Action System & Interface
 Custom AI/AGENT Framework (made by a non-coder)
 
 Action M0dules (28) – These are custom plugins that bring in most features  
-Commands (247) – These are commands the user and AI can use  
+Commands (251) – These are commands the user and AI can use  
 Memories (65) – These are random memories or keywords for dev/random uses  
 Agent Tools (51) – These are tools the agent can use  
 Principles (32) – These guide every interaction, decision, and evolution of the system  
@@ -40,7 +40,7 @@ Features (37) –
 📝 Pre-Prompts  
 📟 System Manipulation  
 🖱️ UI Manipulation  
-👨‍🔧 Addon AI Consultant  
+👨‍🔧 Multiple AI Consultants
 🧭 Topic/Keyword Triggered Events  
 🔐 User Authentication  
 🗄️ User-Based Convo History  
