@@ -18,10 +18,10 @@ The m0dai platform supports a layered AI control architecture centered on:
 * A standard Conversation AI
 * A unified command and control system that all AI tiers can use
 
-### The V-AGENT
+## The V-AGENT
 The V-AGENT is an intelligent goal executor. When you type `goal: Write a summary about AI ethics`, the agent uses any available tools, commands, or consultant AIs to solve the task, or simulates user input using `speak_for_user` if needed..
 
-### The Consultant AIs (up to 4 extra ai)
+## The Consultant AIs (up to 4 extra ai)
 These are parallel AIs with distinct purposes:
 
 * Independently configurable (provider, model, mode, inject, etc.)
@@ -32,11 +32,11 @@ These are parallel AIs with distinct purposes:
 
 They are restored to their original settings after agent use to preserve your configuration. The consultants do not replace plugins — they are separate autonomous models.
 
-### Normal AI Behavior
+## Normal AI Behavior
 Even when not using the agent or consultants, the core AI can use commands, control the entire visual interface, and can start plugins and initiate the agent.
 This makes the normal AI interactive, autonomous, and aware of system functionality.
 
-### 🕹Full System & UI Control
+## 🕹Full System & UI Control
 The AI — whether agent, consultant, or base — can control nearly all system features, including disabling communication from the website and turning off the action system.
 
 **UI Control (via HTML/JS/CSS)**
