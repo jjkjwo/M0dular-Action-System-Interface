@@ -11,9 +11,9 @@ It was designed and built by a single developer over 6 months, using over 15,000
 The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item, feature, and plugin is custom and modular.
 
 ## Agent Behavior, Consultants, and System Control
-The m0dai platform supports a layered AI control architecture centered on:
+The m0dai platform supports a layered AI Control, Server Mode, and Local OS executions.
 
-* A goal-oriented V-AGENT
+* A goal-oriented Virtual AGENT
 * Up to 4 parallel Consultant AIs
 * A standard Conversation AI
 * A unified command and control system that all AI tiers can use
@@ -27,7 +27,7 @@ These are parallel AIs with distinct purposes:
 * Independently configurable (provider, model, mode, inject, etc.)
 * Used by the V-AGENT or directly by user commands for cross-checking logic or augmenting output
 * Can operate in:
-    * **Live mode:** Chained like a relay (each consultant sees the prior one’s response)
+    * **Live mode:** Chained like a relay (each consultant sees the prior one's response)
     * **Delayed mode:** All operate in parallel, results optionally injected before primary AI output
 
 They are restored to their original settings after agent use to preserve your configuration. The consultants do not replace plugins — they are separate autonomous models.
@@ -36,7 +36,7 @@ They are restored to their original settings after agent use to preserve your co
 Even when not using the agent or consultants, the core AI can use commands, control the entire visual interface, and can start plugins and initiate the agent.
 This makes the normal AI interactive, autonomous, and aware of system functionality.
 
-## 🕹Full System & UI Control
+## Full System & UI Control
 The AI — whether agent, consultant, or base — can control nearly all system features, including disabling communication from the website and turning off the action system.
 
 **UI Control (via HTML/JS/CSS)**
@@ -166,26 +166,21 @@ These are the PLUGINS that bring in most features - processing pipeline of the m
 
 The specific functions the AI agent can call to perform actions.
 
-<details>
-<summary><strong>Communication (3 Tools)</strong></summary>
+### Communication (3 Tools)
 
 - **message_user:** Send a direct message to user (bypasses conversation history).
 - **pipeline_message:** Send message through pipeline to AI (normal conversation flow).
 - **speak_for_user:** Submit input as if it came from the user.
-</details>
 
-<details>
-<summary><strong>System Commands (5 Tools)</strong></summary>
+### System Commands (5 Tools)
 
 - **send_command:** Send a generic system command.
 - **control_action:** Start or stop a system action/module.
 - **save_context:** Save current conversation context.
 - **fix_response:** Load the last saved AI response for iteration.
 - **load_context:** Load a previously saved context file.
-</details>
 
-<details>
-<summary><strong>Memory Management (7 Tools)</strong></summary>
+### Memory Management (7 Tools)
 
 - **set_context:** Store a value in the AGENT'S short-term context.
 - **get_context:** Retrieve a value from the AGENT'S short-term context.
@@ -194,10 +189,8 @@ The specific functions the AI agent can call to perform actions.
 - **memory_get_fact:** Retrieve facts from SYSTEM-WIDE memory.
 - **memory_list_facts:** List all facts stored in SYSTEM-WIDE memory.
 - **memory_delete_fact:** Delete a specific fact from system memory.
-</details>
 
-<details>
-<summary><strong>Persona & Prompts (7 Tools)</strong></summary>
+### Persona & Prompts (7 Tools)
 
 - **persona_use:** Switch to a specific AI persona.
 - **persona_list:** List available AI personas.
@@ -206,10 +199,8 @@ The specific functions the AI agent can call to perform actions.
 - **prompt_list:** List all available system prompts.
 - **prompt_active:** Check which system prompt is currently active.
 - **prompt_show:** Show the content of a specific system prompt.
-</details>
 
-<details>
-<summary><strong>Information & State (17 Tools)</strong></summary>
+### Information & State (17 Tools)
 
 - **check_actions:** Check which system modules are active.
 - **actions_info:** Get information about available system modules.
@@ -228,10 +219,8 @@ The specific functions the AI agent can call to perform actions.
 - **log_status:** Check for pending log results.
 - **log_clear_pending:** Clear pending log results.
 - **wait_for_log_results:** Send a neutral message to trigger log result injection.
-</details>
 
-<details>
-<summary><strong>Plugin Control (10 Tools)</strong></summary>
+### Plugin Control (10 Tools)
 
 - **youtube_search:** Search for videos on YouTube.
 - **youtube_open:** Open a specific YouTube video.
@@ -243,10 +232,8 @@ The specific functions the AI agent can call to perform actions.
 - **sandbox_set_var:** Set a variable in the sandbox.
 - **block_add:** Add an item to the blocklist.
 - **block_remove:** Remove an item from the blocklist.
-</details>
 
-<details>
-<summary><strong>Consultant AI Control (6 Tools)</strong></summary>
+### Consultant AI Control (6 Tools)
 
 - **consultant_status:** Check the status of all consultant AIs.
 - **consultant_enable:** Enable a specific consultant AI.
@@ -254,64 +241,87 @@ The specific functions the AI agent can call to perform actions.
 - **consultant_configure:** Configure a consultant AI's provider and model.
 - **consultant_assign_task:** Assign a specific task to consultant(s).
 - **consultant_coordinate:** Coordinate multiple consultants for complex tasks.
-</details>
 
-<details>
-<summary><strong>Utility (1 Tool)</strong></summary>
+### Utility (1 Tool)
 
 - **wait:** Pause agent execution for a specified number of seconds.
-</details>
 
 ## CLI Commands (271)
 
 This is the complete list of commands available to the Progenitor for direct system manipulation.
 
-<details>
-<summary><strong>📌 System (13 Commands)</strong></summary>
+### System (13 Commands)
 
 `help` `clear` `exit` `reload` `delay` `prepare_shutdown` `agent status` `agent stop` `agent clear` `agent tools` `api switch` `api status` `api reset_counter` `api models`
-</details>
 
-<details>
-<summary><strong>📌 Action Module Control (59 Commands)</strong></summary>
+### Action Module Control (59 Commands)
 
 `start key` `start jjk` `stop jjk` `start lvl3` `stop lvl3` `start back` `stop back` `start ok` `stop ok` `start web_input` `stop web_input` `start x` `stop x` `start focus` `stop focus` `start voice` `stop voice` `voice on` `voice off` `enable voice` `disable voice` `turn voice on` `turn voice off` `start filter` `stop filter` `start newfilter` `stop newfilter` `start dirt` `stop dirt` `dirton` `dirtoff` `start memory` `stop memory` `start persona` `stop persona` `start prompts` `stop prompts` `start update` `stop update` `start youtube_action` `stop youtube_action` `start wiki_action` `stop wiki_action` `start emotions` `stop emotions` `start core` `stop core` `start block` `stop block` `core config` `start common` `actions info` `log level` `start controls` `stop controls` `start sandbox` `stop sandbox` `start auth` `stop auth` `start advisory` `stop advisory` `start principles` `stop principles` `start aware` `stop aware` `start lore` `stop lore` `start sms` `stop sms` `start mematrix` `stop mematrix` `start log_reader` `stop log_reader`
-</details>
 
-<details>
-<summary><strong>📌 Plugin-Specific Shortcuts (5 Commands)</strong></summary>
+### Plugin-Specific Shortcuts (5 Commands)
 
 `ok` `save` `fix` `load` `model`
-</details>
 
-<details>
-<summary><strong>📌 Comprehensive Plugin Commands (189 Commands)</strong></summary>
+### Comprehensive Plugin Commands (189 Commands)
 
--   **JJK (Security):** `jjk auth` `jjk status` `jjk progenitor` `jjk is_progenitor` `jjk revoke` `jjk audit on` `jjk audit off` `jjk audit show` `jjk override` `jjk backup` `jjk help`
--   **Memory:** `memory status` `memory list facts` `memory list conversations` `memory store fact` `memory get fact` `memory store conversation` `memory delete fact` `memory delete conversation` `memory clear all`
--   **Persona:** `persona list` `persona info` `persona create` `persona delete` `persona use` `persona clear`
--   **Prompts:** `prompt list` `prompt show` `prompt set` `prompt delete` `prompt use` `prompt active` `prompt format`
--   **Emotions:** `emotions status` `emotions reset` `emotions get current` `emotions get history`
--   **YouTube:** `youtube search` `youtube open` `youtube list` `youtube auto` `youtube setkey`
--   **Wiki:** `wiki search` `wiki open` `wiki list` `wiki auto` `wikipedia search` `wikipedia open` `wikipedia list` `wikipedia auto`
--   **SMS:** `sms send` `sms status` `sms help`
--   **Blocklist:** `block list` `block add` `block remove` `block reload`
--   **Focus (Perturbation):** `focus status` `focus config` `focus set typos on` `focus set typos off` `focus set emotions on` `focus set emotions off` `focus set expletives on` `focus set expletives off` `focus set probability` `focus add emotion` `focus add expletive` `focus log on` `focus log off` `focus reset`
--   **Sandbox:** `sandbox reverse_text` `sandbox set_var` `sandbox get_var` `sandbox status` `sandbox clear_log` `sandbox clear_vars`
--   **Auth:** `auth status` `auth users` `auth create` `auth disable` `auth enable` `auth debug` `auth reset`
--   **Consultant AI (`addon_ai` 1-4):**
-    -   *Per addon:* `on` `off` `provider` `model` `mode` `mode delayed` `mode live` `inject` `inject on` `inject off` `history_turns` `status`
-    -   *Global:* `addons off` `addons status`
--   **Advisory System:** `advisory status` `advisory clear` `advisory clear temp` `advisory remove` `advisory format` `advisory threshold` `advisory base on` `advisory base off` `advisory base set` `advisory categories on` `advisory categories off` `advisory skip on` `advisory skip off` `advisory debug on` `advisory debug off` `advisory help`
--   **Logging:** `log event` `log search` `log recent` `log status` `log clear_pending` `log help`
--   **Principles:** `principles stats` `principles report` `principles check` `principles toggle` `principles mode` `principles mode real-time` `principles mode addon-ai` `principles coverage` `principles coverage all` `principles coverage critical` `principles coverage top10` `principles coverage legacy4` `principles list` `principles help`
--   **Lore:** `lore help` `lore status` `lore export` `lore find` `lore list`
-</details>
+#### JJK (Security)
+`jjk auth` `jjk status` `jjk progenitor` `jjk is_progenitor` `jjk revoke` `jjk audit on` `jjk audit off` `jjk audit show` `jjk override` `jjk backup` `jjk help`
 
-<details>
-<summary><strong>📌 Special Input Prefixes (4 Commands)</strong></summary>
+#### Memory
+`memory status` `memory list facts` `memory list conversations` `memory store fact` `memory get fact` `memory store conversation` `memory delete fact` `memory delete conversation` `memory clear all`
 
--   **`<path>`:** Provide a file path for loading.
--   **`<update>` / `<download>`:** Prefixes to trigger file transfers.
--   **`goal:`:** The prefix for assigning an autonomous objective to the agent.
-</details>
+#### Persona
+`persona list` `persona info` `persona create` `persona delete` `persona use` `persona clear`
+
+#### Prompts
+`prompt list` `prompt show` `prompt set` `prompt delete` `prompt use` `prompt active` `prompt format`
+
+#### Emotions
+`emotions status` `emotions reset` `emotions get current` `emotions get history`
+
+#### YouTube
+`youtube search` `youtube open` `youtube list` `youtube auto` `youtube setkey`
+
+#### Wiki
+`wiki search` `wiki open` `wiki list` `wiki auto` `wikipedia search` `wikipedia open` `wikipedia list` `wikipedia auto`
+
+#### SMS
+`sms send` `sms status` `sms help`
+
+#### Blocklist
+`block list` `block add` `block remove` `block reload`
+
+#### Focus (Perturbation)
+`focus status` `focus config` `focus set typos on` `focus set typos off` `focus set emotions on` `focus set emotions off` `focus set expletives on` `focus set expletives off` `focus set probability` `focus add emotion` `focus add expletive` `focus log on` `focus log off` `focus reset`
+
+#### Sandbox
+`sandbox reverse_text` `sandbox set_var` `sandbox get_var` `sandbox status` `sandbox clear_log` `sandbox clear_vars`
+
+#### Auth
+`auth status` `auth users` `auth create` `auth disable` `auth enable` `auth debug` `auth reset`
+
+#### Consultant AI (`addon_ai` 1-4)
+**Per addon:** `addon_ai 1 on` `addon_ai 1 off` `addon_ai 1 provider` `addon_ai 1 model` `addon_ai 1 mode` `addon_ai 1 mode delayed` `addon_ai 1 mode live` `addon_ai 1 inject` `addon_ai 1 inject on` `addon_ai 1 inject off` `addon_ai 1 history_turns` `addon_ai 1 status`
+
+**Same commands for addon_ai 2, 3, and 4**
+
+**Global:** `addons off` `addons status`
+
+#### Advisory System
+`advisory status` `advisory clear` `advisory clear temp` `advisory remove` `advisory format` `advisory threshold` `advisory base on` `advisory base off` `advisory base set` `advisory categories on` `advisory categories off` `advisory skip on` `advisory skip off` `advisory debug on` `advisory debug off` `advisory help`
+
+#### Logging
+`log event` `log search` `log recent` `log status` `log clear_pending` `log help`
+
+#### Principles
+`principles stats` `principles report` `principles check` `principles toggle` `principles mode` `principles mode real-time` `principles mode addon-ai` `principles coverage` `principles coverage all` `principles coverage critical` `principles coverage top10` `principles coverage legacy4` `principles list` `principles help`
+
+#### Lore
+`lore help` `lore status` `lore export` `lore find` `lore list`
+
+### Special Input Prefixes (4 Commands)
+
+- **`<path>`:** Provide a file path for loading (e.g., `</home/user/document.txt>`)
+- **`<update>`:** Prefix to trigger file upload from client to server
+- **`<download>`:** Prefix to trigger file download from server to client  
+- **`goal:`:** The prefix for assigning an autonomous objective to the agent (e.g., `goal: analyze the latest logs`)
