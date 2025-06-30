@@ -7,9 +7,9 @@
 
 ## 1. Project Philosophy & Development Context
 
-This document is a technical specification for m0dai, a modular AI platform. It was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
+It was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
 
-The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators.
+The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item is custom and modular.
 
 ## 1A. Agent Behavior, Consultants, and System Control
 The m0dai platform supports a layered AI control architecture centered on:
@@ -20,15 +20,7 @@ The m0dai platform supports a layered AI control architecture centered on:
 * A unified command and control system that all AI tiers can use
 
 ### 🧠 The V-AGENT
-The V-AGENT is an intelligent goal executor. When you type `goal: Write a summary about AI ethics`, the agent:
-
-1. Decomposes the goal into substeps using private prompts
-2. Uses any available tools, commands, or consultant AIs to solve the task
-3. Simulates user input using `speak_for_user` if needed
-4. Controls plugins (called “Actions”) by issuing `start <module>` or `stop <module>` commands
-5. Temporarily modifies system state (e.g., personas, prompts, memory) and restores it after the goal is complete
-
-The agent can use every system feature the user can — and more — with a command suite that includes file management, state toggling, emotion resets, log searches, web UI control, etc.
+The V-AGENT is an intelligent goal executor. When you type `goal: Write a summary about AI ethics`, the agent uses any available tools, commands, or consultant AIs to solve the task, or simulates user input using `speak_for_user` if needed..
 
 ### 👥 The Consultant AIs (addon_ai1–4)
 These are parallel AIs with distinct purposes:
@@ -42,29 +34,11 @@ These are parallel AIs with distinct purposes:
 They are restored to their original settings after agent use to preserve your configuration. The consultants do not replace plugins — they are separate autonomous models.
 
 ### 💬 Normal AI Behavior (Primary AI Model)
-Even when not using the agent or consultants, the core AI can:
-
-* Accept raw user input and respond as usual
-* Use commands (e.g., `start memory`, `dirton`, `voice off`) if a response ends with one
-* Trigger the loopback system, which lets the AI send another reply without user input
-* Simulate user input via the `speakforuser` mechanism — where the next user turn is auto-filled by AI intent
-* Suggest or activate plugin modules based on context (e.g., loading a YouTube module when a video is referenced)
-
-This makes the AI interactive, autonomous, and aware of system functionality.
+Even when not using the agent or consultants, the core AI can use commands, control the entire visual interface, and can start plugins and initiate the agent.
+This makes the normal AI interactive, autonomous, and aware of system functionality.
 
 ### 🕹️ Full System & UI Control
-The AI — whether agent, consultant, or base — can control nearly all system features:
-
-**✅ Core Controls:**
-* `start`, `stop`, or `status` of any Action module
-* Switch memory modes, prompts, and personas
-* Send file commands (`save`, `load`, `fix`)
-* Inspect logs, block content, manipulate emotional state
-
-**🧠 Behavior + Memory:**
-* Alter its own behavior by setting `principles`
-* Adjust emotional tone or persona stack
-* Store and recall system-wide facts or personal context
+The AI — whether agent, consultant, or base — can control nearly all system features, including disabling communication from the website and turning off the action system.
 
 **🌐 UI Control (via HTML/JS/CSS):**
 * Inject custom HTML elements into the UI
