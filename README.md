@@ -6,7 +6,6 @@
 ---
 
 ## 1. Project Philosophy & Development Context
-
 It was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
 
 The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item is custom and modular.
@@ -41,16 +40,15 @@ This makes the normal AI interactive, autonomous, and aware of system functional
 The AI — whether agent, consultant, or base — can control nearly all system features, including disabling communication from the website and turning off the action system.
 
 **🌐 UI Control (via HTML/JS/CSS):**
+This allows the AI to create full interactive web environments, debug interfaces, or visually display logic — all autonomously.
+
 * Inject custom HTML elements into the UI
 * Run JavaScript code in the browser dynamically
 * Set custom styles and animations with CSS
 * Trigger sound effects, background visuals, buttons, and more
 
-This allows the AI to create full interactive web environments, debug interfaces, or visually display logic — all autonomously.
-
-## 2. The 32 Guiding Principles (Complete List)
-
-System behavior is governed by the following 32 principles, structured in a 6-tier hierarchy. Lower-numbered tiers have absolute authority. The system actively monitors its own adherence to this ruleset.
+## 2. Principle AI must adhere to:
+System behavior is governed by the following 32 principles and actively monitors its own adaptation to this ruleset.
 
 | Tier | ID | Principle Name | P-Score |
 | :--- | :-- | :--- | :--- |
@@ -87,9 +85,7 @@ System behavior is governed by the following 32 principles, structured in a 6-ti
 | **5** | P048 | Resourceful Salvage & Insight Generation | P3 |
 | **5** | P025 | The "Hallway" Philosophy of Preference | N/A |
 
-## 3. The 39 System Features (Complete List)
-
-These are the high-level capabilities of the m0dai platform.
+## 3. The 39 System Features 
 
 - **🎤 Text-to-Speech**
 - **🤲 Speech-to-Text**
@@ -132,7 +128,6 @@ These are the high-level capabilities of the m0dai platform.
 - **🛡️ High-Privilege Security Layer**
 
 ## 4. The 29 Action Modules (Complete List)
-
 The processing pipeline of the system. Modules execute in order of priority (`P#`).
 
 | Priority | Module Name | Description |
