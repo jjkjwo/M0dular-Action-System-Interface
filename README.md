@@ -5,8 +5,8 @@
 
 ---
 
-## Project Philosophy & Development Context
-It was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
+## M0dai
+M0dai was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
 
 The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item, feature, and plugin is custom and modular.
 
@@ -248,53 +248,288 @@ The specific functions the AI agent can call to perform actions.
 
 ## CLI Commands (271)
 
-This is the complete list of commands available to the Progenitor for direct system manipulation.
-
-### System (13 Commands)
-`help` `clear` `exit` `reload` `delay` `prepare_shutdown` `agent status` `agent stop` `agent clear` `agent tools` `api switch` `api status` `api reset_counter` `api models`
-### Action Module Control (59 Commands)
-`start key` `start jjk` `stop jjk` `start lvl3` `stop lvl3` `start back` `stop back` `start ok` `stop ok` `start web_input` `stop web_input` `start x` `stop x` `start focus` `stop focus` `start voice` `stop voice` `voice on` `voice off` `enable voice` `disable voice` `turn voice on` `turn voice off` `start filter` `stop filter` `start newfilter` `stop newfilter` `start dirt` `stop dirt` `dirton` `dirtoff` `start memory` `stop memory` `start persona` `stop persona` `start prompts` `stop prompts` `start update` `stop update` `start youtube_action` `stop youtube_action` `start wiki_action` `stop wiki_action` `start emotions` `stop emotions` `start core` `stop core` `start block` `stop block` `core config` `start common` `actions info` `log level` `start controls` `stop controls` `start sandbox` `stop sandbox` `start auth` `stop auth` `start advisory` `stop advisory` `start principles` `stop principles` `start aware` `stop aware` `start lore` `stop lore` `start sms` `stop sms` `start mematrix` `stop mematrix` `start log_reader` `stop log_reader`
-### Plugin-Specific Shortcuts (5 Commands)
-`ok` `save` `fix` `load` `model`
-### Comprehensive Plugin Commands (189 Commands)
-#### JJK (Security)
-`jjk auth` `jjk status` `jjk progenitor` `jjk is_progenitor` `jjk revoke` `jjk audit on` `jjk audit off` `jjk audit show` `jjk override` `jjk backup` `jjk help`
-#### Memory
-`memory status` `memory list facts` `memory list conversations` `memory store fact` `memory get fact` `memory store conversation` `memory delete fact` `memory delete conversation` `memory clear all`
-#### Persona
-`persona list` `persona info` `persona create` `persona delete` `persona use` `persona clear`
-#### Prompts
-`prompt list` `prompt show` `prompt set` `prompt delete` `prompt use` `prompt active` `prompt format`
-#### Emotions
-`emotions status` `emotions reset` `emotions get current` `emotions get history`
-#### YouTube
-`youtube search` `youtube open` `youtube list` `youtube auto` `youtube setkey`
-#### Wiki
-`wiki search` `wiki open` `wiki list` `wiki auto` `wikipedia search` `wikipedia open` `wikipedia list` `wikipedia auto`
-#### SMS
-`sms send` `sms status` `sms help`
-#### Blocklist
-`block list` `block add` `block remove` `block reload`
-#### Focus (Perturbation)
-`focus status` `focus config` `focus set typos on` `focus set typos off` `focus set emotions on` `focus set emotions off` `focus set expletives on` `focus set expletives off` `focus set probability` `focus add emotion` `focus add expletive` `focus log on` `focus log off` `focus reset`
-#### Sandbox
-`sandbox reverse_text` `sandbox set_var` `sandbox get_var` `sandbox status` `sandbox clear_log` `sandbox clear_vars`
-#### Auth
-`auth status` `auth users` `auth create` `auth disable` `auth enable` `auth debug` `auth reset`
-#### Consultant AI (`addon_ai` 1-4)
-**Per addon:** `addon_ai 1 on` `addon_ai 1 off` `addon_ai 1 provider` `addon_ai 1 model` `addon_ai 1 mode` `addon_ai 1 mode delayed` `addon_ai 1 mode live` `addon_ai 1 inject` `addon_ai 1 inject on` `addon_ai 1 inject off` `addon_ai 1 history_turns` `addon_ai 1 status`
-**Same commands for addon_ai 2, 3, and 4**
-**Global:** `addons off` `addons status`
-#### Advisory System
-`advisory status` `advisory clear` `advisory clear temp` `advisory remove` `advisory format` `advisory threshold` `advisory base on` `advisory base off` `advisory base set` `advisory categories on` `advisory categories off` `advisory skip on` `advisory skip off` `advisory debug on` `advisory debug off` `advisory help`
-#### Logging
-`log event` `log search` `log recent` `log status` `log clear_pending` `log help`
-#### Principles
-`principles stats` `principles report` `principles check` `principles toggle` `principles mode` `principles mode real-time` `principles mode addon-ai` `principles coverage` `principles coverage all` `principles coverage critical` `principles coverage top10` `principles coverage legacy4` `principles list` `principles help`
-#### Lore
-`lore help` `lore status` `lore export` `lore find` `lore list`
-### Special Input Prefixes (4 Commands)
-- **`<path>`:** Provide a file path for loading (e.g., `</home/user/document.txt>`)
-- **`<update>`:** Prefix to trigger file upload from client to server
-- **`<download>`:** Prefix to trigger file download from server to client  
-- **`goal:`:** The prefix for assigning an autonomous objective to the agent (e.g., `goal: analyze the latest logs`)
+```
+{
+  "system": {
+    "help": true,
+    "clear": true,
+    "exit": true,
+    "reload": true,
+    "delay": true,
+    "prepare_shutdown": true,
+    "agent status": true,
+    "agent stop": true,
+    "agent clear": true,
+    "agent tools": true,
+    "api switch": true,
+    "api status": true,
+    "api reset_counter": true,
+    "api models": true
+  },
+  "action": {
+    "start key": true,
+    "start jjk": true,
+    "stop jjk": true,
+    "start lvl3": true,
+    "stop lvl3": true,
+    "start back": true,
+    "stop back": true,
+    "start ok": true,
+    "stop ok": true,
+    "start web_input": true,
+    "stop web_input": true,
+    "start x": true,
+    "stop x": true,
+    "start focus": true,
+    "stop focus": true,
+    "start voice": true,
+    "stop voice": true,
+    "voice on": true,
+    "voice off": true,
+    "enable voice": true,
+    "disable voice": true,
+    "turn voice on": true,
+    "turn voice off": true,
+    "start filter": true,
+    "stop filter": true,
+    "start newfilter": true,
+    "stop newfilter": true,
+    "start dirt": true,
+    "stop dirt": true,
+    "dirton": true,
+    "dirtoff": true,
+    "start memory": true,
+    "stop memory": true,
+    "start persona": true,
+    "stop persona": true,
+    "start prompts": true,
+    "stop prompts": true,
+    "start update": true,
+    "stop update": true,
+    "start youtube_action": true,
+    "stop youtube_action": true,
+    "start wiki_action": true,
+    "stop wiki_action": true,
+    "start emotions": true,
+    "stop emotions": true,
+    "start core": true,
+    "stop core": true,
+    "start block": true,
+    "stop block": true,
+    "core config": true,
+    "start common": true,
+    "actions info": true,
+    "log level": true,
+    "start controls": true,
+    "stop controls": true,
+    "start sandbox": true,
+    "stop sandbox": true,
+    "start auth": true,
+    "stop auth": true,
+    "start advisory": true,
+    "stop advisory": true,
+    "start principles": true,
+    "stop principles": true,
+    "start aware": true,
+    "stop aware": true,
+    "start lore": true,
+    "stop lore": true,
+    "start sms": true,
+    "stop sms": true,
+    "start mematrix": true,
+    "stop mematrix": true,
+    "start log_reader": true,
+    "stop log_reader": true
+  },
+  "plugin_specific": {
+    "ok": true,
+    "save": true,
+    "fix": true,
+    "load": true,
+    "model": true
+  },
+  "plugin_commands": {
+    "jjk auth": true,
+    "jjk status": true,
+    "jjk progenitor": true,
+    "jjk is_progenitor": true,
+    "jjk revoke": true,
+    "jjk audit on": true,
+    "jjk audit off": true,
+    "jjk audit show": true,
+    "jjk override": true,
+    "jjk backup": true,
+    "jjk help": true,
+    "memory status": true,
+    "memory list facts": true,
+    "memory list conversations": true,
+    "memory store fact": true,
+    "memory get fact": true,
+    "memory store conversation": true,
+    "memory delete fact": true,
+    "memory delete conversation": true,
+    "memory clear all": true,
+    "persona list": true,
+    "persona info": true,
+    "persona create": true,
+    "persona delete": true,
+    "persona use": true,
+    "persona clear": true,
+    "prompt list": true,
+    "prompt show": true,
+    "prompt set": true,
+    "prompt delete": true,
+    "prompt use": true,
+    "prompt active": true,
+    "prompt format": true,
+    "emotions status": true,
+    "emotions reset": true,
+    "emotions get current": true,
+    "emotions get history": true,
+    "youtube search": true,
+    "youtube open": true,
+    "youtube list": true,
+    "youtube auto": true,
+    "youtube setkey": true,
+    "wiki search": true,
+    "wiki open": true,
+    "wiki list": true,
+    "wiki auto": true,
+    "wikipedia search": true,
+    "wikipedia open": true,
+    "wikipedia list": true,
+    "wikipedia auto": true,
+    "sms send": true,
+    "sms status": true,
+    "sms help": true,
+    "block list": true,
+    "block add": true,
+    "block remove": true,
+    "block reload": true,
+    "focus status": true,
+    "focus config": true,
+    "focus set typos on": true,
+    "focus set typos off": true,
+    "focus set emotions on": true,
+    "focus set emotions off": true,
+    "focus set expletives on": true,
+    "focus set expletives off": true,
+    "focus set probability": true,
+    "focus add emotion": true,
+    "focus add expletive": true,
+    "focus log on": true,
+    "focus log off": true,
+    "focus reset": true,
+    "sandbox reverse_text": true,
+    "sandbox set_var": true,
+    "sandbox get_var": true,
+    "sandbox status": true,
+    "sandbox clear_log": true,
+    "sandbox clear_vars": true,
+    "auth status": true,
+    "auth users": true,
+    "auth create": true,
+    "auth disable": true,
+    "auth enable": true,
+    "auth debug": true,
+    "auth reset": true,
+    "addon_ai on": true,
+    "addon_ai off": true,
+    "addon_ai provider": true,
+    "addon_ai model": true,
+    "addon_ai mode": true,
+    "addon_ai mode delayed": true,
+    "addon_ai mode live": true,
+    "addon_ai inject": true,
+    "addon_ai inject on": true,
+    "addon_ai inject off": true,
+    "addon_ai history_turns": true,
+    "addon_ai status": true,
+    "addon_ai2 on": true,
+    "addon_ai2 off": true,
+    "addon_ai2 provider": true,
+    "addon_ai2 model": true,
+    "addon_ai2 mode": true,
+    "addon_ai2 mode delayed": true,
+    "addon_ai2 mode live": true,
+    "addon_ai2 inject": true,
+    "addon_ai2 inject on": true,
+    "addon_ai2 inject off": true,
+    "addon_ai2 history_turns": true,
+    "addon_ai2 status": true,
+    "addon_ai3 on": true,
+    "addon_ai3 off": true,
+    "addon_ai3 provider": true,
+    "addon_ai3 model": true,
+    "addon_ai3 mode": true,
+    "addon_ai3 mode delayed": true,
+    "addon_ai3 mode live": true,
+    "addon_ai3 inject": true,
+    "addon_ai3 inject on": true,
+    "addon_ai3 inject off": true,
+    "addon_ai3 history_turns": true,
+    "addon_ai3 status": true,
+    "addon_ai4 on": true,
+    "addon_ai4 off": true,
+    "addon_ai4 provider": true,
+    "addon_ai4 model": true,
+    "addon_ai4 mode": true,
+    "addon_ai4 mode delayed": true,
+    "addon_ai4 mode live": true,
+    "addon_ai4 inject": true,
+    "addon_ai4 inject on": true,
+    "addon_ai4 inject off": true,
+    "addon_ai4 history_turns": true,
+    "addon_ai4 status": true,
+    "addons off": true,
+    "addons status": true,
+    "advisory status": true,
+    "advisory clear": true,
+    "advisory clear temp": true,
+    "advisory remove": true,
+    "advisory format": true,
+    "advisory threshold": true,
+    "advisory base on": true,
+    "advisory base off": true,
+    "advisory base set": true,
+    "advisory categories on": true,
+    "advisory categories off": true,
+    "advisory skip on": true,
+    "advisory skip off": true,
+    "advisory debug on": true,
+    "advisory debug off": true,
+    "advisory help": true,
+    "log event": true,
+    "log search": true,
+    "log recent": true,
+    "log status": true,
+    "log clear_pending": true,
+    "log help": true,
+    "principles stats": true,
+    "principles report": true,
+    "principles check": true,
+    "principles toggle": true,
+    "principles mode": true,
+    "principles mode real-time": true,
+    "principles mode addon-ai": true,
+    "principles coverage": true,
+    "principles coverage all": true,
+    "principles coverage critical": true,
+    "principles coverage top10": true,
+    "principles coverage legacy4": true,
+    "principles list": true,
+    "principles help": true,
+    "lore help": true,
+    "lore status": true,
+    "lore export": true,
+    "lore find": true,
+    "lore list": true
+  },
+  "special_prefixes": {
+    "<path>": true,
+    "<update>": true,
+    "<download>": true,
+    "goal:": true
+  }
+}
+```
