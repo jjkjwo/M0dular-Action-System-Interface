@@ -8,7 +8,7 @@
 ## Project Philosophy & Development Context
 It was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
 
-The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item is custom and modular.
+The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item, feature, and plugin is custom and modular.
 
 ## Agent Behavior, Consultants, and System Control
 The m0dai platform supports a layered AI control architecture centered on:
@@ -47,7 +47,7 @@ This allows the AI to create full interactive web environments, debug interfaces
 * Set custom styles and animations with CSS
 * Trigger sound effects, background visuals, buttons, and more
 
-## 2. Principles (32)
+## Principles (32)
 System behavior is governed by the following 32 principles and actively monitors its own adaptation to this ruleset.
 
 | Tier | ID | Principle Name | P-Score |
@@ -85,7 +85,7 @@ System behavior is governed by the following 32 principles and actively monitors
 | **5** | P048 | Resourceful Salvage & Insight Generation | P3 |
 | **5** | P025 | The "Hallway" Philosophy of Preference | N/A |
 
-## 3. System Features (39)
+## System Features (39)
 
 - **🎤 Text-to-Speech**
 - **🤲 Speech-to-Text**
@@ -127,8 +127,8 @@ System behavior is governed by the following 32 principles and actively monitors
 - **📊 AI Log Inspection**
 - **🛡️ High-Privilege Security Layer**
 
-## 4. The Action M0dules (29)
-The plugins that bring in most features - processing pipeline of the main system.
+## The Action M0dules (29)
+These are the PLUGINS that bring in most features - processing pipeline of the main system.
 
 | Priority | Module Name | Description |
 | :--- | :--- | :--- |
@@ -162,7 +162,7 @@ The plugins that bring in most features - processing pipeline of the main system
 | **P12**| [PROMPTS] | Manages system prompts and conversational reminders. |
 | **P50**| [SANDBOX] | Provides a sandboxed environment for simple operations and scripting. |
 
-## 5. Agent Tools (56)
+## Agent Tools (56)
 
 The specific functions the AI agent can call to perform actions.
 
@@ -262,7 +262,7 @@ The specific functions the AI agent can call to perform actions.
 - **wait:** Pause agent execution for a specified number of seconds.
 </details>
 
-## 6. CLI Commands (271)
+## CLI Commands (271)
 
 This is the complete list of commands available to the Progenitor for direct system manipulation.
 
