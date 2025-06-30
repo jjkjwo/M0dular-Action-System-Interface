@@ -14,8 +14,8 @@ The system was created entirely from first principles. **No third-party AI frame
 The m0dai platform supports a layered AI control architecture centered on:
 
 * A goal-oriented V-AGENT
-* Up to 4 parallel Consultant AIs (addon_ai1–4)
-* A main Conversation AI (standard AI model)
+* Up to 4 parallel Consultant AIs
+* A standard Conversation AI
 * A unified command and control system that all AI tiers can use
 
 ### The V-AGENT
@@ -32,7 +32,7 @@ These are parallel AIs with distinct purposes:
 
 They are restored to their original settings after agent use to preserve your configuration. The consultants do not replace plugins — they are separate autonomous models.
 
-### Normal AI Behavior (Primary AI Model)
+### Normal AI Behavior
 Even when not using the agent or consultants, the core AI can use commands, control the entire visual interface, and can start plugins and initiate the agent.
 This makes the normal AI interactive, autonomous, and aware of system functionality.
 
