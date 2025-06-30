@@ -21,7 +21,7 @@ The m0dai platform supports a layered AI control architecture centered on:
 ### 🧠 The V-AGENT
 The V-AGENT is an intelligent goal executor. When you type `goal: Write a summary about AI ethics`, the agent uses any available tools, commands, or consultant AIs to solve the task, or simulates user input using `speak_for_user` if needed..
 
-### 👥 The Consultant AIs (addon_ai1–4)
+### 👥 The Consultant AIs (up to 4 extra ai)
 These are parallel AIs with distinct purposes:
 
 * Independently configurable (provider, model, mode, inject, etc.)
@@ -47,7 +47,7 @@ This allows the AI to create full interactive web environments, debug interfaces
 * Set custom styles and animations with CSS
 * Trigger sound effects, background visuals, buttons, and more
 
-## 2. Principle AI must adhere to:
+## 2. Principles (32)
 System behavior is governed by the following 32 principles and actively monitors its own adaptation to this ruleset.
 
 | Tier | ID | Principle Name | P-Score |
@@ -85,7 +85,7 @@ System behavior is governed by the following 32 principles and actively monitors
 | **5** | P048 | Resourceful Salvage & Insight Generation | P3 |
 | **5** | P025 | The "Hallway" Philosophy of Preference | N/A |
 
-## 3. The 39 System Features 
+## 3. System Features (39)
 
 - **🎤 Text-to-Speech**
 - **🤲 Speech-to-Text**
@@ -127,7 +127,7 @@ System behavior is governed by the following 32 principles and actively monitors
 - **📊 AI Log Inspection**
 - **🛡️ High-Privilege Security Layer**
 
-## 4. The 29 Action Modules (Complete List)
+## 4. The Action M0dules (29)
 The processing pipeline of the system. Modules execute in order of priority (`P#`).
 
 | Priority | Module Name | Description |
