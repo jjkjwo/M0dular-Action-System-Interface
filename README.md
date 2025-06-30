@@ -5,12 +5,12 @@
 
 ---
 
-## 1. Project Philosophy & Development Context
+## Project Philosophy & Development Context
 It was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
 
 The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item is custom and modular.
 
-## 1A. Agent Behavior, Consultants, and System Control
+## Agent Behavior, Consultants, and System Control
 The m0dai platform supports a layered AI control architecture centered on:
 
 * A goal-oriented V-AGENT
@@ -18,10 +18,10 @@ The m0dai platform supports a layered AI control architecture centered on:
 * A main Conversation AI (standard AI model)
 * A unified command and control system that all AI tiers can use
 
-### 🧠 The V-AGENT
+### The V-AGENT
 The V-AGENT is an intelligent goal executor. When you type `goal: Write a summary about AI ethics`, the agent uses any available tools, commands, or consultant AIs to solve the task, or simulates user input using `speak_for_user` if needed..
 
-### 👥 The Consultant AIs (up to 4 extra ai)
+### The Consultant AIs (up to 4 extra ai)
 These are parallel AIs with distinct purposes:
 
 * Independently configurable (provider, model, mode, inject, etc.)
@@ -32,14 +32,14 @@ These are parallel AIs with distinct purposes:
 
 They are restored to their original settings after agent use to preserve your configuration. The consultants do not replace plugins — they are separate autonomous models.
 
-### 💬 Normal AI Behavior (Primary AI Model)
+### Normal AI Behavior (Primary AI Model)
 Even when not using the agent or consultants, the core AI can use commands, control the entire visual interface, and can start plugins and initiate the agent.
 This makes the normal AI interactive, autonomous, and aware of system functionality.
 
-### 🕹️ Full System & UI Control
+### 🕹Full System & UI Control
 The AI — whether agent, consultant, or base — can control nearly all system features, including disabling communication from the website and turning off the action system.
 
-**🌐 UI Control (via HTML/JS/CSS):**
+**UI Control (via HTML/JS/CSS)**
 This allows the AI to create full interactive web environments, debug interfaces, or visually display logic — all autonomously.
 
 * Inject custom HTML elements into the UI
@@ -162,7 +162,7 @@ The processing pipeline of the system. Modules execute in order of priority (`P#
 | **P12**| [PROMPTS] | Manages system prompts and conversational reminders. |
 | **P50**| [SANDBOX] | Provides a sandboxed environment for simple operations and scripting. |
 
-## 5. The 56 Agent Tools (Complete List)
+## 5. Agent Tools (56)
 
 The specific functions the AI agent can call to perform actions.
 
@@ -262,7 +262,7 @@ The specific functions the AI agent can call to perform actions.
 - **wait:** Pause agent execution for a specified number of seconds.
 </details>
 
-## 6. The 271 CLI Commands (Categorized Index)
+## 6. CLI Commands (271)
 
 This is the complete list of commands available to the Progenitor for direct system manipulation.
 
