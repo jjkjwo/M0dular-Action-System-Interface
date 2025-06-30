@@ -251,76 +251,49 @@ The specific functions the AI agent can call to perform actions.
 This is the complete list of commands available to the Progenitor for direct system manipulation.
 
 ### System (13 Commands)
-
 `help` `clear` `exit` `reload` `delay` `prepare_shutdown` `agent status` `agent stop` `agent clear` `agent tools` `api switch` `api status` `api reset_counter` `api models`
-
 ### Action Module Control (59 Commands)
-
 `start key` `start jjk` `stop jjk` `start lvl3` `stop lvl3` `start back` `stop back` `start ok` `stop ok` `start web_input` `stop web_input` `start x` `stop x` `start focus` `stop focus` `start voice` `stop voice` `voice on` `voice off` `enable voice` `disable voice` `turn voice on` `turn voice off` `start filter` `stop filter` `start newfilter` `stop newfilter` `start dirt` `stop dirt` `dirton` `dirtoff` `start memory` `stop memory` `start persona` `stop persona` `start prompts` `stop prompts` `start update` `stop update` `start youtube_action` `stop youtube_action` `start wiki_action` `stop wiki_action` `start emotions` `stop emotions` `start core` `stop core` `start block` `stop block` `core config` `start common` `actions info` `log level` `start controls` `stop controls` `start sandbox` `stop sandbox` `start auth` `stop auth` `start advisory` `stop advisory` `start principles` `stop principles` `start aware` `stop aware` `start lore` `stop lore` `start sms` `stop sms` `start mematrix` `stop mematrix` `start log_reader` `stop log_reader`
-
 ### Plugin-Specific Shortcuts (5 Commands)
-
 `ok` `save` `fix` `load` `model`
-
 ### Comprehensive Plugin Commands (189 Commands)
-
 #### JJK (Security)
 `jjk auth` `jjk status` `jjk progenitor` `jjk is_progenitor` `jjk revoke` `jjk audit on` `jjk audit off` `jjk audit show` `jjk override` `jjk backup` `jjk help`
-
 #### Memory
 `memory status` `memory list facts` `memory list conversations` `memory store fact` `memory get fact` `memory store conversation` `memory delete fact` `memory delete conversation` `memory clear all`
-
 #### Persona
 `persona list` `persona info` `persona create` `persona delete` `persona use` `persona clear`
-
 #### Prompts
 `prompt list` `prompt show` `prompt set` `prompt delete` `prompt use` `prompt active` `prompt format`
-
 #### Emotions
 `emotions status` `emotions reset` `emotions get current` `emotions get history`
-
 #### YouTube
 `youtube search` `youtube open` `youtube list` `youtube auto` `youtube setkey`
-
 #### Wiki
 `wiki search` `wiki open` `wiki list` `wiki auto` `wikipedia search` `wikipedia open` `wikipedia list` `wikipedia auto`
-
 #### SMS
 `sms send` `sms status` `sms help`
-
 #### Blocklist
 `block list` `block add` `block remove` `block reload`
-
 #### Focus (Perturbation)
 `focus status` `focus config` `focus set typos on` `focus set typos off` `focus set emotions on` `focus set emotions off` `focus set expletives on` `focus set expletives off` `focus set probability` `focus add emotion` `focus add expletive` `focus log on` `focus log off` `focus reset`
-
 #### Sandbox
 `sandbox reverse_text` `sandbox set_var` `sandbox get_var` `sandbox status` `sandbox clear_log` `sandbox clear_vars`
-
 #### Auth
 `auth status` `auth users` `auth create` `auth disable` `auth enable` `auth debug` `auth reset`
-
 #### Consultant AI (`addon_ai` 1-4)
 **Per addon:** `addon_ai 1 on` `addon_ai 1 off` `addon_ai 1 provider` `addon_ai 1 model` `addon_ai 1 mode` `addon_ai 1 mode delayed` `addon_ai 1 mode live` `addon_ai 1 inject` `addon_ai 1 inject on` `addon_ai 1 inject off` `addon_ai 1 history_turns` `addon_ai 1 status`
-
 **Same commands for addon_ai 2, 3, and 4**
-
 **Global:** `addons off` `addons status`
-
 #### Advisory System
 `advisory status` `advisory clear` `advisory clear temp` `advisory remove` `advisory format` `advisory threshold` `advisory base on` `advisory base off` `advisory base set` `advisory categories on` `advisory categories off` `advisory skip on` `advisory skip off` `advisory debug on` `advisory debug off` `advisory help`
-
 #### Logging
 `log event` `log search` `log recent` `log status` `log clear_pending` `log help`
-
 #### Principles
 `principles stats` `principles report` `principles check` `principles toggle` `principles mode` `principles mode real-time` `principles mode addon-ai` `principles coverage` `principles coverage all` `principles coverage critical` `principles coverage top10` `principles coverage legacy4` `principles list` `principles help`
-
 #### Lore
 `lore help` `lore status` `lore export` `lore find` `lore list`
-
 ### Special Input Prefixes (4 Commands)
-
 - **`<path>`:** Provide a file path for loading (e.g., `</home/user/document.txt>`)
 - **`<update>`:** Prefix to trigger file upload from client to server
 - **`<download>`:** Prefix to trigger file download from server to client  
