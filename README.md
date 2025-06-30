@@ -128,7 +128,7 @@ System behavior is governed by the following 32 principles and actively monitors
 - **🛡️ High-Privilege Security Layer**
 
 ## 4. The Action M0dules (29)
-The processing pipeline of the system. Modules execute in order of priority (`P#`).
+The plugins that bring in most features - processing pipeline of the main system.
 
 | Priority | Module Name | Description |
 | :--- | :--- | :--- |
