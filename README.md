@@ -2,10 +2,10 @@
 
 > **m0d.ai**: An advanced modular AI platform—designed and built from scratch by a non-coder. (m0d differently)
 
-This system is the result of a single developer's vision and dedication, built from the ground up over 6 months and iteratively refined through more than 15,000 developer-AI conversations. It is a powerful, deeply layered tool designed for a specific type of interaction, and is now being shared with the wider community.
+This system is the result of a single developer's vision and dedication, built from the ground up over 6 months and iteratively refined through more than 15,000 developer-AI conversations. It is a powerful, deeply layered tool designed for a specific type of interaction, and is now being previewed with the wider community.
 
 -   **Community:** [r/m0dai on Reddit](https://www.reddit.com/r/m0dai/)
--   **Source Code:** [m0dai on GitHub](https://github.com/jjkjwo/M0dular-Action-System-Interface)
+-   **Project:** [m0dai on GitHub](https://github.com/jjkjwo/M0dular-Action-System-Interface)
 
 ---
 
