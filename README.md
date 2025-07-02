@@ -1,4 +1,4 @@
-# m0dai: Project Technical Specifications & Complete Component Index
+(Outdated already) # m0dai: Project Technical Specifications & Complete Component Index
 
 - **Live System Preview & Waitlist:** [https://m0d.ai/](https://m0d.ai/)
 - **Community Discussion:** [https://www.reddit.com/r/m0dai/](https://www.reddit.com/r/m0dai/)
