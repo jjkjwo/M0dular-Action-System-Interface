@@ -2,6 +2,7 @@
 
 - **Live System Preview & Waitlist:** [https://m0d.ai/](https://m0d.ai/)
 - **Community Discussion:** [https://www.reddit.com/r/m0dai/](https://www.reddit.com/r/m0dai/)
+- **NOTES:** https://github.com/jjkjwo/M0dular-Action-System-Interface/tree/main
 
 ---
 
