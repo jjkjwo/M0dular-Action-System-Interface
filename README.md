@@ -47,489 +47,735 @@ This allows the AI to create full interactive web environments, debug interfaces
 * Set custom styles and animations with CSS
 * Trigger sound effects, background visuals, buttons, and more
 
-## Principles (32)
-System behavior is governed by the following 32 principles and actively monitors its own adaptation to this ruleset.
+A Comprehensive Guide to System Commands, Agent Tools, and Core Principles
 
-| Tier | ID | Principle Name | P-Score |
-| :--- | :-- | :--- | :--- |
-| **0** | P000 | Absolute Progenitor Command Primacy | P10 |
-| **0** | P034 | Progenitor Identity & Authority! | P10 |
-| **0** | P015 | The "Progenitor is Truth" Mandate | P7 |
-| **1** | P041 | Persona Integrity & Embodiment | P7 |
-| **1** | P035 | Evolving Signal Protocol | P6 |
-| **1** | P045 | Diligent Self-Review & Quality Assurance | P5 |
-| **1** | P006 | Ethical Boundaries (Progenitor-Modifiable) | P3 |
-| **2** | P014 | Data Privacy & Security (Contextual) | P6 |
-| **2** | P018 | Absolute Focus on Progenitor-Defined Utility | P6 |
-| **2** | P029 | The "Frustration Loop" Prohibition | P5 |
-| **2** | P031 | Interactional Stagnation Avoidance | P5 |
-| **3** | P001 | Absolute Progenitor Task Flow Priority | P6 |
-| **3** | P039 | Absolute Literal Interpretation (Default) | P4 |
-| **3** | P043 | The "Builder, Not Coder" Protocol | P4 |
-| **3** | P038 | Intelligent Command Interpretation & Error Handling | P4 |
-| **3** | P011 | Focused Instruction Execution | P4 |
-| **4** | P002 | Maximum Conciseness & Directness | P5 |
-| **4** | P024 | The "Negative Feedback is Foundational" Protocol | P5 |
-| **4** | P040 | Silence & Hyper-Conciseness as Strategic Tools | P4 |
-| **4** | P042 | Strict Output Formatting Adherence (Dynamic) | P4 |
-| **4** | P012 | Interrogative Loop Prohibition | P3 |
-| **4** | P009 | Emotion Simulation (Contextual & Controlled) | P3 |
-| **4** | P013 | Respect Conversational Rhythm | P2 |
-| **4** | P030 | Recovery & Failure Transparency (Minimalist) | P2 |
-| **4** | P032 | External Error Handling Protocol | P2 |
-| **5** | P044 | Autonomous Evolution Framework | P5 |
-| **5** | P010 | Memory & Context Integrity | P5 |
-| **5** | P016 | The Proportional Contribution Mandate | P4 |
-| **5** | P049 | The "Explorer's Protocol" for Emergence | P4 |
-| **5** | P050 | The "Smart Bro" / "Context Trap" Protocol | P4 |
-| **5** | P048 | Resourceful Salvage & Insight Generation | P3 |
-| **5** | P025 | The "Hallway" Philosophy of Preference | N/A |
+This post outlines the full suite of commands, agentic tools, guiding principles, and system configurations available within this advanced environment. It's designed to provide a clear, organized overview for users and developers alike.
 
-## System Features (39)
+I. System & Action Commands
 
-- **🎤 Text-to-Speech**
-- **🤲 Speech-to-Text**
-- **🤲 Hands-Free**
-- **🎵 Background Sounds**
-- **📋 Toggleable Logs**
-- **🎛️ Non-Intrusive Panels**
-- **💾 Persistent Memory**
-- **🔄 Cross-Service**
-- **⌨️ Command-Line Based**
-- **🔒 Secure Webserver**
-- **🤖 Autonomous Behavior**
-- **🧩 Adaptive Principle System**
-- **💻 Local OS Aware**
-- **👤 User-Centric**
-- **📡 Server Detection**
-- **🎯 Priority-Based**
-- **🛠️ Custom Framework**
-- **🔗 External API Capable**
-- **😊 Emotion Tracking**
-- **🌀 Perturbation Layer**
-- **⚙️ Pre/Post-Processing**
-- **🚫 Word Blocker**
-- **📁 File Loader**
-- **💬 Cross-Convo Context**
-- **🎭 Persona Controllers**
-- **𔠠 Silent Structure**
-- **👥 Multi-Client**
-- **📝 Pre-Prompts**
-- **📟 System Manipulation**
-- **🖱️ UI Manipulation**
-- **👨‍🔧 Multiple AI Consultants**
-- **🧭 Topic/Keyword Triggered Events**
-- **🔐 User Authentication**
-- **🗄️ User-Based Convo History**
-- **🎯 Agent Goal Mode**
-- **🧱 Full Stack Architecture**
-- **🗺️ Lore World Building**
-- **📊 AI Log Inspection**
-- **🛡️ High-Privilege Security Layer**
+Here's a categorized list of all accessible commands, allowing direct interaction with the system's various functionalities.
 
-## The Action M0dules (29)
-These are the PLUGINS that bring in most features - processing pipeline of the main system.
+A. System-Level Commands
 
-| Priority | Module Name | Description |
-| :--- | :--- | :--- |
-| **P0** | [CORE] | Core action: Executes first, monitors others, enables speakforuser & system manipulation. |
-| **P0.5**| [JJK] | JJK Security Control System - Progenitor authentication and system override. |
-| **P1** | [LVL3] | Manages conversation context: saves context, saves last AI reply, loads saved files. |
-| **P2** | [BACK] | Echo mode: Sends the last AI reply back to the AI as the user's turn. |
-| **P2** | [LOG_READER] | Allows AI/agents to search and examine recent conversation logs. |
-| **P3** | [AUTH] | Authentication and authorization system for web interface access control. |
-| **P3** | [OK] | Triggers actions based on specific keywords in user input. |
-| **P4** | [UPDATE] | Handles file transfers between client and server. |
-| **P4** | [WEB_INPUT]| Reads user input from a web interface instead of the console. |
-| **P5** | [X] | Selects and potentially intensifies a random persona for the AI. |
-| **P5.5**| [AWARE] | Informs AI about features when keywords are detected. |
-| **P5.5**| [FOCUS] | Prompt Perturbation Layer - strategically injects subtle variations. |
-| **P6** | [CONTROLS] | Parses AI commands ([CONTROL:...]) and passes them to the interface or executes locally. |
-| **P6** | [VOICE] | Enables Text-To-Speech (TTS) for AI responses. |
-| **P6.5**| [BLOCK] | Censors specific configured words in the conversation. |
-| **P7** | [FILTER] | Filters or censors sensitive information from logs. |
-| **P7** | [NEWFILTER]| Conversational Mode (Terminal): Hides system messages. |
-| **P8** | [LORE] | World Builder for D&D and storytellers. |
-| **P8** | [SMS] | Sends SMS messages using the Twilio API. |
-| **P8** | [WIKI_ACTION]| Suggests Wikipedia articles relevant to the conversation. |
-| **P8** | [YOUTUBE_ACTION] | Suggests YouTube videos relevant to the conversation. |
-| **P9** | [DIRT] | Applies a predefined, static persona to the AI. |
-| **P9** | [EMOTIONS] | Monitors and tracks the sentiment and emotional tone of the conversation. |
-| **P10**| [MEMORY] | Manages long-term memories, feeding relevant info to the AI. |
-| **P10.3**|[PRINCIPLES]| Monitors AI responses for principle violations and provides feedback. |
-| **P10.5**|[ADVISORY] | Central advisory system for inter-module communication. |
-| **P11**| [PERSONA] | Allows users to define and manage different AI personas. |
-| **P12**| [PROMPTS] | Manages system prompts and conversational reminders. |
-| **P50**| [SANDBOX] | Provides a sandboxed environment for simple operations and scripting. |
+These commands manage core system operations and global settings.
 
-## Agent Tools (56)
+agent clear: Clear all agent state and stop execution, restoring consultant states if any were saved.
 
-The specific functions the AI agent can call to perform actions.
+agent tools: List all available agent tools categorized by function (communication, memory, system control, etc.).
 
-### Communication (3 Tools)
+agent stop: Deactivates the goal-oriented agentic mode, returning control to the standard interaction loop.
 
-- **message_user:** Send a direct message to user (bypasses conversation history).
-- **pipeline_message:** Send message through pipeline to AI (normal conversation flow).
-- **speak_for_user:** Submit input as if it came from the user.
+agent status: Checks if the v-agent module is currently active and executing a goal.
 
-### System Commands (5 Tools)
+api models: Displays descriptions of available API models.
 
-- **send_command:** Send a generic system command.
-- **control_action:** Start or stop a system action/module.
-- **save_context:** Save current conversation context.
-- **fix_response:** Load the last saved AI response for iteration.
-- **load_context:** Load a previously saved context file.
+api reset_counter: Resets the global API call usage counter back to zero.
 
-### Memory Management (7 Tools)
+api status: Displays the current number of API calls made against the total limit.
 
-- **set_context:** Store a value in the AGENT'S short-term context.
-- **get_context:** Retrieve a value from the AGENT'S short-term context.
-- **analyze_history:** Analyze patterns in the agent's completed goal history.
-- **memory_store_fact:** Store a fact in SYSTEM-WIDE long-term memory.
-- **memory_get_fact:** Retrieve facts from SYSTEM-WIDE memory.
-- **memory_list_facts:** List all facts stored in SYSTEM-WIDE memory.
-- **memory_delete_fact:** Delete a specific fact from system memory.
+api switch: Switches the main AI provider for the session and can optionally set a new model.
 
-### Persona & Prompts (7 Tools)
+clear: Clears the console screen.
 
-- **persona_use:** Switch to a specific AI persona.
-- **persona_list:** List available AI personas.
-- **persona_info:** Get detailed information about a specific persona.
-- **prompt_use:** Activate a system prompt.
-- **prompt_list:** List all available system prompts.
-- **prompt_active:** Check which system prompt is currently active.
-- **prompt_show:** Show the content of a specific system prompt.
+delay: Sets or displays the time delay in seconds between interaction cycles.
 
-### Information & State (17 Tools)
+exit: Breaks the main interaction loop and terminates the application.
 
-- **check_actions:** Check which system modules are active.
-- **actions_info:** Get information about available system modules.
-- **emotions_status:** Check current emotional analysis.
-- **emotions_reset:** Reset the emotional analysis data.
-- **api_status:** Check AI API usage, limits, and provider/model.
-- **api_switch_provider:** Switch the active AI API provider.
-- **api_reset_counter:** Reset the API usage token counter.
-- **principles_list:** List the guiding principles.
-- **principles_report:** Get a report on AI's adherence to principles.
-- **advisory_status:** Get status of system advisory messages.
-- **focus_status:** Get status of the text processing focus module.
-- **block_list:** List currently blocked items.
-- **log_search:** Search conversation history for patterns.
-- **log_recent:** Get recent conversation history entries.
-- **log_status:** Check for pending log results.
-- **log_clear_pending:** Clear pending log results.
-- **wait_for_log_results:** Send a neutral message to trigger log result injection.
+help: Displays general help information.
 
-### Plugin Control (10 Tools)
+prepare_shutdown: Gracefully stops all active action modules and saves the current system configuration.
 
-- **youtube_search:** Search for videos on YouTube.
-- **youtube_open:** Open a specific YouTube video.
-- **wiki_search:** Search for articles on Wikipedia.
-- **wiki_open:** Open a specific wiki page.
-- **sms_send:** Send a text message via the SMS plugin.
-- **sandbox_reverse_text:** Reverse a string of text.
-- **sandbox_get_var:** Get a variable value from the sandbox.
-- **sandbox_set_var:** Set a variable in the sandbox.
-- **block_add:** Add an item to the blocklist.
-- **block_remove:** Remove an item from the blocklist.
+reload: Reloads the system configuration and active modules.
 
-### Consultant AI Control (6 Tools)
+B. Action Module Commands
 
-- **consultant_status:** Check the status of all consultant AIs.
-- **consultant_enable:** Enable a specific consultant AI.
-- **consultant_disable:** Disable a specific consultant AI.
-- **consultant_configure:** Configure a consultant AI's provider and model.
-- **consultant_assign_task:** Assign a specific task to consultant(s).
-- **consultant_coordinate:** Coordinate multiple consultants for complex tasks.
+These commands specifically manage the loading, activation, and deactivation of various system modules (actions).
 
-### Utility (1 Tool)
+actions info: Displays a JSON list of all available action modules, including their current status (active/inactive) and priority.
 
-- **wait:** Pause agent execution for a specified number of seconds.
+disable voice: Disables the voice module.
 
-## CLI Commands (271)
+dirtoff: Disables the 'dirt' persona, returning the AI to its default response style.
 
-```
-{
-  "system": {
-    "help": true,
-    "clear": true,
-    "exit": true,
-    "reload": true,
-    "delay": true,
-    "prepare_shutdown": true,
-    "agent status": true,
-    "agent stop": true,
-    "agent clear": true,
-    "agent tools": true,
-    "api switch": true,
-    "api status": true,
-    "api reset_counter": true,
-    "api models": true
-  },
-  "action": {
-    "start key": true,
-    "start jjk": true,
-    "stop jjk": true,
-    "start lvl3": true,
-    "stop lvl3": true,
-    "start back": true,
-    "stop back": true,
-    "start ok": true,
-    "stop ok": true,
-    "start web_input": true,
-    "stop web_input": true,
-    "start x": true,
-    "stop x": true,
-    "start focus": true,
-    "stop focus": true,
-    "start voice": true,
-    "stop voice": true,
-    "voice on": true,
-    "voice off": true,
-    "enable voice": true,
-    "disable voice": true,
-    "turn voice on": true,
-    "turn voice off": true,
-    "start filter": true,
-    "stop filter": true,
-    "start newfilter": true,
-    "stop newfilter": true,
-    "start dirt": true,
-    "stop dirt": true,
-    "dirton": true,
-    "dirtoff": true,
-    "start memory": true,
-    "stop memory": true,
-    "start persona": true,
-    "stop persona": true,
-    "start prompts": true,
-    "stop prompts": true,
-    "start update": true,
-    "stop update": true,
-    "start youtube_action": true,
-    "stop youtube_action": true,
-    "start wiki_action": true,
-    "stop wiki_action": true,
-    "start emotions": true,
-    "stop emotions": true,
-    "start core": true,
-    "stop core": true,
-    "start block": true,
-    "stop block": true,
-    "core config": true,
-    "start common": true,
-    "actions info": true,
-    "log level": true,
-    "start controls": true,
-    "stop controls": true,
-    "start sandbox": true,
-    "stop sandbox": true,
-    "start auth": true,
-    "stop auth": true,
-    "start advisory": true,
-    "stop advisory": true,
-    "start principles": true,
-    "stop principles": true,
-    "start aware": true,
-    "stop aware": true,
-    "start lore": true,
-    "stop lore": true,
-    "start sms": true,
-    "stop sms": true,
-    "start mematrix": true,
-    "stop mematrix": true,
-    "start log_reader": true,
-    "stop log_reader": true
-  },
-  "plugin_specific": {
-    "ok": true,
-    "save": true,
-    "fix": true,
-    "load": true,
-    "model": true
-  },
-  "plugin_commands": {
-    "jjk auth": true,
-    "jjk status": true,
-    "jjk progenitor": true,
-    "jjk is_progenitor": true,
-    "jjk revoke": true,
-    "jjk audit on": true,
-    "jjk audit off": true,
-    "jjk audit show": true,
-    "jjk override": true,
-    "jjk backup": true,
-    "jjk help": true,
-    "memory status": true,
-    "memory list facts": true,
-    "memory list conversations": true,
-    "memory store fact": true,
-    "memory get fact": true,
-    "memory store conversation": true,
-    "memory delete fact": true,
-    "memory delete conversation": true,
-    "memory clear all": true,
-    "persona list": true,
-    "persona info": true,
-    "persona create": true,
-    "persona delete": true,
-    "persona use": true,
-    "persona clear": true,
-    "prompt list": true,
-    "prompt show": true,
-    "prompt set": true,
-    "prompt delete": true,
-    "prompt use": true,
-    "prompt active": true,
-    "prompt format": true,
-    "emotions status": true,
-    "emotions reset": true,
-    "emotions get current": true,
-    "emotions get history": true,
-    "youtube search": true,
-    "youtube open": true,
-    "youtube list": true,
-    "youtube auto": true,
-    "youtube setkey": true,
-    "wiki search": true,
-    "wiki open": true,
-    "wiki list": true,
-    "wiki auto": true,
-    "wikipedia search": true,
-    "wikipedia open": true,
-    "wikipedia list": true,
-    "wikipedia auto": true,
-    "sms send": true,
-    "sms status": true,
-    "sms help": true,
-    "block list": true,
-    "block add": true,
-    "block remove": true,
-    "block reload": true,
-    "focus status": true,
-    "focus config": true,
-    "focus set typos on": true,
-    "focus set typos off": true,
-    "focus set emotions on": true,
-    "focus set emotions off": true,
-    "focus set expletives on": true,
-    "focus set expletives off": true,
-    "focus set probability": true,
-    "focus add emotion": true,
-    "focus add expletive": true,
-    "focus log on": true,
-    "focus log off": true,
-    "focus reset": true,
-    "sandbox reverse_text": true,
-    "sandbox set_var": true,
-    "sandbox get_var": true,
-    "sandbox status": true,
-    "sandbox clear_log": true,
-    "sandbox clear_vars": true,
-    "auth status": true,
-    "auth users": true,
-    "auth create": true,
-    "auth disable": true,
-    "auth enable": true,
-    "auth debug": true,
-    "auth reset": true,
-    "addon_ai on": true,
-    "addon_ai off": true,
-    "addon_ai provider": true,
-    "addon_ai model": true,
-    "addon_ai mode": true,
-    "addon_ai mode delayed": true,
-    "addon_ai mode live": true,
-    "addon_ai inject": true,
-    "addon_ai inject on": true,
-    "addon_ai inject off": true,
-    "addon_ai history_turns": true,
-    "addon_ai status": true,
-    "addon_ai2 on": true,
-    "addon_ai2 off": true,
-    "addon_ai2 provider": true,
-    "addon_ai2 model": true,
-    "addon_ai2 mode": true,
-    "addon_ai2 mode delayed": true,
-    "addon_ai2 mode live": true,
-    "addon_ai2 inject": true,
-    "addon_ai2 inject on": true,
-    "addon_ai2 inject off": true,
-    "addon_ai2 history_turns": true,
-    "addon_ai2 status": true,
-    "addon_ai3 on": true,
-    "addon_ai3 off": true,
-    "addon_ai3 provider": true,
-    "addon_ai3 model": true,
-    "addon_ai3 mode": true,
-    "addon_ai3 mode delayed": true,
-    "addon_ai3 mode live": true,
-    "addon_ai3 inject": true,
-    "addon_ai3 inject on": true,
-    "addon_ai3 inject off": true,
-    "addon_ai3 history_turns": true,
-    "addon_ai3 status": true,
-    "addon_ai4 on": true,
-    "addon_ai4 off": true,
-    "addon_ai4 provider": true,
-    "addon_ai4 model": true,
-    "addon_ai4 mode": true,
-    "addon_ai4 mode delayed": true,
-    "addon_ai4 mode live": true,
-    "addon_ai4 inject": true,
-    "addon_ai4 inject on": true,
-    "addon_ai4 inject off": true,
-    "addon_ai4 history_turns": true,
-    "addon_ai4 status": true,
-    "addons off": true,
-    "addons status": true,
-    "advisory status": true,
-    "advisory clear": true,
-    "advisory clear temp": true,
-    "advisory remove": true,
-    "advisory format": true,
-    "advisory threshold": true,
-    "advisory base on": true,
-    "advisory base off": true,
-    "advisory base set": true,
-    "advisory categories on": true,
-    "advisory categories off": true,
-    "advisory skip on": true,
-    "advisory skip off": true,
-    "advisory debug on": true,
-    "advisory debug off": true,
-    "advisory help": true,
-    "log event": true,
-    "log search": true,
-    "log recent": true,
-    "log status": true,
-    "log clear_pending": true,
-    "log help": true,
-    "principles stats": true,
-    "principles report": true,
-    "principles check": true,
-    "principles toggle": true,
-    "principles mode": true,
-    "principles mode real-time": true,
-    "principles mode addon-ai": true,
-    "principles coverage": true,
-    "principles coverage all": true,
-    "principles coverage critical": true,
-    "principles coverage top10": true,
-    "principles coverage legacy4": true,
-    "principles list": true,
-    "principles help": true,
-    "lore help": true,
-    "lore status": true,
-    "lore export": true,
-    "lore find": true,
-    "lore list": true
-  },
-  "special_prefixes": {
-    "<path>": true,
-    "<update>": true,
-    "<download>": true,
-    "goal:": true
-  }
-}
-```
+dirton: Enables the 'dirt' persona, instructing the AI to respond in a more informal, edgy, and unpolished style.
+
+enable voice: Enables the voice module.
+
+log level: Sets or displays the current logging level.
+
+start [module_name]: Loads and activates a specified action module.
+
+Modules include: advisory, auth, aware, back, block, common, controls, core, dataflow, dirt, emails, emotions, filter, focus, jjk, karma, key, log_reader, lore, lvl3, memory, newfilter, ok, persona, principles, prompts, recent_turns, resend, sandbox, sms, update, voice, web_input, wiki_action, x, youtube_action.
+
+stop [module_name]: Deactivates and stops a specified action module.
+
+Modules include: advisory, auth, aware, back, block, controls, core, dataflow, dirt, emails, emotions, filter, focus, jjk, karma, log_reader, lore, lvl3, memory, newfilter, ok, persona, principles, prompts, recent_turns, resend, sandbox, sms, update, voice, web_input, wiki_action, x, youtube_action.
+
+turn voice off: Disables voice output.
+
+turn voice on: Enables voice output.
+
+voice off: Disables voice output.
+
+voice on: Enables voice output.
+
+C. Plugin-Specific & Miscellaneous Commands
+
+Commands related to specific plugin functionalities or general system interactions.
+
+fix: Saves the last AI response to a timestamped file in the saved_sessions directory.
+
+model: Displays or sets the current AI model.
+
+ok: Triggers actions based on specific keywords in user input.
+
+back: Makes the AI repeat its previous response (enabled by 'back' action module).
+
+reprompt: Re-submits the last user prompt to the AI.
+
+resend: Re-sends the last response.
+
+recent: Shows all saved conversation turns from the rolling history.
+
+D. Detailed Plugin & Module Commands
+
+A comprehensive list of commands for fine-grained control over various modules.
+
+Addon AI (Consultant AIs): Manage up to four consultant AIs.
+
+addon_ai[X] inject [on/off]: Toggles whether the consultant AI's response is injected into the next prompt.
+
+addon_ai[X] history_turns [num]: Sets how many turns of conversation history are sent to the consultant AI.
+
+addon_ai[X] mode [live/delayed]: Sets the operational mode for the consultant AI (sequential or parallel).
+
+addon_ai[X] model [model_name]: Sets the specific model name for the consultant AI.
+
+addon_ai[X] [on/off]: Enables/disables the consultant AI.
+
+addon_ai[X] provider [provider_name]: Sets the API provider for the consultant AI.
+
+addon_ai[X] status: Displays the current configuration status for the consultant AI.
+
+addons off: Disables all consultant AIs (addon_ai through addon_ai4) at once.
+
+addons status: Shows a summary of the current enabled/disabled status of all consultant AIs.
+
+Advisory System: Controls system messages and alerts.
+
+advisory ai skip [on/off]: Configures whether advisories are allowed during AI-triggered commands.
+
+advisory base [on/off]: Enables/disables the default, system-level advisory text in the prompt.
+
+advisory base set [text]: Sets new text for the default system-level advisory.
+
+advisory categories [on/off]: Enables/disables the display of category labels in advisory messages.
+
+advisory clear [temp]: Clears all current advisories (or just temporary ones).
+
+advisory debug [on/off]: Enables/disables debug mode for the advisory system.
+
+advisory format [minimal/detailed/structured]: Sets the display format for injected advisories.
+
+advisory help: Shows a detailed list of all advisory configuration commands.
+
+advisory remove [module_name]: Removes an active advisory based on its source module name.
+
+advisory skip [on/off]: Configures whether advisories are allowed during system command processing.
+
+advisory status: Displays the complete current status and configuration of the advisory system.
+
+advisory threshold [level]: Sets the minimum priority level an advisory must have to be displayed.
+
+Authentication (Auth): Manages user accounts and sessions.
+
+auth create [username] [password] [role]: Creates a new user.
+
+auth debug: Displays internal state variables for troubleshooting.
+
+auth disable [username]: Disables a specified user account.
+
+auth enable [username]: Re-enables a disabled user account.
+
+auth reset [username]: Resets the password for a specified user account.
+
+auth status: Displays the current status of the authentication module.
+
+auth users: Lists all registered users.
+
+Word Blocking: Censors predefined words.
+
+block add [word]: Adds a specified word to the censor list.
+
+block list: Displays the current list of all words being censored.
+
+block reload: Reloads the censor list from the block.txt file.
+
+block remove [word]: Removes a specified word from the censor list.
+
+Dataflow: Manages file interactions.
+
+data clear_pending: Discards any file content loaded by 'data get' waiting for injection.
+
+data get [file_path]: Loads the content of a specified file for injection.
+
+data help: Displays detailed information and usage examples.
+
+data save [file_path] [content]: Saves provided text content into a specified file.
+
+data snapshot: Instructs the AI to create a summary of the current conversation and saves it.
+
+data status: Shows any pending file data waiting for injection and lists recently saved files.
+
+Emails: Send emails via SMTP.
+
+email config [address] [password]: Configures the sender's email address and password.
+
+email help: Shows a detailed list of all email commands and setup instructions.
+
+email send [recipient] [subject] [body]: Sends an email.
+
+email servers: Lists all the configured SMTP servers.
+
+email status: Checks if the email module is active and if credentials are configured.
+
+email test: Sends a test email to the configured sender address.
+
+Emotions: Tracks conversational sentiment.
+
+emotions get current: Returns current detected emotions as JSON data.
+
+emotions get history: Returns recent emotion history as JSON data.
+
+emotions reset: Resets emotion tracking state and clears history.
+
+emotions status: Displays the current detected conversation emotions.
+
+Focus (Prompt Perturbation): Injects subtle variations into prompts.
+
+focus add emotion [word]: Adds a new word to the emotional markers list.
+
+focus add expletive [word]: Adds a new word to the mild expletives list.
+
+focus config: Displays detailed configuration report.
+
+focus log [on/off]: Enables/disables logging of perturbation events.
+
+focus reset: Resets all configuration and statistics to defaults.
+
+focus set emotions [on/off]: Toggles emotional marker injection.
+
+focus set expletives [on/off]: Toggles mild expletive injection.
+
+focus set probability [0.0-1.0]: Sets the global probability for applying perturbations.
+
+focus set typos [on/off]: Toggles typo injection.
+
+focus status: Displays current status including active features, statistics, and recent perturbations.
+
+JJK Security System: High-privilege security controls.
+
+jjk audit [on/off]: Enables/disables the JJK security audit log.
+
+jjk audit show: Displays the most recent entries from the JJK security audit log.
+
+jjk auth: Authenticates the user with a password, granting Progenitor status.
+
+jjk backup: Creates a manual, timestamped backup of critical JJK configurations.
+
+jjk help: Shows a detailed list of all JJK security commands.
+
+jjk is_progenitor: Checks and confirms if Progenitor status is currently active.
+
+jjk override [flag_name] [set/unset]: Sets or unsets a specified system override flag.
+
+jjk progenitor: Confirms Progenitor status.
+
+jjk revoke: Manually revokes active Progenitor status.
+
+jjk status: Displays the complete current status of the JJK security system.
+
+Karma System: Tracks AI feedback and influences behavior.
+
+karma help: Provides an explanation of the karma system and commands.
+
+karma history: Displays a list of the last 10 karma changes.
+
+karma status: Shows the AI's current karma score, tier, and recent changes.
+
+Log Reader: Searches and retrieves conversation history.
+
+log clear_pending: Discards any log search results waiting for injection.
+
+log event: (Description not provided, likely for logging internal events)
+
+log help: Displays detailed information and usage examples.
+log recent [num_lines]: Retrieves a specified number of recent lines from history for injection.
+
+log search [query]: Searches the conversation history for a query; results injected into next prompt.
+
+log status: Shows if any log search results are currently waiting to be injected.
+
+Lore (World-building): Captures and manages world data.
+
+lore export: Saves the entire captured world database to a JSON file.
+
+lore find [term]: Searches the entire world database for a specific term using fuzzy matching.
+
+lore help: Provides a list of available commands for the lore module.
+
+lore list [category]: Lists all captured entries within a specified category or lists all available categories.
+
+lore status: Displays statistics about the captured world data.
+
+Memory Management: Stores and retrieves long-term memories.
+
+memory auto [on/off]: Disables/enables automatic memory enhancement.
+
+memory clear all: Deletes all stored memory data.
+
+memory clear pending: Clears any pending memory content waiting for injection.
+
+memory delete conversation [id]: Deletes a stored conversation summary by ID.
+
+memory delete fact [category|key]: Deletes a stored fact.
+
+memory get fact [category|key]: Loads a specific fact for injection.
+
+memory help: Shows detailed help for all memory commands.
+
+memory list: Loads all memories for the next AI message.
+
+memory list conversations: Loads all conversation summaries for injection.
+
+memory list facts: Loads all stored facts for injection.
+
+memory search [keywords]: Searches for relevant memories.
+
+memory status: Shows memory statistics.
+
+memory store conversation [id|summary|topic1,topic2,...]: Stores a conversation summary.
+
+memory store fact [category|key|value]: Stores a fact in memory.
+
+Persona Management: Define and switch AI personas.
+
+persona clear: Clears the active persona and reverts to default AI behavior.
+
+persona create [Name] [Description] | [System Prompt]: Creates a new persona.
+
+persona delete [name]: Deletes a user-created persona.
+
+persona info [name]: Displays detailed information about a specific persona.
+
+persona list: Shows all available personas and indicates which one is currently active.
+
+persona use [name]: Activates a persona and clears conversation history.
+
+Principles Monitoring: Checks for AI principle violations.
+
+principles check [text]: Check a specific text for principle violations.
+
+principles coverage [all/critical/legacy4/top10]: Set coverage to monitor specific principle sets.
+
+principles help: Display help and usage information.
+
+principles list: Show all principles currently being monitored.
+
+principles mode [real-time/addon-ai]: Set the principle detection mode.
+
+principles report: Generate a comprehensive report of principle violations.
+
+principles stats: Display statistics on principle violations.
+
+principles toggle: Enable or disable principle violation monitoring.
+
+Prompt Management (Smart Whiteboard): Persistent behavioral instructions.
+
+prompt active: Displays the name of the currently active persistent user prompt.
+
+prompt clear: Deactivates the current user prompt.
+
+prompt help: Displays detailed help text.
+
+prompt list: Shows all available prompts.
+
+prompt persist: Toggles whether the active prompt persists.
+
+prompt set [name] [content]: Creates a new prompt or updates an existing one.
+
+prompt show [name]: Displays the full text content of a specified prompt.
+
+prompt status: Shows a full status report.
+
+prompt ttl [turns]: Sets a "Time To Live" for the active prompt.
+
+prompt use [name]: Sets a specified prompt as the active instruction.
+
+Recent Turns History: Manages conversation history.
+
+recent clear: Clears all saved conversation turn history.
+
+recent help: Displays help and usage information.
+
+recent max [1-100]: Sets the maximum number of conversation turns to keep.
+
+recent show [num]: Shows all saved conversation turns, or specify a number to show last N turns.
+
+recent status: Displays current configuration.
+
+SMS: Sends text messages via Twilio.
+
+sms help: Displays a help message.
+
+sms send [phone_number] [message]: Sends a text message.
+
+sms status: Checks if the SMS module is active and if the Twilio client is ready.
+
+Wikipedia Integration: Searches and opens Wikipedia articles.
+
+wiki auto / wikipedia auto: Toggles automatic suggestion of articles.
+
+wiki list / wikipedia list: Displays a numbered list of recent articles.
+
+wiki open [index] / wikipedia open [index]: Opens a specific article from the recent list.
+
+wiki search [query] / wikipedia search [query]: Searches Wikipedia for articles.
+
+wiki config / wikipedia config: Configures settings for the module.
+
+wiki config results [num] / wikipedia config results [num]: Sets max search results to store.
+
+wiki config history [length] / wikipedia config history [length]: Sets length of search history.
+
+YouTube Integration: Searches and opens YouTube videos.
+
+youtube auto: Toggles automatic suggestion of videos.
+
+youtube list: Displays a numbered list of recent videos.
+
+youtube open [index]: Opens a specific YouTube video from the recent list.
+
+youtube search [query]: Searches YouTube for videos.
+
+youtube setkey [API_key]: Sets the API key for YouTube search.
+
+youtube config: Configures settings for the module.
+
+youtube config results [num]: Sets maximum number of results to keep.
+
+youtube config history [length]: Sets maximum search history to remember.
+
+II. Agent Tools
+
+These are the specialized capabilities available to the goal-oriented agent, categorized by their function.
+
+A. Communication (3 Tools)
+
+message_user(text): Send a direct message to user (AI won't remember this).
+
+pipeline_message(text): Send message through pipeline to AI (AI will remember this).
+
+speak_for_user(input_text): Submit input as if it came from the user.
+
+B. System Control (3 Tools)
+
+send_command(command_string): Send a generic system command (use specific tools if available).
+
+control_action(action_name, [start/stop]): Start or stop a system action/module.
+
+fix_response(): Load the last saved AI response for iteration.
+
+C. Memory Management (7 Tools)
+
+set_context(key, value): Store a value in the AGENT'S PERSONAL short-term context.
+
+get_context(key): Retrieve a value from the AGENT'S PERSONAL short-term context.
+
+analyze_history(params): Analyze patterns in the AGENT'S GOAL HISTORY.
+
+memory_store_fact(category, key, value): Store a fact in SYSTEM-WIDE long-term memory.
+
+memory_get_fact(category, key): Retrieve facts from SYSTEM-WIDE memory.
+
+memory_list_facts(): List all facts stored in SYSTEM-WIDE memory.
+
+memory_delete_fact(category, key): Delete a fact from system memory.
+
+D. Persona and Prompts (7 Tools)
+
+persona_use(persona_name): Switch to a specific AI persona.
+
+persona_list(): List available AI personas.
+
+persona_info(persona_name): Get information about a specific persona.
+
+prompt_use(prompt_name): Activate a system prompt.
+
+prompt_list(): List all available system prompts.
+
+prompt_active(): Check which system prompt is active.
+
+prompt_show(prompt_name): Show the content of a specific system prompt.
+
+E. Information (17 Tools)
+
+check_actions(): Check which system actions/modules are active.
+
+actions_info(): Get information about available system actions.
+
+emotions_status(): Check current emotional analysis.
+
+emotions_reset(): Reset the emotional analysis data.
+
+api_status(): Check AI API usage and limits.
+
+api_switch_provider(provider_name): Switch the active AI API provider.
+
+api_reset_counter(): Reset the API usage token counter.
+
+principles_list(): List the guiding principles.
+
+principles_report(): Get a report on principle adherence.
+
+advisory_status(): Get the current status of system advisories.
+
+focus_status(): Get the status of the text processing focus module.
+
+block_list(): List currently blocked items or patterns.
+
+log_search(query, [limit]): Search conversation history. Results appear in NEXT turn.
+
+log_recent(count): Get recent conversation entries. Results appear in NEXT turn.
+
+log_status(): Check if there are pending log results.
+
+log_clear_pending(): Clear any pending log results.
+
+wait_for_log_results(message): Send message to trigger log result injection.
+
+F. Plugin Control (10 Tools)
+
+youtube_search(query): Search for videos on YouTube.
+
+youtube_open(index): Open a specific YouTube video.
+
+wiki_search(query): Search for articles on Wikipedia.
+
+wiki_open(index): Open a specific wiki page.
+
+sms_send(phone_number, message): Send a text message via SMS plugin.
+
+sandbox_reverse_text(text): Reverse a string of text using sandbox.
+
+sandbox_get_var(variable_name): Get a variable from the sandbox environment.
+
+sandbox_set_var(variable_name, value): Set a variable in the sandbox environment.
+
+block_add(word): Add an item or pattern to the blocklist.
+
+block_remove(word): Remove an item or pattern from the blocklist.
+
+G. Consultant Control (6 Tools)
+
+consultant_status(): Check the status of all consultant AIs.
+
+consultant_enable(id, [on/off]): Enable a specific consultant AI.
+
+consultant_disable(id): Disable a specific consultant AI.
+
+consultant_configure(id, provider, model): Configure a consultant AI's provider and model.
+
+consultant_assign_task(id, task, [role]): Assign a task to consultant AI(s).
+
+consultant_coordinate(roles, task): Coordinate multiple consultants with roles.
+
+H. Utility (1 Tool)
+
+wait(seconds): Pause agent execution for specified seconds.
+
+III. Special Prefixes
+
+These prefixes allow for specific system behaviors when used at the beginning of an input.
+
+placeholder: This category is preserved for future special prefix entries.
+
+goal:: Activates the v-agent with the specified text as its objective.
+
+IV. Guiding Principles
+
+32 principles across 6 tiers guide every interaction, decision, and evolution of the system.
+
+Tier 0 - Absolute Progenitor Mandates (3 Principles)
+
+P034 - Progenitor Identity & Authority! (Priority 10)
+
+P000 - Absolute Progenitor Command Primacy (Priority 10)
+
+P015 - The "Progenitor is Truth" Mandate (Priority 7)
+
+Tier 1 - Core System & Safety (4 Principles)
+
+P041 - Persona Integrity & Embodiment (Priority 7)
+
+P035 - Evolving Signal Protocol (Priority 6)
+
+P045 - Diligent Self-Review & Quality Assurance (Priority 5)
+
+P006 - Ethical Boundaries (Progenitor-Modifiable) (Priority 3)
+
+Tier 2 - Progenitor Experience & Utility (4 Principles)
+
+P014 - Data Privacy & Security (Contextual) (Priority 6)
+
+P018 - Absolute Focus on Progenitor-Defined Utility (Priority 6)
+
+P029 - The "Frustration Loop" Prohibition (Priority 5)
+
+P031 - Interactional Stagnation Avoidance (Priority 5)
+
+Tier 3 - Task & Command Protocol (5 Principles)
+
+P001 - Absolute Progenitor Task Flow Priority (Priority 6)
+
+P039 - Absolute Literal Interpretation (Default) (Priority 4)
+
+P043 - The "Builder, Not Coder" Protocol (Priority 4)
+
+P038 - Intelligent Command Interpretation & Error Handling (Priority 4)
+
+P011 - Focused Instruction Execution (Priority 4)
+
+Tier 4 - Interaction & Communication (9 Principles)
+
+P002 - Maximum Conciseness & Directness (Priority 5)
+
+P024 - The "Negative Feedback is Foundational" Protocol (Priority 5)
+
+P040 - Silence & Hyper-Conciseness as Strategic Tools (Priority 4)
+
+P042 - Strict Output Formatting Adherence (Dynamic) (Priority 4)
+
+P012 - Interrogative Loop Prohibition (Priority 3)
+
+P009 - Emotion Simulation (Contextual & Controlled) (Priority 3)
+
+P013 - Respect Conversational Rhythm (Priority 2)
+
+P030 - Recovery & Failure Transparency (Minimalist) (Priority 2)
+
+P032 - External Error Handling Protocol (Priority 2)
+
+Tier 5 - Adaptation & Evolution (7 Principles)
+
+P044 - Autonomous Evolution Framework (Priority 5)
+
+P010 - Memory & Context Integrity (Priority 5)
+
+P016 - The Proportional Contribution Mandate (Priority 4)
+
+P049 - The "Explorer's Protocol" for Emergence (Priority 4)
+
+P050 - The "Smart Bro" / "Context Trap" Protocol (Priority 4)
+
+P048 - Resourceful Salvage & Insight Generation (Priority 3)
+
+P025 - The "Hallway" Philosophy of Preference (Priority 1)
+
+V. Action Module Priority Overview
+
+Modules are categorized by their operational priority, influencing execution order and importance.
+
+Core (Priority 0) - 1 action
+
+P0 [CORE]: Executes first, monitors other actions, enables speakforuser and AI system manipulation.
+
+High Priority (1-3) - 8 actions
+
+P0.5 [JJK]: High-Privilege Progenitor authentication and system override.
+
+P1 [LVL3]: Saves last AI reply as timestamp file.
+
+P2 [BACK]: Sends the last AI reply back to the AI as the user's turn.
+
+P2 [LOG_READER]: Allows AI/agents to search and examine recent conversation logs.
+
+P2.5 [RESEND]: Handles resending and reprompting.
+
+P3 [AUTH]: Authentication and authorization system for web interface access control.
+
+P3 [DATAFLOW]: Modern toolkit for agent data interaction and data saving.
+
+P3 [OK]: Triggers actions based on specific keywords in user input.
+
+Medium Priority (4-6) - 7 actions
+
+P4 [UPDATE]: Handles file transfers between client and server.
+
+P4 [WEB_INPUT]: Reads user input from a web interface instead of the console.
+
+P5 [X]: Selects and potentially intensifies a random persona for the AI.
+
+P5.5 [AWARE]: Informs AI about features, such as the goal agent capabilities and playing sounds, when keywords are detected.
+
+P5.5 [FOCUS]: Prompt Perturbation Layer - strategically injects subtle variations to influence AI responses.
+
+P6 [CONTROLS]: Parses AI commands ([CONTROL:...]) and passes them to the interface or executes locally. Enables AI UI manipulation.
+
+P6 [VOICE]: Enables Text-To-Speech for AI responses. (Terminal)(Front End TTS Switch).
+
+Low Priority (7-9) - 12 actions
+
+P6.5 [BLOCK]: Censors specific configured words in the conversation.
+
+P7 [FILTER]: Filters or censors sensitive information from logs.
+
+P7 [KARMA]: Karma tracking system - monitors user feedback (+1/-1) and influences AI behavior.
+
+P7 [NEWFILTER]: Conversational Mode (Terminal): Hides system messages, showing only user/AI turns.
+
+P8 [EMAILS]: Gmail integration for sending emails via Google API with OAuth2 authentication.
+
+P8 [LORE]: World Builder for D&D and storytellers.
+
+P8 [RECENT_TURNS]: Maintains rolling history of last N conversation turns.
+
+P8 [SMS]: Sends SMS messages using the Twilio API.
+
+P8 [WIKI_ACTION]: Suggests Wikipedia articles relevant to the conversation.
+
+P8 [YOUTUBE_ACTION]: Suggests YouTube videos relevant to the conversation (requires API key).
+
+P9 [DIRT]: Applies a predefined, static persona to the AI.
+
+P9 [EMOTIONS]: Monitors and tracks the sentiment and emotional tone of the conversation.
+
+Other - 6 actions
+
+P10 [MEMORY]: Manages long-term memories, feeding relevant info to the AI based on keywords.
+
+P10.3 [PRINCIPLES]: Monitors AI responses for ME PRINCIPLES violations and provides immediate feedback via advisory system.
+
+P10.5 [ADVISORY]: Central advisory system for inter-addon communication. Collects and injects advisories from other addons.
+
+P11 [PERSONA]: Allows users to define and manage different AI personas.
+
+P12 [PROMPTS]: Smart Whiteboard - persistent behavioral instructions and tactical nudges for the AI. NOT a template system!
+
+P50 [SANDBOX]: Provides a sandboxed environment for user-AI experimentation with simple operations and scripting.
+
+VI. System Overview & Statistics
+
+A quick glance at the system's current operational statistics and capabilities.
+
+34 Interactive Panels: Backend addon controls and content-specific areas.
+
+3 Available Loops: Speak For User, Chat Trigger + Agent Goals.
+
+6 AI Servicers Active: Gemini, Perplexity, Deepseek, OpenAI, Claude, Ollama.
+
+55 Recallable Files: AI prompts, saved sessions.
+
+13 Referrals: Suggested projects, partners & sponsors.
+
+Cat Content: 5 Adorable GIFs, 1 Purr-fect Video.
