@@ -47,7 +47,7 @@ This allows the AI to create full interactive web environments, debug interfaces
 * Set custom styles and animations with CSS
 * Trigger sound effects, background visuals, buttons, and more
 
-A Comprehensive Guide to System Commands, Agent Tools, and Core Principles
+## A Comprehensive Guide to System Commands, Agent Tools, and Core Principles
 
 This post outlines the full suite of commands, agentic tools, guiding principles, and system configurations available within this advanced environment. It's designed to provide a clear, organized overview for users and developers alike.
 
