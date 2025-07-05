@@ -1,4 +1,6 @@
-(Outdated already) # m0dai: Project Technical Specifications & Complete Component Index
+(Outdated already)
+
+# m0dai: Project Technical Specifications & Complete Component Index
 
 - **Live System Preview & Waitlist:** [https://m0d.ai/](https://m0d.ai/)
 - **Community Discussion:** [https://www.reddit.com/r/m0dai/](https://www.reddit.com/r/m0dai/)
@@ -7,9 +9,11 @@
 ---
 
 ## M0dai
-M0dai was designed and built by a single developer over 6 months, using over 15,000 developer-AI conversations as the sole development and testing environment.
+M0dai was meticulously crafted by a single non-coder developer over 6 months, driven by more than 15,000 developer-AI interactions as the sole environment for learning, development, and testing—every single day. Each interaction was a deliberate step, addressing a specific need, feature, or desired AI trait, ranging from hours-long problem-solving sessions to single-line code fixes, all without automation. No videos, guides, tools, or third-party services were used. The project emerged organically after thousands of conversations, with the developer relying solely on a console terminal and discovering AI as a JSON-like text-in, text-out system through persistent, genuine trial and error. The system was built entirely from first principles. 
 
-The system was created entirely from first principles. **No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used.** Every component was coded from scratch because the design required it. The project is currently closed-source and is being shared to showcase its capabilities and find collaborators. Every item, feature, and plugin is custom and modular.
+No third-party AI frameworks (e.g., LangChain), SDKs, tutorials, research papers, or standard development best practices were used. Every component was coded from scratch to meet the project's unique design requirements. Currently closed-source, M0dai is being shared to demonstrate its capabilities and attract collaborators. Every feature, plugin, and module is custom-built and modular, embodying the non-coder paradox: a system designed for non-coders must stem from a non-coder's mindset—intuitive, modular, and accessible, allowing clueless builders to hand off files, request features, and implement fixes across every aspect. Yet, only a coder can build such a system, despite a coder never truly being a non-coder, bridging this gap through relentless iteration and empathy for the non-technical perspective.
+
+ITERATION IS NOT RE-PROMPT AND RETRY, IT IS PURE PAINFUL PERSISTENCE AND LEARNING AND LUCK
 
 ## Agent Behavior, Consultants, and System Control
 The m0dai platform supports a layered AI Control, Server Mode, and Local OS executions.
