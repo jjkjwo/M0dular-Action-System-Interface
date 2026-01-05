@@ -1,1 +1,52 @@
-system.html
+<!-- system.html - System Components (Action M0dules/Commands/Memories/Agent Tools/Principles/Features) -->
+<!-- NOTE: Principles are displayed here AND in a separate principles.html card -->
+<!-- This duplication is intentional to provide multiple access points -->
+<div class="loader-data-section loader-list-card loader-actions-card">
+    <div class="loader-data-header">
+        <span class="loader-data-title" id="actionsTitle">System Components</span>
+    </div>
+    <!-- Tab Headers -->
+    <div class="loader-tabs-header">
+        <button class="loader-tab" id="actionsTab">
+            Action M0dules <span id="actionsTabCount" class="loader-tab-count"></span>
+        </button>
+        <button class="loader-tab" id="commandsTab">
+            Commands <span id="commandsTabCount" class="loader-tab-count"></span>
+        </button>
+        <button class="loader-tab" id="memoriesTab">
+            Memories <span id="memoriesTabCount" class="loader-tab-count"></span>
+        </button>
+        <button class="loader-tab" id="toolsTab">
+            Agent Tools <span id="toolsTabCount" class="loader-tab-count"></span>
+        </button>
+        <!-- DUPLICATE DISPLAY: Principles also appear in a separate standalone card (principles.html) -->
+        <button class="loader-tab" id="principlesTab">
+            Principles <span id="principlesTabCount" class="loader-tab-count"></span>
+        </button>
+        <!-- NEW FEATURES TAB - NOW ACTIVE BY DEFAULT -->
+        <button class="loader-tab active" id="featuresTab">
+            Features <span id="featuresTabCount" class="loader-tab-count"></span>
+        </button>
+    </div>
+    <!-- Tab Contents -->
+    <div class="loader-data-value loader-actions-list" id="actionsList" style="display: none;">
+        <span class="loading-dots">...</span>
+    </div>
+    <div class="loader-data-value loader-actions-list" id="commandsList" style="display: none;">
+        <span class="loading-dots">...</span>
+    </div>
+    <div class="loader-data-value loader-actions-list" id="memoriesList" style="display: none;">
+        <span class="loading-dots">...</span>
+    </div>
+    <div class="loader-data-value loader-actions-list" id="toolsList" style="display: none;">
+        <span class="loading-dots">...</span>
+    </div>
+    <!-- DUPLICATE DISPLAY: This shows the same principles as the standalone Principles card -->
+    <div class="loader-data-value loader-actions-list" id="principlesTabList" style="display: none;">
+        <span class="loading-dots">...</span>
+    </div>
+    <!-- NEW FEATURES TAB CONTENT - NOW VISIBLE BY DEFAULT -->
+    <div class="loader-data-value loader-actions-list" id="featuresTabList">
+        <span class="loading-dots">...</span>
+    </div>
+</div>

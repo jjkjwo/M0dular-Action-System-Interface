@@ -1,1 +1,45 @@
-wait.html
+<!-- wait.html - Self-contained waitlist modal -->
+<div id="waitlist-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10001; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 2rem; border-radius: 10px; max-width: 400px; width: 90%; position: relative;">
+        <button onclick="document.getElementById('waitlist-modal').style.display='none'" style="position: absolute; top: 0.75rem; right: 0.75rem; background: none; border: none; font-size: 1.75rem; color: #666; cursor: pointer;">×</button>
+        
+        <h2 style="margin-top: 0; margin-bottom: 1rem; color: #4a76a8; text-align: center;">Join the Waitlist</h2>
+        
+        <div id="waitlist-count" style="text-align: center; margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">
+            Loading...
+        </div>
+        
+        <form id="waitlist-form">
+            <div style="margin-bottom: 1.25rem;">
+                <label style="display: block; margin-bottom: 0.5rem; color: #666; font-weight: bold;">Name:</label>
+                <input type="text" id="waitlist-name" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 1.25rem;">
+                <label style="display: block; margin-bottom: 0.5rem; color: #666; font-weight: bold;">Email:</label>
+                <input type="email" id="waitlist-email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem; color: #666; font-weight: bold;">I want to be a:</label>
+                <select id="waitlist-type" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px;">
+                    <option value="">Select an option</option>
+                    <option value="contributor">Contributor (code, plugins, advice)</option>
+                    <option value="supporter">Supporter (funds, services)</option>
+                    <!-- #1: ADDED 'User' OPTION HERE -->
+                    <option value="user">User (General Use)</option>
+                </select>
+            </div>
+
+            <!-- #2: ADDED HIDDEN DONATE LINK CONTAINER -->
+            <div id="donate-link-container" style="display: none; text-align: center; margin-bottom: 1.5rem; background: #e3f2fd; padding: 1rem; border-radius: 5px;">
+                <p style="margin: 0 0 0.5rem 0; color: #4a76a8; font-weight: bold;">Thank you for your interest in contributing!</p>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=Z6WPJPH47LUKS" target="_blank" rel="noopener noreferrer" id="donate-link" style="color: #1e88e5; text-decoration: underline; font-weight: 600;">Donate to support the project</a>
+            </div>
+            
+            <button type="submit" style="background: #4a76a8; color: white; border: none; padding: 0.75rem 2rem; border-radius: 5px; cursor: pointer; font-size: 1rem; font-weight: bold; width: 100%;">Join Waitlist</button>
+            
+            <div id="waitlist-message" style="margin-top: 1rem; text-align: center; min-height: 1.2em;"></div>
+        </form>
+    </div>
+</div>

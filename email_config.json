@@ -1,1 +1,32 @@
-email_config.json
+{
+  "email": "PLACEHOLDER",
+  "password": "placeholder",
+  "smtp_servers": [
+    {
+      "name": "Gmail Primary",
+      "server": "smtp.gmail.com",
+      "port": 587,
+      "use_tls": true,
+      "use_ssl": false
+    },
+    {
+      "name": "Gmail SSL",
+      "server": "smtp.gmail.com",
+      "port": 465,
+      "use_tls": false,
+      "use_ssl": true
+    },
+    {
+      "name": "Gmail Alternative",
+      "server": "smtp.gmail.com",
+      "port": 2525,
+      "use_tls": true,
+      "use_ssl": false
+    }
+  ],
+  "connection_timeout": 10,
+  "port_test_timeout": 3,
+  "test_ports_before_smtp": true,
+  "try_all_servers": true,
+  "verbose_errors": true
+}

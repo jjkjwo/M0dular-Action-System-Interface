@@ -1,1 +1,47 @@
-wikipedia_config.json
+{
+  "auto_suggest": false,
+  "search_history": [
+    "somethign happened please",
+    "that show what",
+    "that still good",
+    "turn least based",
+    "another question then",
+    "user system sent",
+    "user dont worry",
+    "debug",
+    "debugging",
+    "persona artist intensity"
+  ],
+  "recent_articles": [
+    {
+      "title": "Catherine (video game)",
+      "summary": "Catherine is a puzzle video game developed by Atlus. The game was released for the PlayStation 3 and Xbox 360 in Japan and North America in 2011, in PAL regions by Deep Silver in 2012, and for Windows by Sega in 2019.",
+      "url": "https://en.wikipedia.org/wiki/Catherine_(video_game)",
+      "query": "persona artist intensity"
+    },
+    {
+      "title": "Mori Calliope",
+      "summary": "Mori Calliope (Japanese: \u68ee\u30ab\u30ea\u30aa\u30da, Hepburn: Mori Kariope) is a virtual YouTuber and singer affiliated with Cover Corporation's Hololive Production agency, who first debuted in September 2020 as a member of the Hololive English Myth unit.\n\n\n== Overview ==\nMori Calliope's fictional lore describes her as the \"Grim Reaper's first apprentice\" who, due to slow business, had to start a career as a VTuber and collect souls.",
+      "url": "https://en.wikipedia.org/wiki/Mori_Calliope",
+      "query": "persona artist intensity"
+    },
+    {
+      "title": "Smithereens (Black Mirror)",
+      "summary": "\"Smithereens\" is the second episode of the fifth series of the British science fiction anthology series Black Mirror. Written by series creator and showrunner Charlie Brooker and directed by James Hawes, it premiered on Netflix on 5 June 2019, alongside \"Striking Vipers\" and \"Rachel, Jack and Ashley Too\".",
+      "url": "https://en.wikipedia.org/wiki/Smithereens_(Black_Mirror)",
+      "query": "persona artist intensity"
+    },
+    {
+      "title": "Mariah Carey",
+      "summary": "Mariah Carey (  m\u0259-RY-\u0259;:\u200a0:01\u200a born March 27, 1969) is an American singer-songwriter, record producer, and actress. Dubbed the \"Songbird Supreme\" by Guinness World Records, Carey is known for her five-octave vocal range, melismatic singing style, signature use of the whistle register, and diva persona.",
+      "url": "https://en.wikipedia.org/wiki/Mariah_Carey",
+      "query": "persona artist intensity"
+    },
+    {
+      "title": "Lucid dream",
+      "summary": "In the psychology subfield of oneirology, a lucid dream is a type of dream wherein the dreamer realizes that they are dreaming during their dream. The capacity to have lucid dreams is a trainable cognitive skill.",
+      "url": "https://en.wikipedia.org/wiki/Lucid_dream",
+      "query": "persona artist intensity"
+    }
+  ]
+}

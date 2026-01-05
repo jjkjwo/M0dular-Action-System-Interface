@@ -1,1 +1,1 @@
-right-panel-3.js
+this was a private buisness page, now placeholder

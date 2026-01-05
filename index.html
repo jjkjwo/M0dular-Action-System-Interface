@@ -1,1 +1,633 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ==== Version 4.3 - Created by James O'kelly ==== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M0dular action interface - A flexible panel-based UI for AI interaction">
+    <meta name="theme-color" content="#4a76a8">
+    <title>M0dular Action Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="auth.css"> <!-- Added auth.css link -->
+    <!-- Preload critical JavaScript files for faster initialization -->
+    <link rel="preload" href="config.js" as="script">
+    <link rel="preload" href="panels.js" as="script">
+    <link rel="preload" href="framework.js" as="script">
+</head>
+<body>
+    <!-- Authentication Status Display - MOVED TO CHAT FOOTER -->
+
+    <!-- ============
+         MAIN APPLICATION CONTAINER
+         - Houses all panels, chat interface, and controls
+         - Uses flexbox layout with 4 panel areas + central chat
+         ============ -->
+    <div class="app-container" id="appContainer" role="application" aria-label="Modular Panel Interface">
+        
+        <!-- =================
+             TOP PANEL AREA
+             - Contains horizontal panel toggles and panel containers
+             - Panels: Commands, Actions, API Config, Controls, etc.
+             ================= -->
+        <div class="panel-area top-area" id="topArea" role="region" aria-label="Top panels">
+            <!-- Top Panel Toggle Buttons (11 panels) -->
+            <div class="panel-toggles top-toggles" id="topToggles" role="toolbar" aria-label="Top panel toggles">
+                <!-- Panel 1: Commands - Shows available system commands -->
+                <div class="panel-toggle" id="toggle-top-panel-1" data-target="top-panel-1" role="button" aria-controls="top-panel-1" aria-expanded="false" tabindex="0" title="Toggle Commands panel">
+                    <span class="toggle-arrow" aria-hidden="true">📝</span>
+                </div>
+                <!-- Panel 2: Actions - Lists all available actions -->
+                <div class="panel-toggle" id="toggle-top-panel-2" data-target="top-panel-2" role="button" aria-controls="top-panel-2" aria-expanded="false" tabindex="0" title="Toggle Actions panel">
+                    <span class="toggle-arrow" aria-hidden="true">🔌</span>
+                </div>
+                <!-- Panel 3: Active Actions - Shows currently running actions -->
+                <div class="panel-toggle" id="toggle-top-panel-3" data-target="top-panel-3" role="button" aria-controls="top-panel-3" aria-expanded="false" tabindex="0" title="Toggle Active Actions panel">
+                    <span class="toggle-arrow" aria-hidden="true">🟢</span>
+                </div>
+                <!-- Panel 4: API Configuration - External AI API integration -->
+                <div class="panel-toggle" id="toggle-top-panel-4" data-target="top-panel-4" role="button" aria-controls="top-panel-4" aria-expanded="false" tabindex="0" title="Toggle Add Your AI (API) panel">
+                    <span class="toggle-arrow" aria-hidden="true">🔑</span>
+                </div>
+                <!-- Panel 5: Core Manager - Core action settings -->
+                <div class="panel-toggle" id="toggle-top-panel-5" data-target="top-panel-5" role="button" aria-controls="top-panel-5" aria-expanded="false" tabindex="0" title="Toggle Core Manager panel">
+                    <span class="toggle-arrow" aria-hidden="true">🧰</span>
+                </div>
+                <!-- Panel 6: Filter Controls - Filter action behavior -->
+                <div class="panel-toggle" id="toggle-top-panel-6" data-target="top-panel-6" role="button" aria-controls="top-panel-6" aria-expanded="false" tabindex="0" title="Toggle Filter Controls panel">
+                    <span class="toggle-arrow" aria-hidden="true">🧹</span>
+                </div>
+                <!-- Panel 7: Emotions Tracker - Emotion visualization -->
+                <div class="panel-toggle" id="toggle-top-panel-7" data-target="top-panel-7" role="button" aria-controls="top-panel-7" aria-expanded="false" tabindex="0" title="Toggle Emotions Tracker panel">
+                    <span class="toggle-arrow" aria-hidden="true">😊</span>
+                </div>
+                <!-- Panel 8: Focus Controls - Prompt perturbation system -->
+                <div class="panel-toggle" id="toggle-top-panel-8" data-target="top-panel-8" role="button" aria-controls="top-panel-8" aria-expanded="false" tabindex="0" title="Toggle Focus Controls panel">
+                    <span class="toggle-arrow" aria-hidden="true">🧩</span>
+                </div>
+                <!-- Panel 9: Web Conversation Mode - Toggle conversation-only view -->
+                <div class="panel-toggle" id="toggle-top-panel-9" data-target="top-panel-9" role="button" aria-controls="top-panel-9" aria-expanded="false" tabindex="0" title="Toggle Web Conversation Mode panel">
+                    <span class="toggle-arrow" aria-hidden="true">💯</span>
+                </div>
+                <!-- Panel 10: CS Surf Game - Counter-Strike style surfing game -->
+                <div class="panel-toggle" id="toggle-top-panel-10" data-target="top-panel-10" role="button" aria-controls="top-panel-10" aria-expanded="false" tabindex="0" title="Toggle CS Surf Game panel">
+                    <span class="toggle-arrow" aria-hidden="true">🏄</span>
+                </div>
+                <!-- Panel 11: Lore Data - View and search world-building lore data -->
+                <div class="panel-toggle" id="toggle-top-panel-11" data-target="top-panel-11" role="button" aria-controls="top-panel-11" aria-expanded="false" tabindex="0" title="Toggle Lore Data panel">
+                    <span class="toggle-arrow" aria-hidden="true">📚</span>
+                </div>
+            </div>
+            <!-- Container for dynamically loaded top panel content -->
+            <div class="panel-container" id="topPanelContainer">
+                <!-- Panels inserted here by framework.js -->
+            </div>
+        </div>
+
+        <!-- ===================
+             MIDDLE SECTION: SIDEBARS + CHAT
+             - Left sidebar with vertical toggles
+             - Central chat interface
+             - Right sidebar with vertical toggles
+             =================== -->
+        <div class="middle-section" id="middleSection">
+            
+            <!-- ===== LEFT VERTICAL TOGGLE BAR ===== -->
+            <div class="vertical-toggles-container vertical-toggles-left" id="leftVerticalTogglesContainer">
+                <div class="panel-toggles left-toggles" id="leftToggles" role="toolbar" aria-label="Left panel toggles">
+                    <!-- Panel 1: Load/Edit Prompt (requires lvl3) -->
+                    <div class="panel-toggle" id="toggle-left-panel-1" data-target="left-panel-1" role="button" aria-controls="left-panel-1" aria-expanded="false" tabindex="0" title="Toggle Load/Edit Prompt panel">
+                        <span class="toggle-arrow" aria-hidden="true">📁</span>
+                    </div>
+                    <!-- Panel 2: Loopback - AI self-prompting loop -->
+                    <div class="panel-toggle" id="toggle-left-panel-2" data-target="left-panel-2" role="button" aria-controls="left-panel-2" aria-expanded="false" tabindex="0" title="Toggle Loopback panel">
+                        <span class="toggle-arrow" aria-hidden="true">🔄</span>
+                    </div>
+                    <!-- Panel 3: Wikipedia search/browse -->
+                    <div class="panel-toggle" id="toggle-left-panel-3" data-target="left-panel-3" role="button" aria-controls="left-panel-3" aria-expanded="false" tabindex="0" title="Toggle Wikipedia panel">
+                        <span class="toggle-arrow" aria-hidden="true">🌐</span>
+                    </div>
+                    <!-- Panel 4: YouTube search/watch -->
+                    <div class="panel-toggle" id="toggle-left-panel-4" data-target="left-panel-4" role="button" aria-controls="left-panel-4" aria-expanded="false" tabindex="0" title="Toggle YouTube panel">
+                        <span class="toggle-arrow" aria-hidden="true">📺</span>
+                    </div>
+                    <!-- Panel 5: Idea Incubator - Track addon ideas -->
+                    <div class="panel-toggle" id="toggle-left-panel-5" data-target="left-panel-5" role="button" aria-controls="left-panel-5" aria-expanded="false" tabindex="0" title="Toggle Idea Incubator panel">
+                        <span class="toggle-arrow" aria-hidden="true">💡</span>
+                    </div>
+                    <!-- Panel 6: Remote Connector - Legacy remote file connector -->
+                    <div class="panel-toggle" id="toggle-left-panel-6" data-target="left-panel-6" role="button" aria-controls="left-panel-6" aria-expanded="false" tabindex="0" title="Toggle Remote Connector panel">
+                        <span class="toggle-arrow" aria-hidden="true">🆙</span>
+                    </div>
+                    <!-- Panel 7: Feline Companion info -->
+                    <div class="panel-toggle" id="toggle-left-panel-7" data-target="left-panel-7" role="button" aria-controls="left-panel-7" aria-expanded="false" tabindex="0" title="Toggle Feline Companion panel">
+                        <span class="toggle-arrow" aria-hidden="true">🐈</span>
+                    </div>
+                    <!-- Panel 8: Referrals - Helpful resources -->
+                    <div class="panel-toggle" id="toggle-left-panel-8" data-target="left-panel-8" role="button" aria-controls="left-panel-8" aria-expanded="false" tabindex="0" title="Toggle Referrals panel">
+                        <span class="toggle-arrow" aria-hidden="true">🔗</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== LEFT SIDEBAR AREA ===== -->
+            <div class="sidebar-area left-area" id="leftArea" role="complementary" aria-label="Left sidebar">
+                <div class="panel-container" id="leftPanelContainer">
+                    <!-- Left panels inserted here by framework.js -->
+                </div>
+            </div>
+
+            <!-- ===================
+                 CENTRAL CHAT INTERFACE
+                 - Connection status
+                 - Chat messages area
+                 - Input controls (text, voice, TTS, sound)
+                 - Footer credits and toggles
+                 =================== -->
+            <div class="chat-container" id="chatContainer" role="main" aria-label="Chat interface">
+                <!-- Connection status indicator -->
+                <div id="connectionStatus" class="connection-status" role="status" aria-live="polite">
+                    Connecting to server...
+                </div>
+
+                <!-- Chat messages display area -->
+                <div class="chat-messages" id="chatMessages" role="log" aria-label="Chat messages"></div>
+
+                <!-- ===== USER INPUT SECTION ===== -->
+                <div class="chat-input" id="chatInputForm" role="form" aria-label="Message input">
+                    <!-- Multi-line text input -->
+                    <textarea id="userInput" placeholder="Type your message here..." aria-label="Message input field" rows="1"></textarea>
+
+                    <!-- Voice options (hands-free toggle) - Only visible when voice addon active -->
+                    <div class="voice-options" id="voiceOptions">
+                        <label for="handsFreeModeToggle" class="hands-free-toggle-container" id="handsFreeToggleContainer">
+                            <input type="checkbox" id="handsFreeModeToggle">
+                            <span class="hands-free-label">Hands-Free</span>
+                        </label>
+                    </div>
+
+                    <!-- Control Buttons (Order: Mic → TTS → Sound → Send) -->
+                    <button id="micToggleButton" aria-label="Toggle voice input" title="Toggle voice input">🎤</button>
+                    <button id="ttsToggleButton" aria-label="Toggle text-to-speech" title="Toggle text-to-speech">🔈</button>
+                    <button id="soundToggleButton" aria-label="Toggle background sounds" title="Toggle background sounds">🎵</button>
+                    <button id="sendButton" aria-label="Send message">Send</button>
+
+                    <!-- Voice recording indicator (hidden by default) -->
+                    <div id="recordingIndicator" class="recording-indicator hidden">
+                        <div class="pulse-ring"></div>
+                        <span class="status-text" id="recordingStatusText">Listening...</span>
+                    </div>
+
+                    <!-- Countdown timer for voice input (hidden by default) -->
+                    <div id="countdownTimer" class="countdown-timer hidden">
+                        <svg class="countdown-svg" viewBox="0 0 100 100">
+                            <circle class="countdown-track" cx="50" cy="50" r="45"></circle>
+                            <circle class="countdown-progress" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <span class="countdown-text" id="countdownTimerText">3</span>
+                    </div>
+                </div>
+
+                <!-- Footer: Credit and toggle links -->
+                <div id="creatorCredit" style="text-align: center; font-size: 12px; margin: 5px 0; opacity: 0.5; color: #666;">
+                    Created by James O'Kelly — powered by curiosity, signals, and principles forged through painful iteration.
+                </div>
+                
+                <!-- Footer Controls Wrapper -->
+                <div id="chat-footer-controls">
+                    <!-- Authentication Status Display (New Location) -->
+                    <div id="auth-status" class="auth-status-container">
+                        <span>Checking authentication...</span>
+                    </div>
+                    <!-- Footer toggle links -->
+                    <div id="footerToggles">
+                        <a href="#" id="toggleLogsLink">toggle logs</a>
+                        <a href="#" id="togglePanelsLink">toggle panels</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== RIGHT SIDEBAR AREA ===== -->
+            <div class="sidebar-area right-area" id="rightArea" role="complementary" aria-label="Right sidebar">
+                <div class="panel-container" id="rightPanelContainer">
+                    <!-- Right panels inserted here by framework.js -->
+                </div>
+            </div>
+
+            <!-- ===== RIGHT VERTICAL TOGGLE BAR ===== -->
+            <div class="vertical-toggles-container vertical-toggles-right" id="rightVerticalTogglesContainer">
+                <div class="panel-toggles right-toggles" id="rightToggles" role="toolbar" aria-label="Right panel toggles">
+                    <!-- Panel 1: Persona management -->
+                    <div class="panel-toggle" id="toggle-right-panel-1" data-target="right-panel-1" role="button" aria-controls="right-panel-1" aria-expanded="false" tabindex="0" title="Toggle Persona panel">
+                        <span class="toggle-arrow" aria-hidden="true">🤖</span>
+                    </div>
+                    <!-- Panel 2: Theme customization -->
+                    <div class="panel-toggle" id="toggle-right-panel-2" data-target="right-panel-2" role="button" aria-controls="right-panel-2" aria-expanded="false" tabindex="0" title="Toggle Theme panel">
+                        <span class="toggle-arrow" aria-hidden="true">⚙️</span>
+                    </div>
+                    <!-- Panel 3: Partner Features (utility - opens overlay) -->
+                    <div class="panel-toggle" id="toggle-right-partner-features" data-target="right-panel-3" role="button" aria-expanded="false" tabindex="0" title="Toggle Partner Features panel">
+                        <span class="toggle-arrow" aria-hidden="true">✨</span>
+                    </div>
+                    <!-- Panel 4: Back Button (utility - repeats AI's last reply) -->
+                    <div class="panel-toggle" id="toggle-right-repeat-reply" data-target="right-panel-4" role="button" aria-expanded="false" tabindex="0" title="Repeat AI's Last Reply">
+                        <span class="toggle-arrow" aria-hidden="true">⏪</span>
+                    </div>
+                    <!-- Panel 5: Word Block - Blocked words/censorship -->
+                    <div class="panel-toggle" id="toggle-right-panel-5" data-target="right-panel-5" role="button" aria-controls="right-panel-5" aria-expanded="false" tabindex="0" title="Toggle Word Block panel">
+                        <span class="toggle-arrow" aria-hidden="true">🔞</span>
+                    </div>
+                    <!-- Panel 7: Restart Button (utility - sends "start key" command) -->
+                    <div class="panel-toggle" id="button-restart-conversation" data-target="right-panel-7" role="button" tabindex="0" title="Restart Conversation">
+                        <span class="toggle-arrow" aria-hidden="true">♻️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================
+             BOTTOM PANEL AREA
+             - Contains horizontal panel toggles and panel containers
+             - Panels: Memory, Server Health, Controls, Preprompts, etc.
+             =================== -->
+        <div class="panel-area bottom-area" id="bottomArea" role="region" aria-label="Bottom panels">
+            <!-- Bottom Panel Toggle Buttons (8 panels) -->
+            <div class="panel-toggles bottom-toggles" id="bottomToggles" role="toolbar" aria-label="Bottom panel toggles">
+                <!-- Panel 1: Memory Manager -->
+                <div class="panel-toggle" id="toggle-bottom-panel-1" data-target="bottom-panel-1" role="button" aria-controls="bottom-panel-1" aria-expanded="false" tabindex="0" title="Toggle Memory Manager">
+                    <span class="toggle-arrow" aria-hidden="true">🧠</span>
+                </div>
+                <!-- Panel 2: Server Health - System performance metrics -->
+                <div class="panel-toggle" id="toggle-bottom-panel-2" data-target="bottom-panel-2" role="button" aria-controls="bottom-panel-2" aria-expanded="false" tabindex="0" title="Toggle Server Health panel">
+                    <span class="toggle-arrow" aria-hidden="true">📊</span>
+                </div>
+                <!-- Panel 3: Control Panel - Common commands -->
+                <div class="panel-toggle" id="toggle-bottom-panel-3" data-target="bottom-panel-3" role="button" aria-controls="bottom-panel-3" aria-expanded="false" tabindex="0" title="Toggle Control Panel">
+                    <span class="toggle-arrow" aria-hidden="true">🎛️</span>
+                </div>
+                <!-- Panel 4: Preprompts - Prompt templates -->
+                <div class="panel-toggle" id="toggle-bottom-panel-4" data-target="bottom-panel-4" role="button" aria-controls="bottom-panel-4" aria-expanded="false" tabindex="0" title="Toggle Preprompts panel">
+                    <span class="toggle-arrow" aria-hidden="true">💬</span>
+                </div>
+                <!-- Panel 5: Project Details - File summary and AI info -->
+                <div class="panel-toggle" id="toggle-bottom-panel-5" data-target="bottom-panel-5" role="button" aria-controls="bottom-panel-5" aria-expanded="false" tabindex="0" title="Toggle Project Details panel">
+                    <span class="toggle-arrow" aria-hidden="true">🔢</span>
+                </div>
+                <!-- Panel 6: Dirt Action Controls (Priority 9) -->
+                <div class="panel-toggle" id="toggle-bottom-panel-6" data-target="bottom-panel-6" role="button" aria-controls="bottom-panel-6" aria-expanded="false" tabindex="0" title="Toggle Dirt Action Controls panel">
+                    <span class="toggle-arrow" aria-hidden="true">💥</span>
+                </div>
+                <!-- Panel 7: Dynamic Persona (X) Controls (Priority 5) -->
+                <div class="panel-toggle" id="toggle-bottom-panel-7" data-target="bottom-panel-7" role="button" aria-controls="bottom-panel-7" aria-expanded="false" tabindex="0" title="Toggle Dynamic Persona (X) Controls panel">
+                    <span class="toggle-arrow" aria-hidden="true">🎭</span>
+                </div>
+                <!-- Panel 8: Silent-Structure Translator -->
+                <div class="panel-toggle" id="toggle-bottom-panel-8" data-target="bottom-panel-8" role="button" aria-controls="bottom-panel-8" aria-expanded="false" tabindex="0" title="Toggle Silent-Structure Translator">
+                    <span class="toggle-arrow" aria-hidden="true">🔠</span>
+                </div>
+            </div>
+            <!-- Container for dynamically loaded bottom panel content -->
+            <div class="panel-container" id="bottomPanelContainer">
+                <!-- Panels inserted here by framework.js -->
+            </div>
+        </div>
+
+        <!-- Mobile overlay (for potential future use) -->
+        <div class="panel-overlay" id="panelOverlay" role="button" aria-label="Close panels" tabindex="-1"></div>
+    </div> <!-- END OF app-container -->
+
+    <!-- ==========
+         LOADING SCREEN SECTION
+         ==========
+         IMPORTANT: This is a self-contained loading screen section.
+         - All loading screen HTML/CSS/JS should be placed here
+         - Use unique IDs and classes prefixed with 'loading-' to avoid conflicts
+         - The loading screen is removed from DOM after framework initialization
+         ========== -->
+    <div id="appLoader" class="app-loader">
+        <!-- Main loading container -->
+        <div class="loader-main-container">
+            <!-- Header section with spinner/checkmark and text -->
+            <div class="loader-header">
+                <!-- Spinning loader animation (will become checkmark) -->
+                <div class="loader-spinner-container">
+                    <div class="loader-spinner" id="loaderSpinner"></div>
+                    <div class="loader-checkmark" id="loaderCheckmark" style="display: none;">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="28" fill="none" stroke="#4CAF50" stroke-width="3"/>
+                            <path d="M15 30 L25 40 L45 20" fill="none" stroke="#4CAF50" stroke-width="4" 
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Loading status text -->
+                <div class="loader-text" id="loaderText">Loading M0dular Action Interface...</div>
+                
+                <!-- Continue button -->
+                <button id="continueButton" class="continue-button" disabled>Continue</button>
+            </div>
+            
+            <!-- Data display grid - now more dynamic -->
+            <div class="loader-data-wrapper">
+                <div class="loader-data-grid" id="loaderDataGrid">
+                    <!-- Primary Stats Row -->
+                    <div class="loader-primary-stats">
+                        <!-- News Notes System -->
+                        <div class="loader-data-section loader-stat-card loader-news-card">
+                            <div class="loader-data-value loader-news-container" id="newsContainer">
+                                <!-- News navigation controls -->
+                                <div class="loader-news-nav">
+                                    <button class="loader-news-nav-btn loader-news-prev" id="newsPrevBtn" aria-label="Previous news">‹</button>
+                                    <span class="loader-news-indicator" id="newsIndicator">1 / 3</span>
+                                    <button class="loader-news-nav-btn loader-news-next" id="newsNextBtn" aria-label="Next news">›</button>
+                                </div>
+                                
+                                <!-- News content area -->
+                                <div class="loader-news-content" id="newsContent">
+                                    <div class="loader-news-item active" data-news-id="2">
+                                        <div class="loader-news-date">May 30, 2025</div>
+                                        <div class="loader-news-title">M0d.AI Framework Update v4.2</div>
+                                        <div class="loader-news-body">Voice utilities module extracted for better modularity. New MeMatrix control panel added. Performance improvements across all subsystems.</div>
+                                    </div>
+                                    
+                                    <div class="loader-news-item" data-news-id="3">
+                                        <div class="loader-news-date">May 28, 2025</div>
+                                        <div class="loader-news-title">Community Milestone Reached</div>
+                                        <div class="loader-news-body">Over 14,000 conversations processed! Thank you to our growing community of advanced AI researchers and enthusiasts.</div>
+                                    </div>
+
+                                    <div class="loader-news-item" data-news-id="1">
+                                        <div class="loader-news-date">x</div>
+                                        <div class="loader-news-title">Visit:</div>
+                                       <div class="loader-news-body">
+  <a href="https://www.reddit.com/r/m0dai/" target="_blank" rel="noopener noreferrer">m0d.ai on reddit</a>
+</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Placeholder Section 2 (Target for m0d.png) -->
+                        <div class="loader-data-section loader-stat-card loader-placeholder-card-m0d-image">
+                            <div class="loader-data-header">
+                            </div>
+                            <div class="loader-data-value loader-m0d-text" id="apiConfig">
+                                m0d differently
+                            </div>
+                        </div>
+                        
+                        <!-- Login / Sponsor Space -->
+                        <div class="loader-data-section loader-stat-card loader-sponsor-card">
+                            <div class="loader-data-header">
+                                <span class="loader-data-title">AUTHENTICATION</span>
+                            </div>
+                            <div class="loader-data-value loader-sponsor-container" id="sponsorContainer">
+                                <button id="showLoginBtn" class="loader-login-button">
+                                    <span class="loader-login-icon" aria-hidden="true">👤</span>
+                                    Login
+                                </button>
+                                <button id="showWaitlistBtn" class="loader-login-button" style="margin-top: 0.5rem;">
+                                    <span class="loader-login-icon" aria-hidden="true">📋</span>
+                                    Join Waitlist
+                                </button>
+                                <div id="loaderAuthStatus" class="loader-auth-status">
+                                    <!-- Status text will be populated by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- MAIN HERO CARD PLACEHOLDER -->
+                    <div id="loader-mission-container">
+                        <!-- mission.html content will be loaded here -->
+                    </div>
+                    <!-- END MAIN HERO CARD PLACEHOLDER -->
+                    
+                    <!-- Content Grid Row -->
+                    <div class="loader-content-grid">
+                        <!-- SYSTEM COMPONENTS PLACEHOLDER (Full Width) -->
+                        <div id="loader-system-container" class="loader-full-width-container">
+                            <!-- system.html content will be loaded here -->
+                        </div>
+                        
+                        <!-- Features & Loops Section (NOW 2 COLUMNS) -->
+                        <div class="loader-features-section">
+                            <!-- USER FOCUSED PLACEHOLDER -->
+                            <div id="loader-user-container">
+                                <!-- user.html content will be loaded here -->
+                            </div>
+                            
+                            <!-- FEATURES CARD REMOVED - Now integrated into System Components tab -->
+                            
+                            <!-- LIVE STATUS PLACEHOLDER -->
+                            <div id="loader-status-container">
+                                <!-- status.html content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- ===== JAVASCRIPT LOADING ===== -->
+    <!-- Load configuration first (defines all panels, endpoints, settings) -->
+    <script src="config.js"></script>
+
+    <!-- Load panels module BEFORE framework (framework depends on PanelManager) -->
+    <script src="panels.js"></script>
+
+    <!-- Then load the framework (manages everything) -->
+    <script src="framework.js"></script>
+
+    <!-- Load voice/media utilities module -->
+    <script src="utilities.js"></script>
+    <!-- Load UI Controls module -->
+    <script src="uicontrols.js"></script>
+
+    <!-- Load AuthManager module -->
+    <script src="auth.js"></script>
+
+    <!-- Load Loading Screen module -->
+    <script src="loader.js"></script>
+
+    <!-- Initialize auth for main app -->
+    <script>
+    if (typeof authManager !== 'undefined') {
+        authManager.initializeAuth();
+    }
+    </script>
+
+    <!-- Progressive enhancement and loading screen logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ===== KEYBOARD NAVIGATION FOR TOGGLE BUTTONS =====
+            document.querySelectorAll('.panel-toggle').forEach(toggle => {
+                toggle.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggle.click();
+                    }
+                });
+            });
+
+            // ===== LOADING SCREEN LOGIC =====
+            const appLoader = document.getElementById('appLoader');
+            const continueButton = document.getElementById('continueButton');
+            
+            if (appLoader && continueButton) {
+                // When the framework's components are loaded, enable the continue button.
+                Framework.on('componentsInitialized', () => {
+                    console.log('Framework: All components initialized. Enabling continue button.');
+                    
+                    continueButton.classList.add('ready');
+                    continueButton.disabled = false;
+                    continueButton.focus();
+                });
+
+                // The main `authChange` event is now handled globally and robustly by framework.js.
+                // We no longer need a separate, potentially buggy listener here.
+
+                // The continue button is simple: it just hides the loader.
+                // It does not need to handle auth or loading chat, as the framework now does this automatically.
+                continueButton.addEventListener('click', () => {
+                    console.log('User clicked Continue. Fading out loader.');
+                    appLoader.style.opacity = '0';
+                    setTimeout(() => {
+                        if (appLoader.parentNode) { 
+                           appLoader.remove();
+                        }
+                        const userInput = document.getElementById('userInput');
+                        if (userInput) {
+                            userInput.focus();
+                        }
+                        // No need to load chat here. The authChange event in framework.js
+                        // has already handled this or will handle it when the user logs in.
+                    }, 500); 
+                });
+            } else {
+                console.error('Loader or continue button not found. Loader will not function as intended.');
+            }
+        });
+
+        // The global `authChange` handler in `framework.js` is now the single source of truth
+        // for loading chat content after authentication status is known.
+        // The old, buggy handler that was here has been removed.
+    </script>
+
+    <!-- Add waitlist modal and button handler -->
+    <script>
+    // Load waitlist modal
+    fetch('wait.html').then(r => r.text()).then(html => {
+        document.body.insertAdjacentHTML('beforeend', html);
+        
+        // NOW that the HTML is in the DOM, we can attach the event listeners and fetch the count.
+        const waitlistModal = document.getElementById('waitlist-modal');
+        const waitlistForm = document.getElementById('waitlist-form');
+        const waitlistTypeSelect = document.getElementById('waitlist-type');
+        const donateContainer = document.getElementById('donate-link-container');
+
+        // #3: ADDED - Logic to close the modal on background click
+        if (waitlistModal) {
+            waitlistModal.addEventListener('click', (e) => {
+                // If the clicked target is the modal background itself, not its content
+                if (e.target === waitlistModal) {
+                    waitlistModal.style.display = 'none';
+                }
+            });
+        }
+        
+        // #2: REFINED - Show the donate link for EITHER contributor or supporter
+        if (waitlistTypeSelect && donateContainer) {
+            waitlistTypeSelect.addEventListener('change', (e) => {
+                const selectedValue = e.target.value;
+                if (selectedValue === 'contributor' || selectedValue === 'supporter') { // MODIFIED: Check for both roles
+                    donateContainer.style.display = 'block';
+                } else {
+                    donateContainer.style.display = 'none';
+                }
+            });
+        }
+        
+        // Attach listener to the form
+        if (waitlistForm) {
+            waitlistForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const nameField = document.getElementById('waitlist-name');
+                const emailField = document.getElementById('waitlist-email');
+                const typeField = document.getElementById('waitlist-type');
+                const messageEl = document.getElementById('waitlist-message');
+                
+                if (!nameField || !emailField || !typeField || !messageEl) {
+                    console.error('[WAITLIST] Form fields not found!');
+                    if (messageEl) messageEl.textContent = 'Form error - missing fields';
+                    return;
+                }
+                
+                const data = {
+                    name: nameField.value.trim(),
+                    email: emailField.value.trim(),
+                    type: typeField.value
+                };
+                
+                try {
+                    const response = await fetch('/api/waitlist/join', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        messageEl.style.color = '#4CAF50';
+                        messageEl.textContent = 'Successfully joined the waitlist!';
+                        waitlistForm.reset();
+                        // Hide the donate link on successful submission
+                        if(donateContainer) donateContainer.style.display = 'none';
+                        document.getElementById('waitlist-count').textContent = `${result.count || 0} people already on the waitlist`;
+                        setTimeout(() => {
+                            if (waitlistModal) waitlistModal.style.display = 'none';
+                            messageEl.textContent = '';
+                        }, 2000);
+                    } else {
+                        messageEl.style.color = '#dc3545';
+                        messageEl.textContent = result.error || 'Failed to join waitlist';
+                    }
+                } catch (error) {
+                    messageEl.style.color = '#dc3545';
+                    messageEl.textContent = 'Network error. Please try again.';
+                }
+            });
+        }
+        
+        // Fetch the initial count
+        fetch('/api/waitlist/count')
+            .then(r => r.json())
+            .then(data => {
+                const countEl = document.getElementById('waitlist-count');
+                if (countEl) {
+                    countEl.textContent = `${data.count || 0} people already on the waitlist`;
+                }
+            })
+            .catch(() => {
+                const countEl = document.getElementById('waitlist-count');
+                if (countEl) {
+                    countEl.textContent = 'Join our growing waitlist!';
+                }
+            });
+        
+        // Setup the button that opens the modal
+        const btn = document.getElementById('showWaitlistBtn');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                if (waitlistModal) waitlistModal.style.display = 'flex';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

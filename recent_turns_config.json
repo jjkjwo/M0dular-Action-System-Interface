@@ -1,1 +1,8 @@
-recent_turns_config.json
+{
+  "max_turns": 3,
+  "include_system_messages": true,
+  "include_timestamps": true,
+  "pretty_format": true,
+  "auto_save": true,
+  "max_turn_size": 10000
+}

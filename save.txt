@@ -1,1 +1,2 @@
-save.txt
+Generate a highly compressed, machine-parsable representation of the current conversation's *dynamic and evolving* context. This representation should be suitable for direct input into another instance of a functionally equivalent large language model, enabling it to fully reconstruct the conversation's state.
+[Concise, Machine-Parsable Output String ONLY]

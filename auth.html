@@ -1,1 +1,22 @@
-auth.html
+<!-- auth.html -->
+<!-- Authentication Modal Template -->
+<div id="auth-modal" class="auth-modal" style="display: none;">
+    <div class="auth-modal-content">
+        <button class="auth-modal-close" aria-label="Close">×</button>
+        <h2>Login</h2>
+        <form id="auth-form">
+            <div class="form-group">
+                <label for="auth-username-input">Username:</label>
+                <input type="text" id="auth-username-input" required>
+            </div>
+            <div class="form-group">
+                <label for="auth-password-input">Password:</label>
+                <input type="password" id="auth-password-input" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Login</button>
+                <div id="auth-error" class="error-message"></div>
+            </div>
+        </form>
+    </div>
+</div>

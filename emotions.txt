@@ -1,1 +1,12 @@
-emotions.txt
+# Conversation Emotions Tracker
+# Format: timestamp|user/ai|emotion1,emotion2,...
+2025-07-10 04:00:40|user|neutral
+2025-07-10 04:00:47|user|neutral,joy,anticipation
+2025-07-10 04:01:49|user|neutral
+2025-07-10 04:01:49|assistant|neutral
+2025-07-10 04:02:05|user|neutral
+2025-07-10 04:02:05|assistant|joy
+2025-07-10 04:02:24|user|neutral,anticipation,gratitude
+2025-07-10 04:02:25|assistant|neutral
+2025-07-10 04:02:33|user|neutral
+2025-07-10 04:02:33|assistant|neutral

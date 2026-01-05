@@ -1,1 +1,268 @@
-memory_data.json
+{
+  "conversations": {},
+  "facts": {
+    "user": {
+      "favorite-color": {
+        "value": "blue",
+        "timestamp": "2025-04-04T20:53:39.052854"
+      },
+      "sound-background-rain": {
+        "value": "https://www.soundjay.com/nature/rain-02.wav",
+        "timestamp": "2025-04-28T05:00:01.000000"
+      },
+      "music-electronic": {
+        "value": "https://www.soundjay.com/free-music/sounds/cautious-path-01.mp3",
+        "timestamp": "2025-04-28T05:00:02.000000"
+      },
+      "sound-effects-fart": {
+        "value": "https://www.soundjay.com/human/fart-02.wav",
+        "timestamp": "2025-04-28T05:00:03.000000"
+      },
+      "sound-phone-disconnect-1": {
+        "value": "https://www.soundjay.com/phone/phone-disconnect-1.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-kids-playing-1": {
+        "value": "https://www.soundjay.com/ambient/kids-playing-1.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-restaurant-1": {
+        "value": "https://www.soundjay.com/ambient/restaurant-1.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "music-destination-01": {
+        "value": "https://www.soundjay.com/free-music/destination-01.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-campfire-1": {
+        "value": "https://www.soundjay.com/nature/campfire-1.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-rain-03": {
+        "value": "https://www.soundjay.com/nature/rain-03.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-rippling-water-1": {
+        "value": "https://www.soundjay.com/nature/rippling-water-1.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-wind-breeze-01": {
+        "value": "https://www.soundjay.com/nature/wind-breeze-01.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-baby-crying-01": {
+        "value": "https://www.soundjay.com/human/baby-crying-01.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-wooden-stairs-1": {
+        "value": "https://www.soundjay.com/footsteps/wooden-stairs-1.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-man-giggling-02": {
+        "value": "https://www.soundjay.com/human/man-giggling-02.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-sneezing-1": {
+        "value": "https://www.soundjay.com/human/sneezing-1.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-heartbeat-03": {
+        "value": "https://www.soundjay.com/human/heartbeat-03.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-crowd-talking-10": {
+        "value": "https://www.soundjay.com/human/crowd-talking-10.mp3",
+        "timestamp": "2024-05-06T19:54:19.467817"
+      },
+      "sound-small-bell-ring-01a": {
+        "value": "https://www.soundjay.com/misc/sounds/small-bell-ring-01a.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-01a": {
+        "value": "https://www.soundjay.com/button/sounds/beep-01a.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-07": {
+        "value": "https://www.soundjay.com/button/sounds/beep-07.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-09": {
+        "value": "https://www.soundjay.com/button/sounds/button-09.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-7": {
+        "value": "https://www.soundjay.com/button/sounds/button-7.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-10": {
+        "value": "https://www.soundjay.com/button/sounds/button-10.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-4": {
+        "value": "https://www.soundjay.com/button/sounds/button-4.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-bell-ring-01": {
+        "value": "https://www.soundjay.com/misc/sounds/bell-ring-01.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-bell-ring-02": {
+        "value": "https://www.soundjay.com/misc/sounds/bell-ring-02.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-small-bell-ring-02a": {
+        "value": "https://www.soundjay.com/misc/sounds/small-bell-ring-02a.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-01": {
+        "value": "https://www.soundjay.com/button/sounds/beep-01.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-02": {
+        "value": "https://www.soundjay.com/button/sounds/beep-02.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-03": {
+        "value": "https://www.soundjay.com/button/sounds/beep-03.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-04": {
+        "value": "https://www.soundjay.com/button/sounds/beep-04.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-05": {
+        "value": "https://www.soundjay.com/button/sounds/beep-05.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-06": {
+        "value": "https://www.soundjay.com/button/sounds/beep-06.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-08": {
+        "value": "https://www.soundjay.com/button/sounds/beep-08.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-09": {
+        "value": "https://www.soundjay.com/button/sounds/beep-09.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-10": {
+        "value": "https://www.soundjay.com/button/sounds/beep-10.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-28": {
+        "value": "https://www.soundjay.com/button/sounds/beep-28.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-beep-29": {
+        "value": "https://www.soundjay.com/button/sounds/beep-29.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-1": {
+        "value": "https://www.soundjay.com/button/sounds/button-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-2": {
+        "value": "https://www.soundjay.com/button/sounds/button-2.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-3": {
+        "value": "https://www.soundjay.com/button/sounds/button-3.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-5": {
+        "value": "https://www.soundjay.com/button/sounds/button-5.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-6": {
+        "value": "https://www.soundjay.com/button/sounds/button-6.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-button-8": {
+        "value": "https://www.soundjay.com/button/sounds/button-8.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-click-1": {
+        "value": "https://www.soundjay.com/button/sounds/click-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-click-2": {
+        "value": "https://www.soundjay.com/button/sounds/click-2.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-mouse-click-1": {
+        "value": "https://www.soundjay.com/button/sounds/mouse-click-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-phone-1": {
+        "value": "https://www.soundjay.com/communication/sounds/phone-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-phone-ring-1": {
+        "value": "https://www.soundjay.com/communication/sounds/phone-ring-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-phone-ring-2": {
+        "value": "https://www.soundjay.com/communication/sounds/phone-ring-2.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-phone-ring-3": {
+        "value": "https://www.soundjay.com/communication/sounds/phone-ring-3.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-rain-01": {
+        "value": "https://www.soundjay.com/nature/sounds/rain-01.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-rain-02-mp3": {
+        "value": "https://www.soundjay.com/nature/sounds/rain-02.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-wind-01": {
+        "value": "https://www.soundjay.com/nature/sounds/wind-01.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-wind-02": {
+        "value": "https://www.soundjay.com/nature/sounds/wind-02.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-water-drop-1": {
+        "value": "https://www.soundjay.com/nature/sounds/water-drop-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-water-drop-2": {
+        "value": "https://www.soundjay.com/nature/sounds/water-drop-2.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-door-1": {
+        "value": "https://www.soundjay.com/household/sounds/door-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-door-2": {
+        "value": "https://www.soundjay.com/household/sounds/door-2.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-door-open-1": {
+        "value": "https://www.soundjay.com/household/sounds/door-open-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-door-close-1": {
+        "value": "https://www.soundjay.com/household/sounds/door-close-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-car-1": {
+        "value": "https://www.soundjay.com/transportation/sounds/car-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-car-engine-1": {
+        "value": "https://www.soundjay.com/transportation/sounds/car-engine-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      },
+      "sound-train-1": {
+        "value": "https://www.soundjay.com/transportation/sounds/train-1.mp3",
+        "timestamp": "2024-05-06T19:54:20.129994"
+      }
+    }
+  },
+  "preferences": {}
+}

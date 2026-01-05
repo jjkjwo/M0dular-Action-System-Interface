@@ -1,1 +1,22 @@
-key_history.json
+[
+  {
+    "key": "placeholder",
+    "provider": "gemini",
+    "timestamp": "2025-04-11T22:41:44.315879",
+    "model": "gemini-2.0-flash-thinking-exp-01-21"
+  },
+  {
+    "key": "placeholder",
+    "provider": "gemini",
+    "timestamp": "2025-04-08T17:01:08.780012",
+    "model": "gemini-2.0-flash-thinking-exp-01-21"
+  },
+  {
+    "key": "placeholder",
+    "timestamp": "2025-04-04T06:00:36.284718"
+  },
+  {
+    "key": "test",
+    "timestamp": "2025-04-04T05:59:27.103897"
+  }
+]

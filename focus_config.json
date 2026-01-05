@@ -1,1 +1,59 @@
-focus_config.json
+{
+  "features": {
+    "typos": true,
+    "emotions": true,
+    "expletives": false
+  },
+  "probability": 0.3,
+  "typo_config": {
+    "probability": 0.5,
+    "max_typos": 1,
+    "preserve_keywords": true
+  },
+  "emotion_config": {
+    "probability": 0.4,
+    "markers": [
+      "hmm",
+      "wow",
+      "ugh",
+      "sigh",
+      "huh",
+      "hmph",
+      "ah",
+      "oh",
+      "geez",
+      "whoa",
+      "yikes",
+      "sheesh",
+      "meh",
+      "eh",
+      "oof"
+    ]
+  },
+  "expletive_config": {
+    "probability": 0.1,
+    "words": [
+      "damn",
+      "heck",
+      "darn",
+      "shoot",
+      "crap"
+    ]
+  },
+  "triggers": {
+    "keywords": {
+      "explain": 0.4,
+      "stuck": 0.6,
+      "try again": 0.5,
+      "not working": 0.6,
+      "confused": 0.5,
+      "help": 0.3
+    },
+    "stress_indicators": {
+      "multiple_punctuation": 0.5,
+      "all_caps": 0.6,
+      "repetition": 0.7
+    }
+  },
+  "logging": true
+}

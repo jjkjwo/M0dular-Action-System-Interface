@@ -1,1 +1,241 @@
-actions.json
+{
+  "lvl3": {
+    "script_file": "lvl3.py",
+    "priority": 1,
+    "is_active_by_default": true,
+    "description": "Saves last AI reply as timestamp file."
+  },
+  "dataflow": {
+    "script_file": "dataflow.py",
+    "priority": 3,
+    "is_active_by_default": true,
+    "description": "Modern toolkit for agent data interaction and data saving."
+  },
+  "log_reader": {
+    "script_file": "log_reader.py",
+    "priority": 2,
+    "is_active_by_default": true,
+    "description": "Allows AI/agents to search and examine recent conversation logs."
+  },
+  "resend": {
+    "script_file": "resend.py",
+    "priority": 2.5,
+    "is_active_by_default": true,
+    "description": "Handles resending and reprompting."
+  },
+  "auth": {
+    "script_file": "auth.py",
+    "priority": 3,
+    "is_active_by_default": true,
+    "description": "Authentication and authorization system for web interface access control."
+  },
+  "aware": {
+    "script_file": "aware.py",
+    "priority": 5.5,
+    "is_active_by_default": true,
+    "description": "Informs AI about features, such as the goal agent capabilities and playing sounds, when keywords are detected"
+  },
+  "voice": {
+    "script_file": "voice.py",
+    "priority": 6,
+    "is_active_by_default": true,
+    "description": "Enables Text-To-Speech for AI responses. (Terminal)(Front End TTS Switch)"
+  },
+  "recent_turns": {
+    "script_file": "recent_turns.py",
+    "priority": 8,
+    "is_active_by_default": true,
+    "description": "Maintains rolling history of last N conversation turns"
+  },
+  "memory": {
+    "script_file": "memory.py",
+    "priority": 10,
+    "is_active_by_default": true,
+    "description": "Manages long-term memories, feeding relevant info to the AI based on keywords."
+  },
+  "principles": {
+    "script_file": "principles.py",
+    "priority": 10.3,
+    "is_active_by_default": true,
+    "description": "Monitors AI responses for ME PRINCIPLES violations and provides immediate feedback via advisory system."
+  },
+  "advisory": {
+    "script_file": "advisory.py",
+    "priority": 10.5,
+    "is_active_by_default": true,
+    "description": "Central advisory system for inter-addon communication. Collects and injects advisories from other addons."
+  },
+  "core": {
+    "script_file": "core.py",
+    "priority": 0,
+    "is_active_by_default": true,
+    "description": "Core action: Executes first, monitors other actions, enables speakforuser and ai system manipulation."
+  },
+  "think_mode": {
+    "script_file": "think_mode.py",
+    "priority": 2,
+    "is_active_by_default": true,
+    "description": "AI multi-turn thinking mode - allows AI to refine responses through multiple internal turns before presenting to user."
+  },
+  "placeholder_action": {
+    "script_file": "placeholder_action.py",
+    "priority": 5.0,
+    "is_active_by_default": true,
+    "description": "A template and educational addon to demonstrate system best practices for AI-assisted development."
+  },
+  "karma": {
+    "script_file": "karma.py",
+    "priority": 7,
+    "is_active_by_default": true,
+    "description": "Karma tracking system - monitors user feedback (+1/-1) and influences AI behavior"
+  },
+  "health_observer_ss1": {
+    "script_file": "health_observer_ss1.py",
+    "priority": -1,
+    "is_active_by_default": true,
+    "description": "Silent Structure 1: A pure observer that safely monitors system state by reading files."
+  },
+  "health_analyzer_ss2": {
+    "script_file": "health_analyzer_ss2.py",
+    "priority": 99,
+    "is_active_by_default": true,
+    "description": "Silent Structure 2: Analyzes data from SS1 and sends health advisories to the AI when needed."
+  },
+  "web_input": {
+    "script_file": "web_input.py",
+    "priority": 4,
+    "is_active_by_default": false,
+    "description": "Reads user input from a web interface instead of the console."
+  },
+  "flooring": {
+    "script_file": "flooring.py",
+    "priority": 5.0,
+    "is_active_by_default": false,
+    "description": "Floor covering calculator for sales - handles carpet, tile, plank calculations with waste factors and material requirements."
+  },
+  "jjk": {
+    "script_file": "jjk.py",
+    "priority": 0.5001,
+    "is_active_by_default": false,
+    "description": "High-Privilege Progenitor authentication and system override."
+  },
+  "back": {
+    "script_file": "back.py",
+    "priority": 2,
+    "is_active_by_default": false,
+    "description": "Sends the last AI reply back to the AI as the user's turn."
+  },
+  "ok": {
+    "script_file": "ok.py",
+    "priority": 3,
+    "is_active_by_default": false,
+    "description": "Triggers actions based on specific keywords in user input."
+  },
+  "update": {
+    "script_file": "update.py",
+    "priority": 4,
+    "is_active_by_default": false,
+    "local_path_base": "",
+    "description": "Handles file transfers between client and server."
+  },
+  "x": {
+    "script_file": "x.py",
+    "priority": 5,
+    "is_active_by_default": false,
+    "description": "Selects and potentially intensifies a random persona for the AI."
+  },
+  "focus": {
+    "script_file": "focus.py",
+    "priority": 5.5,
+    "is_active_by_default": false,
+    "description": "Prompt Perturbation Layer - strategically injects subtle variations to influence AI responses"
+  },
+  "controls": {
+    "script_file": "controls.py",
+    "priority": 6,
+    "is_active_by_default": false,
+    "description": "Parses AI commands ([CONTROL:...]) and passes them to the interface or executes locally. Enables ai ui manipulation."
+  },
+  "block": {
+    "script_file": "block.py",
+    "priority": 6.5,
+    "is_active_by_default": false,
+    "description": "Censors specific configured words in the conversation."
+  },
+  "filter": {
+    "script_file": "filter.py",
+    "priority": 7,
+    "is_active_by_default": false,
+    "description": "Filters or censors sensitive information from logs."
+  },
+  "newfilter": {
+    "script_file": "newfilter.py",
+    "priority": 7,
+    "is_active_by_default": false,
+    "description": "Conversational Mode (Terminal): Hides system messages, showing only user/AI turns."
+  },
+  "sms": {
+    "script_file": "sms.py",
+    "priority": 8,
+    "is_active_by_default": false,
+    "description": "Sends SMS messages using the Twilio API."
+  },
+  "emails": {
+    "script_file": "emails.py",
+    "priority": 8,
+    "is_active_by_default": false,
+    "description": "Gmail integration for sending emails via Google API with OAuth2 authentication."
+  },
+  "youtube_action": {
+    "script_file": "youtube_action.py",
+    "priority": 8,
+    "is_active_by_default": false,
+    "description": "Suggests YouTube videos relevant to the conversation (requires API key)."
+  },
+  "wiki_action": {
+    "script_file": "wiki_action.py",
+    "priority": 8,
+    "is_active_by_default": false,
+    "description": "Suggests Wikipedia articles relevant to the conversation."
+  },
+  "lore": {
+    "script_file": "lore.py",
+    "priority": 8,
+    "is_active_by_default": false,
+    "description": "World Builder for D&D and storytellers."
+  },
+  "emotions": {
+    "script_file": "emotions.py",
+    "priority": 9,
+    "is_active_by_default": false,
+    "description": "Monitors and tracks the sentiment and emotional tone of the conversation."
+  },
+  "dirt": {
+    "script_file": "dirt.py",
+    "priority": 9,
+    "is_active_by_default": false,
+    "description": "Applies a predefined, static persona to the AI."
+  },
+  "prompts": {
+    "script_file": "prompts.py",
+    "priority": 12,
+    "is_active_by_default": false,
+    "description": "Smart Whiteboard - persistent behavioral instructions and tactical nudges for the AI. NOT a template system!"
+  },
+  "persona": {
+    "script_file": "persona.py",
+    "priority": 11,
+    "is_active_by_default": false,
+    "description": "Allows users to define and manage different AI personas."
+  },
+  "sandbox": {
+    "script_file": "sandbox.py",
+    "priority": 50,
+    "is_active_by_default": false,
+    "description": "Provides a sandboxed environment for user-AI experimentation with simple operations and scripting.",
+    "required_system_functions": [
+      "user_notification",
+      "get_action_obj"
+    ]
+  }
+}

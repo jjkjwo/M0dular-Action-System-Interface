@@ -1,1 +1,786 @@
-agent_tools.json
+{
+  "metadata": {
+    "exported_at": "2025-07-13T00:55:39.992799",
+    "total_tools": 54,
+    "description": "Available tools for the V-Agent system"
+  },
+  "tools": {
+    "message_user": {
+      "name": "message_user",
+      "description": "Send a direct message to user (AI won't remember this).",
+      "parameters": [
+        "message"
+      ],
+      "category": "communication"
+    },
+    "pipeline_message": {
+      "name": "pipeline_message",
+      "description": "Send message through pipeline to AI (AI will remember this).",
+      "parameters": [
+        "message"
+      ],
+      "category": "communication"
+    },
+    "speak_for_user": {
+      "name": "speak_for_user",
+      "description": "Submit input as if it came from the user (speakforuser).",
+      "parameters": [
+        "message"
+      ],
+      "category": "communication"
+    },
+    "send_command": {
+      "name": "send_command",
+      "description": "Send a generic system command (use specific tools if available).",
+      "parameters": [
+        "command"
+      ],
+      "category": "system_commands"
+    },
+    "control_action": {
+      "name": "control_action",
+      "description": "Start or stop a system action/module.",
+      "parameters": [
+        "action",
+        "operation"
+      ],
+      "category": "system_commands"
+    },
+    "fix_response": {
+      "name": "fix_response",
+      "description": "Load the last saved AI response for iteration.",
+      "parameters": [],
+      "category": "system_commands"
+    },
+    "set_context": {
+      "name": "set_context",
+      "description": "Store a value in the AGENT'S PERSONAL short-term context.",
+      "parameters": [
+        "key",
+        "value"
+      ],
+      "category": "memory_management"
+    },
+    "get_context": {
+      "name": "get_context",
+      "description": "Retrieve a value from the AGENT'S PERSONAL short-term context.",
+      "parameters": [
+        "key"
+      ],
+      "category": "memory_management"
+    },
+    "analyze_history": {
+      "name": "analyze_history",
+      "description": "Analyze patterns in the AGENT'S GOAL HISTORY.",
+      "parameters": [
+        "pattern"
+      ],
+      "category": "memory_management"
+    },
+    "memory_store_fact": {
+      "name": "memory_store_fact",
+      "description": "Store a fact in SYSTEM-WIDE long-term memory.",
+      "parameters": [
+        "fact",
+        "keywords"
+      ],
+      "category": "memory_management"
+    },
+    "memory_get_fact": {
+      "name": "memory_get_fact",
+      "description": "Retrieve facts from SYSTEM-WIDE memory.",
+      "parameters": [
+        "keywords"
+      ],
+      "category": "memory_management"
+    },
+    "memory_list_facts": {
+      "name": "memory_list_facts",
+      "description": "List all facts stored in SYSTEM-WIDE memory.",
+      "parameters": [],
+      "category": "memory_management"
+    },
+    "memory_delete_fact": {
+      "name": "memory_delete_fact",
+      "description": "Delete a fact from system memory.",
+      "parameters": [
+        "keywords"
+      ],
+      "category": "memory_management"
+    },
+    "persona_use": {
+      "name": "persona_use",
+      "description": "Switch to a specific AI persona.",
+      "parameters": [
+        "persona_name"
+      ],
+      "category": "persona_and_prompts"
+    },
+    "persona_list": {
+      "name": "persona_list",
+      "description": "List available AI personas.",
+      "parameters": [],
+      "category": "persona_and_prompts"
+    },
+    "persona_info": {
+      "name": "persona_info",
+      "description": "Get information about a specific persona.",
+      "parameters": [
+        "persona_name"
+      ],
+      "category": "persona_and_prompts"
+    },
+    "prompt_use": {
+      "name": "prompt_use",
+      "description": "Activate a system prompt.",
+      "parameters": [
+        "prompt_name"
+      ],
+      "category": "persona_and_prompts"
+    },
+    "prompt_list": {
+      "name": "prompt_list",
+      "description": "List all available system prompts.",
+      "parameters": [],
+      "category": "persona_and_prompts"
+    },
+    "prompt_active": {
+      "name": "prompt_active",
+      "description": "Check which system prompt is active.",
+      "parameters": [],
+      "category": "persona_and_prompts"
+    },
+    "prompt_show": {
+      "name": "prompt_show",
+      "description": "Show the content of a specific system prompt.",
+      "parameters": [
+        "prompt_name"
+      ],
+      "category": "persona_and_prompts"
+    },
+    "check_actions": {
+      "name": "check_actions",
+      "description": "Check which system actions/modules are active.",
+      "parameters": [],
+      "category": "information"
+    },
+    "actions_info": {
+      "name": "actions_info",
+      "description": "Get information about available system actions.",
+      "parameters": [],
+      "category": "information"
+    },
+    "emotions_status": {
+      "name": "emotions_status",
+      "description": "Check current emotional analysis.",
+      "parameters": [],
+      "category": "information"
+    },
+    "emotions_reset": {
+      "name": "emotions_reset",
+      "description": "Reset the emotional analysis data.",
+      "parameters": [],
+      "category": "information"
+    },
+    "api_status": {
+      "name": "api_status",
+      "description": "Check AI API usage and limits.",
+      "parameters": [],
+      "category": "information"
+    },
+    "api_switch_provider": {
+      "name": "api_switch_provider",
+      "description": "Switch the active AI API provider.",
+      "parameters": [
+        "provider_name"
+      ],
+      "category": "information"
+    },
+    "api_reset_counter": {
+      "name": "api_reset_counter",
+      "description": "Reset the API usage token counter.",
+      "parameters": [],
+      "category": "information"
+    },
+    "principles_list": {
+      "name": "principles_list",
+      "description": "List the guiding principles.",
+      "parameters": [],
+      "category": "information"
+    },
+    "principles_report": {
+      "name": "principles_report",
+      "description": "Get a report on principle adherence.",
+      "parameters": [],
+      "category": "information"
+    },
+    "advisory_status": {
+      "name": "advisory_status",
+      "description": "Get the current status of system advisories.",
+      "parameters": [],
+      "category": "information"
+    },
+    "focus_status": {
+      "name": "focus_status",
+      "description": "Get the status of the text processing focus module.",
+      "parameters": [],
+      "category": "information"
+    },
+    "block_list": {
+      "name": "block_list",
+      "description": "List currently blocked items or patterns.",
+      "parameters": [],
+      "category": "information"
+    },
+    "log_search": {
+      "name": "log_search",
+      "description": "Search conversation history. Results appear in NEXT turn.",
+      "parameters": [
+        "query",
+        "limit"
+      ],
+      "category": "information"
+    },
+    "log_recent": {
+      "name": "log_recent",
+      "description": "Get recent conversation entries. Results appear in NEXT turn.",
+      "parameters": [
+        "count"
+      ],
+      "category": "information"
+    },
+    "log_status": {
+      "name": "log_status",
+      "description": "Check if there are pending log results.",
+      "parameters": [],
+      "category": "information"
+    },
+    "log_clear_pending": {
+      "name": "log_clear_pending",
+      "description": "Clear any pending log results.",
+      "parameters": [],
+      "category": "information"
+    },
+    "wait_for_log_results": {
+      "name": "wait_for_log_results",
+      "description": "Send message to trigger log result injection.",
+      "parameters": [
+        "wait_message"
+      ],
+      "category": "information"
+    },
+    "youtube_search": {
+      "name": "youtube_search",
+      "description": "Search for videos on YouTube.",
+      "parameters": [
+        "query"
+      ],
+      "category": "plugin_control"
+    },
+    "youtube_open": {
+      "name": "youtube_open",
+      "description": "Open a specific YouTube video.",
+      "parameters": [
+        "video_identifier"
+      ],
+      "category": "plugin_control"
+    },
+    "wiki_search": {
+      "name": "wiki_search",
+      "description": "Search for articles on Wikipedia.",
+      "parameters": [
+        "query"
+      ],
+      "category": "plugin_control"
+    },
+    "wiki_open": {
+      "name": "wiki_open",
+      "description": "Open a specific wiki page.",
+      "parameters": [
+        "page_identifier"
+      ],
+      "category": "plugin_control"
+    },
+    "sms_send": {
+      "name": "sms_send",
+      "description": "Send a text message via SMS plugin.",
+      "parameters": [
+        "phone_number",
+        "message"
+      ],
+      "category": "plugin_control"
+    },
+    "sandbox_reverse_text": {
+      "name": "sandbox_reverse_text",
+      "description": "Reverse a string of text using sandbox.",
+      "parameters": [
+        "text"
+      ],
+      "category": "plugin_control"
+    },
+    "sandbox_get_var": {
+      "name": "sandbox_get_var",
+      "description": "Get a variable from the sandbox environment.",
+      "parameters": [
+        "variable_name"
+      ],
+      "category": "plugin_control"
+    },
+    "sandbox_set_var": {
+      "name": "sandbox_set_var",
+      "description": "Set a variable in the sandbox environment.",
+      "parameters": [
+        "variable_name",
+        "value"
+      ],
+      "category": "plugin_control"
+    },
+    "block_add": {
+      "name": "block_add",
+      "description": "Add an item or pattern to the blocklist.",
+      "parameters": [
+        "item_to_block"
+      ],
+      "category": "plugin_control"
+    },
+    "block_remove": {
+      "name": "block_remove",
+      "description": "Remove an item or pattern from the blocklist.",
+      "parameters": [
+        "item_to_remove"
+      ],
+      "category": "plugin_control"
+    },
+    "consultant_status": {
+      "name": "consultant_status",
+      "description": "Check the status of all consultant AIs.",
+      "parameters": [],
+      "category": "consultant_control"
+    },
+    "consultant_enable": {
+      "name": "consultant_enable",
+      "description": "Enable a specific consultant AI.",
+      "parameters": [
+        "consultant_id",
+        "mode"
+      ],
+      "category": "consultant_control"
+    },
+    "consultant_disable": {
+      "name": "consultant_disable",
+      "description": "Disable a specific consultant AI.",
+      "parameters": [
+        "consultant_id"
+      ],
+      "category": "consultant_control"
+    },
+    "consultant_configure": {
+      "name": "consultant_configure",
+      "description": "Configure a consultant AI's provider and model.",
+      "parameters": [
+        "consultant_id",
+        "provider",
+        "model"
+      ],
+      "category": "consultant_control"
+    },
+    "consultant_assign_task": {
+      "name": "consultant_assign_task",
+      "description": "Assign a task to consultant AI(s).",
+      "parameters": [
+        "task",
+        "consultant_ids",
+        "wait_for_response"
+      ],
+      "category": "consultant_control"
+    },
+    "consultant_coordinate": {
+      "name": "consultant_coordinate",
+      "description": "Coordinate multiple consultants with roles.",
+      "parameters": [
+        "task_description",
+        "consultant_assignments"
+      ],
+      "category": "consultant_control"
+    },
+    "wait": {
+      "name": "wait",
+      "description": "Pause agent execution for specified seconds.",
+      "parameters": [
+        "seconds"
+      ],
+      "category": "utility"
+    }
+  },
+  "categorized": {
+    "communication": [
+      {
+        "name": "message_user",
+        "description": "Send a direct message to user (AI won't remember this).",
+        "parameters": [
+          "message"
+        ]
+      },
+      {
+        "name": "pipeline_message",
+        "description": "Send message through pipeline to AI (AI will remember this).",
+        "parameters": [
+          "message"
+        ]
+      },
+      {
+        "name": "speak_for_user",
+        "description": "Submit input as if it came from the user (speakforuser).",
+        "parameters": [
+          "message"
+        ]
+      }
+    ],
+    "system_commands": [
+      {
+        "name": "send_command",
+        "description": "Send a generic system command (use specific tools if available).",
+        "parameters": [
+          "command"
+        ]
+      },
+      {
+        "name": "control_action",
+        "description": "Start or stop a system action/module.",
+        "parameters": [
+          "action",
+          "operation"
+        ]
+      },
+      {
+        "name": "fix_response",
+        "description": "Load the last saved AI response for iteration.",
+        "parameters": []
+      }
+    ],
+    "memory_management": [
+      {
+        "name": "set_context",
+        "description": "Store a value in the AGENT'S PERSONAL short-term context.",
+        "parameters": [
+          "key",
+          "value"
+        ]
+      },
+      {
+        "name": "get_context",
+        "description": "Retrieve a value from the AGENT'S PERSONAL short-term context.",
+        "parameters": [
+          "key"
+        ]
+      },
+      {
+        "name": "analyze_history",
+        "description": "Analyze patterns in the AGENT'S GOAL HISTORY.",
+        "parameters": [
+          "pattern"
+        ]
+      },
+      {
+        "name": "memory_store_fact",
+        "description": "Store a fact in SYSTEM-WIDE long-term memory.",
+        "parameters": [
+          "fact",
+          "keywords"
+        ]
+      },
+      {
+        "name": "memory_get_fact",
+        "description": "Retrieve facts from SYSTEM-WIDE memory.",
+        "parameters": [
+          "keywords"
+        ]
+      },
+      {
+        "name": "memory_list_facts",
+        "description": "List all facts stored in SYSTEM-WIDE memory.",
+        "parameters": []
+      },
+      {
+        "name": "memory_delete_fact",
+        "description": "Delete a fact from system memory.",
+        "parameters": [
+          "keywords"
+        ]
+      }
+    ],
+    "persona_and_prompts": [
+      {
+        "name": "persona_use",
+        "description": "Switch to a specific AI persona.",
+        "parameters": [
+          "persona_name"
+        ]
+      },
+      {
+        "name": "persona_list",
+        "description": "List available AI personas.",
+        "parameters": []
+      },
+      {
+        "name": "persona_info",
+        "description": "Get information about a specific persona.",
+        "parameters": [
+          "persona_name"
+        ]
+      },
+      {
+        "name": "prompt_use",
+        "description": "Activate a system prompt.",
+        "parameters": [
+          "prompt_name"
+        ]
+      },
+      {
+        "name": "prompt_list",
+        "description": "List all available system prompts.",
+        "parameters": []
+      },
+      {
+        "name": "prompt_active",
+        "description": "Check which system prompt is active.",
+        "parameters": []
+      },
+      {
+        "name": "prompt_show",
+        "description": "Show the content of a specific system prompt.",
+        "parameters": [
+          "prompt_name"
+        ]
+      }
+    ],
+    "information": [
+      {
+        "name": "check_actions",
+        "description": "Check which system actions/modules are active.",
+        "parameters": []
+      },
+      {
+        "name": "actions_info",
+        "description": "Get information about available system actions.",
+        "parameters": []
+      },
+      {
+        "name": "emotions_status",
+        "description": "Check current emotional analysis.",
+        "parameters": []
+      },
+      {
+        "name": "emotions_reset",
+        "description": "Reset the emotional analysis data.",
+        "parameters": []
+      },
+      {
+        "name": "api_status",
+        "description": "Check AI API usage and limits.",
+        "parameters": []
+      },
+      {
+        "name": "api_switch_provider",
+        "description": "Switch the active AI API provider.",
+        "parameters": [
+          "provider_name"
+        ]
+      },
+      {
+        "name": "api_reset_counter",
+        "description": "Reset the API usage token counter.",
+        "parameters": []
+      },
+      {
+        "name": "principles_list",
+        "description": "List the guiding principles.",
+        "parameters": []
+      },
+      {
+        "name": "principles_report",
+        "description": "Get a report on principle adherence.",
+        "parameters": []
+      },
+      {
+        "name": "advisory_status",
+        "description": "Get the current status of system advisories.",
+        "parameters": []
+      },
+      {
+        "name": "focus_status",
+        "description": "Get the status of the text processing focus module.",
+        "parameters": []
+      },
+      {
+        "name": "block_list",
+        "description": "List currently blocked items or patterns.",
+        "parameters": []
+      },
+      {
+        "name": "log_search",
+        "description": "Search conversation history. Results appear in NEXT turn.",
+        "parameters": [
+          "query",
+          "limit"
+        ]
+      },
+      {
+        "name": "log_recent",
+        "description": "Get recent conversation entries. Results appear in NEXT turn.",
+        "parameters": [
+          "count"
+        ]
+      },
+      {
+        "name": "log_status",
+        "description": "Check if there are pending log results.",
+        "parameters": []
+      },
+      {
+        "name": "log_clear_pending",
+        "description": "Clear any pending log results.",
+        "parameters": []
+      },
+      {
+        "name": "wait_for_log_results",
+        "description": "Send message to trigger log result injection.",
+        "parameters": [
+          "wait_message"
+        ]
+      }
+    ],
+    "plugin_control": [
+      {
+        "name": "youtube_search",
+        "description": "Search for videos on YouTube.",
+        "parameters": [
+          "query"
+        ]
+      },
+      {
+        "name": "youtube_open",
+        "description": "Open a specific YouTube video.",
+        "parameters": [
+          "video_identifier"
+        ]
+      },
+      {
+        "name": "wiki_search",
+        "description": "Search for articles on Wikipedia.",
+        "parameters": [
+          "query"
+        ]
+      },
+      {
+        "name": "wiki_open",
+        "description": "Open a specific wiki page.",
+        "parameters": [
+          "page_identifier"
+        ]
+      },
+      {
+        "name": "sms_send",
+        "description": "Send a text message via SMS plugin.",
+        "parameters": [
+          "phone_number",
+          "message"
+        ]
+      },
+      {
+        "name": "sandbox_reverse_text",
+        "description": "Reverse a string of text using sandbox.",
+        "parameters": [
+          "text"
+        ]
+      },
+      {
+        "name": "sandbox_get_var",
+        "description": "Get a variable from the sandbox environment.",
+        "parameters": [
+          "variable_name"
+        ]
+      },
+      {
+        "name": "sandbox_set_var",
+        "description": "Set a variable in the sandbox environment.",
+        "parameters": [
+          "variable_name",
+          "value"
+        ]
+      },
+      {
+        "name": "block_add",
+        "description": "Add an item or pattern to the blocklist.",
+        "parameters": [
+          "item_to_block"
+        ]
+      },
+      {
+        "name": "block_remove",
+        "description": "Remove an item or pattern from the blocklist.",
+        "parameters": [
+          "item_to_remove"
+        ]
+      }
+    ],
+    "agent_control": [],
+    "consultant_control": [
+      {
+        "name": "consultant_status",
+        "description": "Check the status of all consultant AIs.",
+        "parameters": []
+      },
+      {
+        "name": "consultant_enable",
+        "description": "Enable a specific consultant AI.",
+        "parameters": [
+          "consultant_id",
+          "mode"
+        ]
+      },
+      {
+        "name": "consultant_disable",
+        "description": "Disable a specific consultant AI.",
+        "parameters": [
+          "consultant_id"
+        ]
+      },
+      {
+        "name": "consultant_configure",
+        "description": "Configure a consultant AI's provider and model.",
+        "parameters": [
+          "consultant_id",
+          "provider",
+          "model"
+        ]
+      },
+      {
+        "name": "consultant_assign_task",
+        "description": "Assign a task to consultant AI(s).",
+        "parameters": [
+          "task",
+          "consultant_ids",
+          "wait_for_response"
+        ]
+      },
+      {
+        "name": "consultant_coordinate",
+        "description": "Coordinate multiple consultants with roles.",
+        "parameters": [
+          "task_description",
+          "consultant_assignments"
+        ]
+      }
+    ],
+    "utility": [
+      {
+        "name": "wait",
+        "description": "Pause agent execution for specified seconds.",
+        "parameters": [
+          "seconds"
+        ]
+      }
+    ]
+  }
+}

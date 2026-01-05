@@ -1,1 +1,1424 @@
-commands.json
+{
+  "system": {
+    "agent clear": {
+      "enabled": true,
+      "description": "Clear all agent state and stop execution, restoring consultant states if any were saved."
+    },
+    "agent stop": {
+      "enabled": true,
+      "description": "Stops the current goal execution."
+    },
+    "agent status": {
+      "enabled": true,
+      "description": "Shows current agent status including history summary."
+    },
+    "agent tools": {
+      "enabled": true,
+      "description": "Lists available agent tools categorized."
+    },
+    "api models": {
+      "enabled": true,
+      "description": "Lists all available AI models across configured providers (OpenAI, Anthropic, etc)."
+    },
+    "api reset_counter": {
+      "enabled": true,
+      "description": "Reset API call counter to 0."
+    },
+    "api status": {
+      "enabled": true,
+      "description": "Show API call count and limit."
+    },
+    "api switch": {
+      "enabled": true,
+      "description": "Switches the main AI provider for the session (requires progenitor status) and can optionally set a new model."
+    },
+    "clear": {
+      "enabled": true,
+      "description": "Clears the console screen."
+    },
+    "delay": {
+      "enabled": true,
+      "description": "Shows the current delay in seconds, or sets the delay between interaction cycles (0-60)."
+    },
+    "exit": {
+      "enabled": true,
+      "description": "Exit the program."
+    },
+    "help": {
+      "enabled": true,
+      "description": "Displays help for commands."
+    },
+    "prepare_shutdown": {
+      "enabled": true,
+      "description": "Gracefully stop actions and save state."
+    },
+    "reload": {
+      "enabled": true,
+      "description": "Reloads configuration and modules."
+    }
+  },
+  "action": {
+    "actions info": {
+      "enabled": true,
+      "description": "Show action status and priorities."
+    },
+    "disable voice": {
+      "enabled": true,
+      "description": "Disables voice output for AI responses."
+    },
+    "dirtoff": {
+      "enabled": true,
+      "description": "Disables the 'dirt' persona, returning the AI to its default response style."
+    },
+    "dirton": {
+      "enabled": true,
+      "description": "Enables the 'dirt' persona, instructing the AI to respond in a more informal, edgy, and unpolished style."
+    },
+    "enable voice": {
+      "enabled": true,
+      "description": "Enables voice output for AI responses using text-to-speech."
+    },
+    "log level": {
+      "enabled": true,
+      "description": "Sets the verbosity level for system logging output."
+    },
+    "start advisory": {
+      "enabled": true,
+      "description": "Loads and activates the 'advisory' action module for inter-addon communication."
+    },
+    "start auth": {
+      "enabled": true,
+      "description": "Loads and activates the 'auth' module, which manages user accounts, session tokens, and request authentication."
+    },
+    "start aware": {
+      "enabled": true,
+      "description": "Loads and activates the 'aware' module, which injects contextual information about system features into prompts based on user input."
+    },
+    "start back": {
+      "enabled": true,
+      "description": "Activates the 'back' module, allowing the user to make the AI repeat its previous response by typing the command 'back'."
+    },
+    "start block": {
+      "enabled": true,
+      "description": "Activates the word blocking module, which automatically censors a predefined list of words in all AI-generated responses."
+    },
+    "start common": {
+      "enabled": true,
+      "description": "Activates common system utilities and shared functionality used by multiple actions."
+    },
+    "start controls": {
+      "enabled": true,
+      "description": "Activates the UI control module, which allows the AI to send commands (e.g., '[CONTROL: execute_js ...]') to manipulate the user interface."
+    },
+    "start core": {
+      "enabled": true,
+      "description": "Activates the core system controller, which enables the AI to execute commands and manage other actions using special tags like '[start/stop]' and '[command]'."
+    },
+    "start dataflow": {
+      "enabled": true,
+      "description": "Activates the dataflow module, enabling commands to save, get, and snapshot data from files."
+    },
+    "start dirt": {
+      "enabled": true,
+      "description": "Activates the 'dirt' persona module, which can modify AI responses to be more informal and edgy using the 'dirton' and 'dirtoff' commands."
+    },
+    "start emails": {
+      "enabled": true,
+      "description": "Activates the email module and initializes the email client."
+    },
+    "start emotions": {
+      "enabled": true,
+      "description": "Loads and activates the 'emotions' action module for tracking conversation emotional tone."
+    },
+    "start filter": {
+      "enabled": true,
+      "description": "Loads and activates the 'filter' action module to suppress non-essential system messages."
+    },
+    "start flooring": {
+      "enabled": true,
+      "description": "Activates the Professional Floor Covering Calculator v3.0 with expert estimation, T-seam optimization, visual cut maps, and comprehensive waste analysis."
+    },
+    "start focus": {
+      "enabled": true,
+      "description": "Loads and activates the 'focus' action module for perturbation of user input."
+    },
+    "start health": {
+      "enabled": true,
+      "description": "A compound command to start both health_observer_ss1 and health_analyzer_ss2."
+    },
+    "start health_analyzer_ss2": {
+      "enabled": true,
+      "description": "Starts the SS2 Insight Engine that analyzes patterns from SS1's event stream."
+    },
+    "start health_observer_ss1": {
+      "enabled": true,
+      "description": "Starts the SS1 Universal Observer that monitors all system events."
+    },
+    "start jjk": {
+      "enabled": true,
+      "description": "Activates the security monitoring and control system. Requires prior successful authentication via 'jjk auth'."
+    },
+    "start karma": {
+      "enabled": true,
+      "description": "Loads and activates the 'karma' action module for tracking AI behavior score."
+    },
+    "start key": {
+      "enabled": true,
+      "description": "Initialize primary AI."
+    },
+    "start log_reader": {
+      "enabled": true,
+      "description": "Activates the log reader module, allowing the user and AI to search the conversation history."
+    },
+    "start lore": {
+      "enabled": true,
+      "description": "Activates the world-building data capture system."
+    },
+    "start lvl3": {
+      "enabled": true,
+      "description": "Loads and activates the 'lvl3' action module."
+    },
+    "start memory": {
+      "enabled": true,
+      "description": "Loads and activates the 'memory' action module for persistent fact and conversation storage."
+    },
+    "start newfilter": {
+      "enabled": true,
+      "description": "Loads and activates the 'newfilter' action module that shows only user and AI messages."
+    },
+    "start ok": {
+      "enabled": true,
+      "description": "Loads and activates the 'ok' action module."
+    },
+    "start persona": {
+      "enabled": true,
+      "description": "Loads and activates the 'persona' action module."
+    },
+    "start placeholder_action": {
+      "enabled": true,
+      "description": "Loads and activates the ultimate reference implementation addon demonstrating ALL AGS best practices and patterns."
+    },
+    "start principles": {
+      "enabled": true,
+      "description": "Loads and activates the 'principles' action module for monitoring ME PRINCIPLES violations."
+    },
+    "start prompts": {
+      "enabled": true,
+      "description": "Activates the prompt management module (Smart Whiteboard)."
+    },
+    "start recent_turns": {
+      "enabled": true,
+      "description": "Loads and activates the 'recent_turns' action module."
+    },
+    "start resend": {
+      "enabled": true,
+      "description": "Loads and activates the 'resend' action module that allows resending the last user prompt."
+    },
+    "start sandbox": {
+      "enabled": true,
+      "description": "Loads and activates the 'sandbox' action module."
+    },
+    "start sms": {
+      "enabled": true,
+      "description": "Activates the SMS module and initializes the Twilio client."
+    },
+    "start think_mode": {
+      "enabled": true,
+      "description": "Activates the think mode module that allows multi-turn thinking before final response."
+    },
+    "start update": {
+      "enabled": true,
+      "description": "Loads and activates the 'update' action module."
+    },
+    "start v-agent": {
+      "enabled": true,
+      "description": "Starts the goal-oriented agent system for executing complex multi-step tasks."
+    },
+    "start voice": {
+      "enabled": true,
+      "description": "Loads and activates the 'voice' action module."
+    },
+    "start web_input": {
+      "enabled": true,
+      "description": "Activates the web input module, enabling the system to read user messages from a file and write responses to another file."
+    },
+    "start wiki_action": {
+      "enabled": true,
+      "description": "Activates the Wikipedia integration module, enabling article search and access features."
+    },
+    "start x": {
+      "enabled": true,
+      "description": "Loads and activates the 'x' action module."
+    },
+    "start youtube_action": {
+      "enabled": true,
+      "description": "Activates the YouTube integration module, enabling video search and playback features."
+    },
+    "stop advisory": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'advisory' action module."
+    },
+    "stop auth": {
+      "enabled": true,
+      "description": "Deactivates the 'auth' module and saves the current state of all users, tokens, and configurations."
+    },
+    "stop aware": {
+      "enabled": true,
+      "description": "Deactivates the 'aware' module, stopping it from injecting contextual awareness information."
+    },
+    "stop back": {
+      "enabled": true,
+      "description": "Deactivates the 'back' module, disabling the command that makes the AI repeat its last message."
+    },
+    "stop block": {
+      "enabled": true,
+      "description": "Deactivates the word blocking module, stopping all censorship of the AI's responses."
+    },
+    "stop controls": {
+      "enabled": true,
+      "description": "Deactivates the UI control module, preventing the AI from sending commands to the user interface."
+    },
+    "stop core": {
+      "enabled": true,
+      "description": "Deactivates the core system controller, preventing the AI from being able to execute system commands or manage other actions."
+    },
+    "stop dataflow": {
+      "enabled": true,
+      "description": "Deactivates the dataflow module, disabling file read/write capabilities."
+    },
+    "stop dirt": {
+      "enabled": true,
+      "description": "Deactivates the 'dirt' persona module, restoring the AI to its standard response style and disabling the 'dirton'/'dirtoff' commands."
+    },
+    "stop emails": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'emails' action module."
+    },
+    "stop emotions": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'emotions' action module."
+    },
+    "stop filter": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'filter' action module."
+    },
+    "stop flooring": {
+      "enabled": true,
+      "description": "Deactivates the professional floor covering calculator v3.0, saving all configuration and state."
+    },
+    "stop focus": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'focus' action module."
+    },
+    "stop health_analyzer_ss2": {
+      "enabled": true,
+      "description": "Stops the SS2 Insight Engine pattern analysis."
+    },
+    "stop health_observer_ss1": {
+      "enabled": true,
+      "description": "Stops the SS1 Universal Observer event monitoring."
+    },
+    "stop jjk": {
+      "enabled": true,
+      "description": "Deactivates security monitoring but maintains authentication and Progenitor status if currently held."
+    },
+    "stop karma": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'karma' action module."
+    },
+    "stop log_reader": {
+      "enabled": true,
+      "description": "Deactivates the log reader module, disabling the ability to search conversation history."
+    },
+    "stop lore": {
+      "enabled": true,
+      "description": "Deactivates the lore capture system and performs a final save of the world data."
+    },
+    "stop lvl3": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'lvl3' action module."
+    },
+    "stop memory": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'memory' action module."
+    },
+    "stop newfilter": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'newfilter' action module."
+    },
+    "stop ok": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'ok' action module."
+    },
+    "stop persona": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'persona' action module."
+    },
+    "stop placeholder_action": {
+      "enabled": true,
+      "description": "Deactivates the placeholder reference implementation addon and saves all state/configuration."
+    },
+    "stop principles": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'principles' action module."
+    },
+    "stop prompts": {
+      "enabled": true,
+      "description": "Deactivates the prompt management module and saves its state."
+    },
+    "stop recent_turns": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'recent_turns' action module."
+    },
+    "stop resend": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'resend' action module."
+    },
+    "stop sandbox": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'sandbox' action module."
+    },
+    "stop sms": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'sms' action module."
+    },
+    "stop think_mode": {
+      "enabled": true,
+      "description": "Deactivates the think mode module."
+    },
+    "stop update": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'update' action module."
+    },
+    "stop v-agent": {
+      "enabled": true,
+      "description": "Stops the goal-oriented agent system and restores consultant states."
+    },
+    "stop voice": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'voice' action module."
+    },
+    "stop web_input": {
+      "enabled": true,
+      "description": "Deactivates the web input module, stopping the system from monitoring its designated input/output files."
+    },
+    "stop wiki_action": {
+      "enabled": true,
+      "description": "Deactivates the Wikipedia integration module, disabling article search and access."
+    },
+    "stop x": {
+      "enabled": true,
+      "description": "Deactivates and stops the 'x' action module."
+    },
+    "stop youtube_action": {
+      "enabled": true,
+      "description": "Deactivates the YouTube integration module, disabling video search and playback."
+    },
+    "turn voice off": {
+      "enabled": true,
+      "description": "Temporarily disables voice output for the current session."
+    },
+    "turn voice on": {
+      "enabled": true,
+      "description": "Temporarily enables voice output for the current session."
+    },
+    "voice off": {
+      "enabled": true,
+      "description": "Disables voice output globally."
+    },
+    "voice on": {
+      "enabled": true,
+      "description": "Enables voice output globally."
+    }
+  },
+  "plugin_specific": {
+    "fix": {
+      "enabled": true,
+      "description": "Fix/retry last response."
+    },
+    "model": {
+      "enabled": true,
+      "description": "Shows the current AI model being used or switches to a different model."
+    },
+    "ok": {
+      "enabled": true,
+      "description": "OK action trigger."
+    }
+  },
+  "plugin_commands": {
+    "addon_ai history_turns": {
+      "enabled": true,
+      "description": "Set history turns for addon_ai."
+    },
+    "addon_ai inject off": {
+      "enabled": true,
+      "description": "Disable response injection for addon_ai."
+    },
+    "addon_ai inject on": {
+      "enabled": true,
+      "description": "Enable response injection for addon_ai."
+    },
+    "addon_ai mode": {
+      "enabled": true,
+      "description": "Set addon_ai mode.",
+      "usage": "addon_ai mode <live|delayed>"
+    },
+    "addon_ai model": {
+      "enabled": true,
+      "description": "Set addon_ai model."
+    },
+    "addon_ai off": {
+      "enabled": true,
+      "description": "Disable addon_ai consultant."
+    },
+    "addon_ai on": {
+      "enabled": true,
+      "description": "Enable addon_ai consultant."
+    },
+    "addon_ai provider": {
+      "enabled": true,
+      "description": "Set addon_ai provider."
+    },
+    "addon_ai status": {
+      "enabled": true,
+      "description": "Show addon_ai configuration."
+    },
+    "addon_ai2 history_turns": {
+      "enabled": true,
+      "description": "Set history turns for addon_ai2."
+    },
+    "addon_ai2 inject off": {
+      "enabled": true,
+      "description": "Disable response injection for addon_ai2."
+    },
+    "addon_ai2 inject on": {
+      "enabled": true,
+      "description": "Enable response injection for addon_ai2."
+    },
+    "addon_ai2 mode": {
+      "enabled": true,
+      "description": "Set addon_ai2 mode.",
+      "usage": "addon_ai2 mode <live|delayed>"
+    },
+    "addon_ai2 model": {
+      "enabled": true,
+      "description": "Set addon_ai2 model."
+    },
+    "addon_ai2 off": {
+      "enabled": true,
+      "description": "Disable addon_ai2 consultant."
+    },
+    "addon_ai2 on": {
+      "enabled": true,
+      "description": "Enable addon_ai2 consultant."
+    },
+    "addon_ai2 provider": {
+      "enabled": true,
+      "description": "Set addon_ai2 provider."
+    },
+    "addon_ai2 status": {
+      "enabled": true,
+      "description": "Show addon_ai2 configuration."
+    },
+    "addon_ai3 history_turns": {
+      "enabled": true,
+      "description": "Set history turns for addon_ai3."
+    },
+    "addon_ai3 inject off": {
+      "enabled": true,
+      "description": "Disable response injection for addon_ai3."
+    },
+    "addon_ai3 inject on": {
+      "enabled": true,
+      "description": "Enable response injection for addon_ai3."
+    },
+    "addon_ai3 mode": {
+      "enabled": true,
+      "description": "Set addon_ai3 mode.",
+      "usage": "addon_ai3 mode <live|delayed>"
+    },
+    "addon_ai3 model": {
+      "enabled": true,
+      "description": "Set addon_ai3 model."
+    },
+    "addon_ai3 off": {
+      "enabled": true,
+      "description": "Disable addon_ai3 consultant."
+    },
+    "addon_ai3 on": {
+      "enabled": true,
+      "description": "Enable addon_ai3 consultant."
+    },
+    "addon_ai3 provider": {
+      "enabled": true,
+      "description": "Set addon_ai3 provider."
+    },
+    "addon_ai3 status": {
+      "enabled": true,
+      "description": "Show addon_ai3 configuration."
+    },
+    "addon_ai4 history_turns": {
+      "enabled": true,
+      "description": "Set history turns for addon_ai4."
+    },
+    "addon_ai4 inject off": {
+      "enabled": true,
+      "description": "Disable response injection for addon_ai4."
+    },
+    "addon_ai4 inject on": {
+      "enabled": true,
+      "description": "Enable response injection for addon_ai4."
+    },
+    "addon_ai4 mode": {
+      "enabled": true,
+      "description": "Set addon_ai4 mode.",
+      "usage": "addon_ai4 mode <live|delayed>"
+    },
+    "addon_ai4 model": {
+      "enabled": true,
+      "description": "Set addon_ai4 model."
+    },
+    "addon_ai4 off": {
+      "enabled": true,
+      "description": "Disable addon_ai4 consultant."
+    },
+    "addon_ai4 on": {
+      "enabled": true,
+      "description": "Enable addon_ai4 consultant."
+    },
+    "addon_ai4 provider": {
+      "enabled": true,
+      "description": "Set addon_ai4 provider."
+    },
+    "addon_ai4 status": {
+      "enabled": true,
+      "description": "Show addon_ai4 configuration."
+    },
+    "addons off": {
+      "enabled": true,
+      "description": "Disables all consultant AIs (addon_ai through addon_ai4) at once."
+    },
+    "addons status": {
+      "enabled": true,
+      "description": "Shows a summary of the current enabled/disabled status of all consultant AIs."
+    },
+    "advisory ai skip off": {
+      "enabled": true,
+      "description": "Allow advisories during AI-triggered commands."
+    },
+    "advisory ai skip on": {
+      "enabled": true,
+      "description": "Skip advisories during AI-triggered commands."
+    },
+    "advisory base off": {
+      "enabled": true,
+      "description": "Disable base advisory."
+    },
+    "advisory base on": {
+      "enabled": true,
+      "description": "Enable base advisory."
+    },
+    "advisory base set": {
+      "enabled": true,
+      "description": "Set base advisory text.",
+      "usage": "advisory base set <text>"
+    },
+    "advisory categories off": {
+      "enabled": true,
+      "description": "Hide category information."
+    },
+    "advisory categories on": {
+      "enabled": true,
+      "description": "Show category information."
+    },
+    "advisory clear": {
+      "enabled": true,
+      "description": "Clear all advisories."
+    },
+    "advisory clear temp": {
+      "enabled": true,
+      "description": "Clear only temporary advisories."
+    },
+    "advisory debug off": {
+      "enabled": true,
+      "description": "Disable debug logging."
+    },
+    "advisory debug on": {
+      "enabled": true,
+      "description": "Enable debug logging."
+    },
+    "advisory format": {
+      "enabled": true,
+      "description": "Set display format.",
+      "usage": "advisory format <minimal|detailed|structured>"
+    },
+    "advisory help": {
+      "enabled": true,
+      "description": "Show advisory command help."
+    },
+    "advisory remove": {
+      "enabled": true,
+      "description": "Remove advisory from specific source.",
+      "usage": "advisory remove <source>"
+    },
+    "advisory skip off": {
+      "enabled": true,
+      "description": "Allow injection for system commands."
+    },
+    "advisory skip on": {
+      "enabled": true,
+      "description": "Skip injection for system commands."
+    },
+    "advisory status": {
+      "enabled": true,
+      "description": "Displays the complete current status and configuration of the advisory system, including a list of active advisories."
+    },
+    "advisory threshold": {
+      "enabled": true,
+      "description": "Set minimum priority to display.",
+      "usage": "advisory threshold <0-10>"
+    },
+    "auth create": {
+      "enabled": true,
+      "description": "Creates a new user with a specified username, password, and optional role.",
+      "usage": "auth create <username> <password> [role]"
+    },
+    "auth debug": {
+      "enabled": true,
+      "description": "Displays internal state variables and file status for troubleshooting the auth module."
+    },
+    "auth disable": {
+      "enabled": true,
+      "description": "Disables a specified user account, preventing them from logging in.",
+      "usage": "auth disable <username>"
+    },
+    "auth enable": {
+      "enabled": true,
+      "description": "Re-enables a disabled user account, allowing them to log in again.",
+      "usage": "auth enable <username>"
+    },
+    "auth reset": {
+      "enabled": true,
+      "description": "Resets the password for a specified user account.",
+      "usage": "auth reset <username> <new_password>"
+    },
+    "auth status": {
+      "enabled": true,
+      "description": "Displays the current status of the authentication module, including its mode, total users, and active sessions."
+    },
+    "auth users": {
+      "enabled": true,
+      "description": "Lists all registered users along with their role, status, and last login time."
+    },
+    "back": {
+      "enabled": true,
+      "description": "Makes the AI repeat its previous response. This command is enabled when the 'back' action module is running."
+    },
+    "block add": {
+      "enabled": true,
+      "description": "Adds a specified word to the censor list, causing it to be replaced with '[CENSORED]' in all future AI responses.",
+      "usage": "block add <word>"
+    },
+    "block list": {
+      "enabled": true,
+      "description": "Displays the current list of all words that are being censored in the AI's responses."
+    },
+    "block reload": {
+      "enabled": true,
+      "description": "Reloads the censor list from the 'block.txt' file, updating the active list with any changes made directly to the file."
+    },
+    "block remove": {
+      "enabled": true,
+      "description": "Removes a specified word from the censor list, allowing it to appear normally in future AI responses.",
+      "usage": "block remove <word>"
+    },
+    "data clear_pending": {
+      "enabled": true,
+      "description": "Clear any pending data injection."
+    },
+    "data get": {
+      "enabled": true,
+      "description": "Load file content for next AI message.",
+      "usage": "data get <filename>"
+    },
+    "data help": {
+      "enabled": true,
+      "description": "Show dataflow help."
+    },
+    "data save": {
+      "enabled": true,
+      "description": "Save content to file.",
+      "usage": "data save <filename> | <content>"
+    },
+    "data snapshot": {
+      "enabled": true,
+      "description": "Ask AI to summarize conversation and save it."
+    },
+    "data status": {
+      "enabled": true,
+      "description": "Show pending data and saved files."
+    },
+    "email config": {
+      "enabled": true,
+      "description": "Configures the sender's email address and password/app-password."
+    },
+    "email help": {
+      "enabled": true,
+      "description": "Shows a detailed list of all email commands and setup instructions."
+    },
+    "email send": {
+      "enabled": true,
+      "description": "Sends an email to a specified recipient with a subject and body."
+    },
+    "email servers": {
+      "enabled": true,
+      "description": "Lists all the configured SMTP servers the module will attempt to use."
+    },
+    "email status": {
+      "enabled": true,
+      "description": "Checks if the email module is active and if credentials are configured."
+    },
+    "email test": {
+      "enabled": true,
+      "description": "Sends a test email to the configured sender address to verify the setup."
+    },
+    "emotions get current": {
+      "enabled": true,
+      "description": "Returns current detected emotions as JSON data for agent use."
+    },
+    "emotions get history": {
+      "enabled": true,
+      "description": "Returns recent emotion history as JSON data for agent use."
+    },
+    "emotions karma status": {
+      "enabled": true,
+      "description": "Displays the karma integration status including: Whether karma module is available, if karma suggestions are enabled, current check interval (every N turns), current turn counter progress, emotion score threshold for suggestions, and maximum suggestion limits."
+    },
+    "emotions reset": {
+      "enabled": true,
+      "description": "Resets emotion tracking state and clears the emotions history file."
+    },
+    "emotions status": {
+      "enabled": true,
+      "description": "Displays the current detected conversation emotions."
+    },
+    "flooring calculate": {
+      "enabled": true,
+      "description": "Calculates professional carpet requirements with multiple layout options, visual cut maps, and waste analysis. Supports various input formats including feet, inches, and mixed units.",
+      "owner_action": "flooring"
+    },
+    "flooring help": {
+      "enabled": true,
+      "description": "Displays comprehensive help for the v3.0 professional flooring calculator including all commands and configuration options.",
+      "owner_action": "flooring"
+    },
+    "flooring reset": {
+      "enabled": true,
+      "description": "Resets all flooring configuration settings to their professionally recommended defaults.",
+      "owner_action": "flooring"
+    },
+    "flooring set": {
+      "enabled": true,
+      "description": "Modifies flooring calculator configuration such as seam_preference (optimized/t-seam_saver/educational), rounding_mode (safe/exact), and seam_allowance_inches.",
+      "owner_action": "flooring"
+    },
+    "flooring status": {
+      "enabled": true,
+      "description": "Shows a detailed status report including the v3.0 addon's current configuration and session statistics.",
+      "owner_action": "flooring"
+    },
+    "focus add emotion": {
+      "enabled": true,
+      "description": "Adds a new word to the emotional markers list for prompt perturbation."
+    },
+    "focus add expletive": {
+      "enabled": true,
+      "description": "Adds a new word to the mild expletives list (requires expletives to be enabled)."
+    },
+    "focus config": {
+      "enabled": true,
+      "description": "Displays detailed configuration report including all features, probabilities, and triggers."
+    },
+    "focus log off": {
+      "enabled": true,
+      "description": "Disables logging of perturbation events to the focus_log.txt file."
+    },
+    "focus log on": {
+      "enabled": true,
+      "description": "Enables logging of perturbation events to the focus_log.txt file."
+    },
+    "focus reset": {
+      "enabled": true,
+      "description": "Resets all configuration and statistics to defaults (creates backup first)."
+    },
+    "focus set emotions off": {
+      "enabled": true,
+      "description": "Disables emotional marker injection in prompt perturbations."
+    },
+    "focus set emotions on": {
+      "enabled": true,
+      "description": "Enables emotional marker injection in prompt perturbations."
+    },
+    "focus set expletives off": {
+      "enabled": true,
+      "description": "Disables mild expletive injection in prompt perturbations."
+    },
+    "focus set expletives on": {
+      "enabled": true,
+      "description": "Enables mild expletive injection in prompt perturbations (use with caution)."
+    },
+    "focus set probability": {
+      "enabled": true,
+      "description": "Sets the global probability for applying perturbations (0.0 to 1.0)."
+    },
+    "focus set typos off": {
+      "enabled": true,
+      "description": "Disables typo injection in prompt perturbations."
+    },
+    "focus set typos on": {
+      "enabled": true,
+      "description": "Enables typo injection in prompt perturbations."
+    },
+    "focus status": {
+      "enabled": true,
+      "description": "Displays current status including active features, statistics, and recent perturbations."
+    },
+    "jjk audit off": {
+      "enabled": true,
+      "description": "Disables the JJK security audit log. Requires active Progenitor status to execute."
+    },
+    "jjk audit on": {
+      "enabled": true,
+      "description": "Enables the JJK security audit log, recording all high-privilege actions."
+    },
+    "jjk audit show": {
+      "enabled": true,
+      "description": "Displays the most recent entries from the JJK security audit log."
+    },
+    "jjk auth": {
+      "enabled": true,
+      "description": "Authenticates the user with a password, granting Progenitor status and enabling the use of high-privilege commands.",
+      "usage": "jjk auth <password>"
+    },
+    "jjk backup": {
+      "enabled": true,
+      "description": "Creates a manual, timestamped backup of critical JJK configurations and system state. Requires Progenitor status."
+    },
+    "jjk help": {
+      "enabled": true,
+      "description": "Shows a detailed list of all JJK security commands and their functions."
+    },
+    "jjk is_progenitor": {
+      "enabled": true,
+      "description": "Checks and confirms if Progenitor status is currently active, which is required for critical system operations."
+    },
+    "jjk override": {
+      "enabled": true,
+      "description": "Sets or unsets a specified system override flag. Requires Progenitor status for execution.",
+      "usage": "jjk override <flag_name> <true|false>"
+    },
+    "jjk progenitor": {
+      "enabled": true,
+      "description": "Confirms Progenitor status. This command is typically redundant as successful auth grants this status automatically."
+    },
+    "jjk revoke": {
+      "enabled": true,
+      "description": "Manually revokes active Progenitor status, immediately disabling access to all protected commands."
+    },
+    "jjk status": {
+      "enabled": true,
+      "description": "Displays the complete current status of the JJK security system, including Progenitor status and audit logging settings."
+    },
+    "karma history": {
+      "enabled": true,
+      "description": "Displays a list of the last 10 karma changes, including the amount, reason, and resulting score."
+    },
+    "karma jjk_reset": {
+      "enabled": true,
+      "description": "Resets the AI's karma score to 0 and clears all related states. Requires JJK Progenitor status."
+    },
+    "karma set_modifier negative": {
+      "enabled": true,
+      "description": "Sets a multiplier for negative karma changes (0.0-2.0). Requires JJK Progenitor status.",
+      "usage": "karma set_modifier negative <value>"
+    },
+    "karma status": {
+      "enabled": true,
+      "description": "Shows the AI's current karma score, its tier (e.g., Optimal, Critical), session changes, and a summary of recent changes."
+    },
+    "log clear_pending": {
+      "enabled": true,
+      "description": "Clear any pending results."
+    },
+    "log help": {
+      "enabled": true,
+      "description": "Show log reader help."
+    },
+    "log recent": {
+      "enabled": true,
+      "description": "Get last n log entries (default 5, max 20).",
+      "usage": "log recent [n]"
+    },
+    "log search": {
+      "enabled": true,
+      "description": "Search logs for query (max 20 results).",
+      "usage": "log search <query> [limit]"
+    },
+    "log status": {
+      "enabled": true,
+      "description": "Show pending results status."
+    },
+    "lore export": {
+      "enabled": true,
+      "description": "Saves the entire captured world database to a human-readable JSON file."
+    },
+    "lore find": {
+      "enabled": true,
+      "description": "Searches the entire world database for a specific term using fuzzy matching."
+    },
+    "lore help": {
+      "enabled": true,
+      "description": "Provides a list of available commands for the lore module."
+    },
+    "lore list": {
+      "enabled": true,
+      "description": "Lists all captured entries within a specified category or lists all available categories if none is specified."
+    },
+    "lore status": {
+      "enabled": true,
+      "description": "Displays statistics about the captured world data, including the total number of entries and recent detections."
+    },
+    "memory auto off": {
+      "enabled": true,
+      "description": "Disables automatic memory enhancement based on context."
+    },
+    "memory auto on": {
+      "enabled": true,
+      "description": "Enables automatic memory enhancement based on context."
+    },
+    "memory clear all": {
+      "enabled": true,
+      "description": "Deletes all stored memory data including facts, conversations, and preferences."
+    },
+    "memory clear pending": {
+      "enabled": true,
+      "description": "Clears any pending memory content waiting to be injected."
+    },
+    "memory delete conversation": {
+      "enabled": true,
+      "description": "Deletes a stored conversation summary by ID."
+    },
+    "memory delete fact": {
+      "enabled": true,
+      "description": "Deletes a stored fact using format: category|key."
+    },
+    "memory get fact": {
+      "enabled": true,
+      "description": "Loads a specific fact for injection into the next AI message using format: category|key."
+    },
+    "memory help": {
+      "enabled": true,
+      "description": "Shows detailed help for all memory commands."
+    },
+    "memory list": {
+      "enabled": true,
+      "description": "Loads all memories (both facts and conversations) for next AI message."
+    },
+    "memory list conversations": {
+      "enabled": true,
+      "description": "Loads all conversation summaries for injection into the next AI message."
+    },
+    "memory list facts": {
+      "enabled": true,
+      "description": "Loads all stored facts for injection into the next AI message."
+    },
+    "memory search": {
+      "enabled": true,
+      "description": "Searches for relevant memories based on keywords."
+    },
+    "memory status": {
+      "enabled": true,
+      "description": "Memory system status."
+    },
+    "memory store conversation": {
+      "enabled": true,
+      "description": "Stores a conversation summary using format: id|summary|topic1,topic2,..."
+    },
+    "memory store fact": {
+      "enabled": true,
+      "description": "Stores a fact in memory using format: category|key|value."
+    },
+    "persona clear": {
+      "enabled": true,
+      "description": "Clears the active persona and reverts to default AI behavior."
+    },
+    "persona create": {
+      "enabled": true,
+      "description": "Creates a new persona using format: Name Description | System Prompt."
+    },
+    "persona delete": {
+      "enabled": true,
+      "description": "Deletes a user-created persona by name (cannot delete default personas)."
+    },
+    "persona info": {
+      "enabled": true,
+      "description": "Displays detailed information about a specific persona including its system prompt."
+    },
+    "persona list": {
+      "enabled": true,
+      "description": "Shows all available personas and indicates which one is currently active."
+    },
+    "persona use": {
+      "enabled": true,
+      "description": "Activates a persona and clears conversation history to apply the new style immediately."
+    },
+    "placeholder antipattern": {
+      "enabled": true,
+      "description": "Educational command that displays common anti-patterns to avoid when developing addons, with explanations of why they're harmful."
+    },
+    "placeholder compliance": {
+      "enabled": true,
+      "description": "Checks if a specified addon follows AGS best practices and patterns. Provides a detailed compliance report.",
+      "usage": "placeholder compliance <addon_name>"
+    },
+    "placeholder demo": {
+      "enabled": true,
+      "description": "Demonstrates the delayed injection pattern by queuing text that will be injected into your next AI prompt.",
+      "usage": "placeholder demo <text>"
+    },
+    "placeholder help": {
+      "enabled": true,
+      "description": "Shows comprehensive help for the placeholder addon including all commands, configuration keys, integration targets, and test features."
+    },
+    "placeholder integrate": {
+      "enabled": true,
+      "description": "Tests integration with other system components (advisory, emotions, memory, jjk, consultant, agent_context).",
+      "usage": "placeholder integrate <system>"
+    },
+    "placeholder multi_step_demo": {
+      "enabled": true,
+      "description": "Starts a multi-turn operation demo that simulates a long-running stateful task. Returns an operation ID for completion.",
+      "usage": "placeholder multi_step_demo"
+    },
+    "placeholder multi_step_result": {
+      "enabled": true,
+      "description": "Completes a multi-turn operation started by multi_step_demo and returns the result. Requires the operation ID.",
+      "usage": "placeholder multi_step_result <operation_id>"
+    },
+    "placeholder set": {
+      "enabled": true,
+      "description": "Modifies configuration values. Supports auto_inject (on/off), verbose (on/off), threshold (number), security (on/off), and integration toggles.",
+      "usage": "placeholder set <key> <value>"
+    },
+    "placeholder status": {
+      "enabled": true,
+      "description": "Displays detailed status report including version, configuration, integration features, runtime statistics, command history, and system integration status."
+    },
+    "placeholder test": {
+      "enabled": true,
+      "description": "Runs tests on specific features (commands, state, errors, security, silent_api, integration) or 'all' for comprehensive testing.",
+      "usage": "placeholder test <feature|all>"
+    },
+    "principles check": {
+      "enabled": true,
+      "description": "Check a specific text for principle violations and display detected violations with severity scores."
+    },
+    "principles coverage": {
+      "enabled": true,
+      "description": "Display current coverage setting showing how many principles are being monitored."
+    },
+    "principles coverage all": {
+      "enabled": true,
+      "description": "Set coverage to monitor ALL principles regardless of priority level."
+    },
+    "principles coverage critical": {
+      "enabled": true,
+      "description": "Set coverage to monitor only critical principles (Priority 7 or higher)."
+    },
+    "principles coverage legacy4": {
+      "enabled": true,
+      "description": "Set coverage to monitor only the original 4 principles (P000, P000A, P002, P018)."
+    },
+    "principles coverage top10": {
+      "enabled": true,
+      "description": "Set coverage to monitor the top 10 highest priority principles."
+    },
+    "principles help": {
+      "enabled": true,
+      "description": "Display help and usage information for all principle monitoring commands."
+    },
+    "principles karma status": {
+      "enabled": true,
+      "description": "Shows karma integration details including: Whether karma module is available, if karma integration is enabled, turns since last karma check, number of violations tracked since last check, and a list of recent violations with severity scores."
+    },
+    "principles list": {
+      "enabled": true,
+      "description": "Show all principles currently being monitored, sorted by priority."
+    },
+    "principles mode": {
+      "enabled": true,
+      "description": "Set the principle detection mode to either 'real-time' (pattern matching) or 'addon-ai' (AI evaluation)."
+    },
+    "principles mode addon-ai": {
+      "enabled": true,
+      "description": "Set principle detection to use addon AI for evaluation instead of pattern matching."
+    },
+    "principles mode real-time": {
+      "enabled": true,
+      "description": "Set principle detection to use real-time pattern matching and keyword detection."
+    },
+    "principles report": {
+      "enabled": true,
+      "description": "Generate a comprehensive report of principle violations including statistics and recent violations."
+    },
+    "principles stats": {
+      "enabled": true,
+      "description": "Display statistics on principle violations including total violations and violations by principle ID."
+    },
+    "principles toggle": {
+      "enabled": true,
+      "description": "Enable or disable principle violation monitoring."
+    },
+    "prompt active": {
+      "enabled": true,
+      "description": "Displays the name of the currently active persistent user prompt."
+    },
+    "prompt clear": {
+      "enabled": true,
+      "description": "Deactivates the current user prompt, returning to the default behavior."
+    },
+    "prompt help": {
+      "enabled": true,
+      "description": "Displays detailed help text for all prompt-related commands."
+    },
+    "prompt list": {
+      "enabled": true,
+      "description": "List prompts."
+    },
+    "prompt persist": {
+      "enabled": true,
+      "description": "Toggles whether the active prompt persists for multiple turns or is cleared after one use."
+    },
+    "prompt set": {
+      "enabled": true,
+      "description": "Creates a new prompt or updates an existing one with new content."
+    },
+    "prompt show": {
+      "enabled": true,
+      "description": "Displays the full text content of a specified prompt."
+    },
+    "prompt status": {
+      "enabled": true,
+      "description": "Shows a full status report, including the active prompt, its settings, and any active bulletins from other modules."
+    },
+    "prompt ttl": {
+      "enabled": true,
+      "description": "Sets a 'Time To Live' for the active prompt, causing it to expire after a set number of turns."
+    },
+    "prompt use": {
+      "enabled": true,
+      "description": "Use a prompt."
+    },
+    "recent": {
+      "enabled": true,
+      "description": "Shows all saved conversation turns from the rolling history."
+    },
+    "recent clear": {
+      "enabled": true,
+      "description": "Clears all saved conversation turn history."
+    },
+    "recent help": {
+      "enabled": true,
+      "description": "Displays help and usage information for all recent turns commands."
+    },
+    "recent max": {
+      "enabled": true,
+      "description": "Sets the maximum number of conversation turns to keep in history (1-100)."
+    },
+    "recent show": {
+      "enabled": true,
+      "description": "Shows all saved conversation turns, or specify a number to show last N turns."
+    },
+    "recent status": {
+      "enabled": true,
+      "description": "Displays current configuration including turns in history, max turns, and settings."
+    },
+    "reprompt": {
+      "enabled": true,
+      "description": "Re-executes the last user prompt with cleared AI memory context, providing a fresh response."
+    },
+    "resend": {
+      "enabled": true,
+      "description": "Re-sends the last user prompt to the AI without clearing context, maintaining conversation continuity."
+    },
+    "sms help": {
+      "enabled": true,
+      "description": "Displays a help message with command usage and examples."
+    },
+    "sms send": {
+      "enabled": true,
+      "description": "Sends a text message to a specified phone number (which must be in E.164 format)."
+    },
+    "sms status": {
+      "enabled": true,
+      "description": "Checks if the SMS module is active and if the Twilio client is ready."
+    },
+    "ss1 report": {
+      "enabled": true,
+      "description": "Generates a real-time status report from the SS1 Universal Observer, including runtime, event counts, and active patterns."
+    },
+    "ss1 set_idle_threshold": {
+      "enabled": true,
+      "description": "Sets the idle threshold in seconds (10-600) for the SS1 observer to determine when the system is idle.",
+      "usage": "ss1 set_idle_threshold <seconds>"
+    },
+    "ss2 query_archive": {
+      "enabled": true,
+      "description": "Queries the long-term Wisdom Archive for retired patterns matching a specific term.",
+      "usage": "ss2 query_archive <search_term>"
+    },
+    "ss2 report": {
+      "enabled": true,
+      "description": "Generates a status report from the SS2 Insight Engine, showing the most significant learned patterns (trees)."
+    },
+    "think": {
+      "enabled": true,
+      "description": "Use think mode with default turns for next response."
+    },
+    "think help": {
+      "enabled": true,
+      "description": "Show think mode help."
+    },
+    "think mode off": {
+      "enabled": true,
+      "description": "Disable think mode feature."
+    },
+    "think mode on": {
+      "enabled": true,
+      "description": "Enable think mode feature."
+    },
+    "think mode show off": {
+      "enabled": true,
+      "description": "Hide thinking process from user."
+    },
+    "think mode show on": {
+      "enabled": true,
+      "description": "Show thinking process to user."
+    },
+    "think mode status": {
+      "enabled": true,
+      "description": "Show current think mode configuration."
+    },
+    "think mode turns": {
+      "enabled": true,
+      "description": "Set default thinking turns (1-5).",
+      "usage": "think mode turns <n>"
+    },
+    "wiki auto": {
+      "enabled": true,
+      "description": "Toggles the automatic suggestion of relevant Wikipedia articles based on conversation context."
+    },
+    "wiki config": {
+      "enabled": true,
+      "description": "Configures settings for the Wikipedia module, such as the maximum number of search results to store or the length of search history."
+    },
+    "wiki config history": {
+      "enabled": true,
+      "description": "Sets the length of Wikipedia search history to remember."
+    },
+    "wiki config results": {
+      "enabled": true,
+      "description": "Sets the maximum number of Wikipedia search results to store."
+    },
+    "wiki list": {
+      "enabled": true,
+      "description": "Displays a numbered list of the most recent Wikipedia articles found in searches."
+    },
+    "wiki open": {
+      "enabled": true,
+      "description": "Opens a specific Wikipedia article from the recent list in the default web browser using its index."
+    },
+    "wiki search": {
+      "enabled": true,
+      "description": "Searches Wikipedia for articles matching a given query and lists the results."
+    },
+    "wikipedia auto": {
+      "enabled": true,
+      "description": "Toggles the automatic suggestion of relevant Wikipedia articles based on conversation context."
+    },
+    "wikipedia config": {
+      "enabled": true,
+      "description": "Configures settings for the Wikipedia module, such as the maximum number of search results to store or the length of search history."
+    },
+    "wikipedia config history": {
+      "enabled": true,
+      "description": "Sets the length of Wikipedia search history to remember."
+    },
+    "wikipedia config results": {
+      "enabled": true,
+      "description": "Sets the maximum number of Wikipedia search results to store."
+    },
+    "wikipedia list": {
+      "enabled": true,
+      "description": "Displays a numbered list of the most recent Wikipedia articles found in searches."
+    },
+    "wikipedia open": {
+      "enabled": true,
+      "description": "Opens a specific Wikipedia article from the recent list in the default web browser using its index."
+    },
+    "wikipedia search": {
+      "enabled": true,
+      "description": "Searches Wikipedia for articles matching a given query and lists the results."
+    },
+    "youtube auto": {
+      "enabled": true,
+      "description": "Toggles the automatic suggestion of relevant YouTube videos based on conversation context."
+    },
+    "youtube config": {
+      "enabled": true,
+      "description": "Configures settings for the YouTube module, such as the maximum number of search results to store or the length of search history."
+    },
+    "youtube config history": {
+      "enabled": true,
+      "description": "Sets maximum search history to remember"
+    },
+    "youtube config results": {
+      "enabled": true,
+      "description": "Sets maximum number of results to keep"
+    },
+    "youtube list": {
+      "enabled": true,
+      "description": "Displays a numbered list of the most recent YouTube videos found in searches."
+    },
+    "youtube open": {
+      "enabled": true,
+      "description": "Opens a specific YouTube video from the recent list in the default web browser using its index."
+    },
+    "youtube search": {
+      "enabled": true,
+      "description": "Searches YouTube for videos matching a given query and lists the results."
+    },
+    "youtube setkey": {
+      "enabled": true,
+      "description": "Sets the API key required for using the YouTube search functionality."
+    }
+  },
+  "special_prefixes": {
+    "<download>:": {
+      "enabled": true,
+      "description": "Prefix for file download operations."
+    },
+    "<path>:": {
+      "enabled": true,
+      "description": "Prefix for file path operations."
+    },
+    "<update>:": {
+      "enabled": true,
+      "description": "Prefix for file update operations."
+    },
+    "goal:": {
+      "enabled": true,
+      "description": "Sets a new goal for the agent to work on."
+    }
+  }
+}

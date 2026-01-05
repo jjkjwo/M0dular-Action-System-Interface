@@ -1,1 +1,11 @@
-auth_config.json
+{
+  "enabled": true,
+  "allow_anonymous": false,
+  "require_token": true,
+  "token_expiry_hours": 24,
+  "max_failed_attempts": 5,
+  "lockout_duration_minutes": 30,
+  "log_unauthorized_attempts": true,
+  "default_user_role": "user",
+  "admin_can_bypass": true
+}

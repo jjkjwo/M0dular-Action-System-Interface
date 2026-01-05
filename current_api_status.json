@@ -1,1 +1,5 @@
-current_api_status.json
+{
+  "active_provider": "ollama",
+  "model_name": "llama3",
+  "initialized": false
+}

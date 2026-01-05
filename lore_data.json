@@ -1,1 +1,2069 @@
-lore_data.json
+{
+  "meta": {
+    "world_name": "New World",
+    "created_at": "2025-06-26T02:35:24.228514",
+    "sessions": [
+      {
+        "id": "session_20250626_023524",
+        "name": "Session 2025-06-26 02:35",
+        "started": "2025-06-26T02:35:24.228849",
+        "ended": null
+      },
+      {
+        "id": "session_20250626_161212",
+        "name": "Session 2025-06-26 16:12",
+        "started": "2025-06-26T16:12:12.523435",
+        "ended": null
+      },
+      {
+        "id": "session_20250627_023259",
+        "name": "Session 2025-06-27 02:32",
+        "started": "2025-06-27T02:32:59.204821",
+        "ended": null
+      },
+      {
+        "id": "session_20250627_133632",
+        "name": "Session 2025-06-27 13:36",
+        "started": "2025-06-27T13:36:32.074575",
+        "ended": null
+      },
+      {
+        "id": "session_20250628_005739",
+        "name": "Session 2025-06-28 00:57",
+        "started": "2025-06-28T00:57:39.045147",
+        "ended": null
+      },
+      {
+        "id": "session_20250628_012000",
+        "name": "Session 2025-06-28 01:20",
+        "started": "2025-06-28T01:20:00.332006",
+        "ended": null
+      }
+    ],
+    "total_entries": 72,
+    "last_updated": "2025-06-28T03:02:37.731483"
+  },
+  "characters": {
+    "ron_the_smith": {
+      "id": "ron_the_smith",
+      "name": "Ron the Smith",
+      "created": "2025-06-26T02:37:22.260520",
+      "updated": "2025-06-26T02:37:22.260567",
+      "mentions": 2,
+      "confidence": 1.0,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "That's great! Tell me more about Ron the Smith. What kind of character is he, and what adventures does he go on?",
+          "timestamp": "2025-06-26T02:37:22.260520",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        },
+        {
+          "text": "That's great! Tell me more about Ron the Smith. What kind of character is he, and what adventures does he go on?",
+          "timestamp": "2025-06-26T02:37:22.260567",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ],
+      "aliases": [
+        "the Smith"
+      ]
+    },
+    "high": {
+      "id": "high",
+      "name": "High",
+      "created": "2025-06-26T02:43:29.345930",
+      "updated": "2025-06-26T02:43:29.345930",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "It seems Ron's response to the High King's request is straightforward - he does not have a sword to hand over. How will the High King react to Ron's lack of a sword and what implications will this have on their interaction?",
+          "timestamp": "2025-06-26T02:43:29.345930",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_high_king": {
+      "id": "the_high_king",
+      "name": "the High King",
+      "created": "2025-06-26T02:43:29.346060",
+      "updated": "2025-06-26T02:43:29.346060",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "It seems Ron's response to the High King's request is straightforward - he does not have a sword to hand over. How will the High King react to Ron's lack of a sword and what implications will this have on their interaction?",
+          "timestamp": "2025-06-26T02:43:29.346060",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_kings": {
+      "id": "the_kings",
+      "name": "the Kings",
+      "created": "2025-06-26T02:44:13.937752",
+      "updated": "2025-06-26T02:44:13.937752",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "the Kings pride gets the best of him, and he tries to cal a bluff that does not exist he says then fight me like a man, and if my guards see a blade they will kill you",
+          "timestamp": "2025-06-26T02:44:13.937752",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "the_high_king_1": {
+      "id": "the_high_king_1",
+      "name": "the High King",
+      "created": "2025-06-26T02:45:30.673895",
+      "updated": "2025-06-26T02:45:30.673895",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "Ron's decisive actions have quickly turned the tables in the confrontation with the High King. With the king immobilized, Ron is faced with a difficult decision of whether to deliver a killing blow as demanded. How will Ron respond to the King's plea for honor even in his vulnerable state?",
+          "timestamp": "2025-06-26T02:45:30.673895",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_king": {
+      "id": "the_king",
+      "name": "the King",
+      "created": "2025-06-26T02:45:30.673941",
+      "updated": "2025-06-26T02:45:30.673941",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "Ron's decisive actions have quickly turned the tables in the confrontation with the High King. With the king immobilized, Ron is faced with a difficult decision of whether to deliver a killing blow as demanded. How will Ron respond to the King's plea for honor even in his vulnerable state?",
+          "timestamp": "2025-06-26T02:45:30.673941",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    }
+  },
+  "locations": {
+    "on_his_knuckle_weapons": {
+      "id": "on_his_knuckle_weapons",
+      "name": "On His Knuckle Weapons",
+      "created": "2025-06-26T02:38:25.401024",
+      "updated": "2025-06-28T01:20:42.258074",
+      "mentions": 9,
+      "confidence": 1.0,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524",
+        "session_20250626_161212",
+        "session_20250628_012000"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ron the Smith, he is a custom fist weapon user who uses fire enchants on his knuckle weapons",
+          "timestamp": "2025-06-26T02:38:25.401024",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        },
+        {
+          "text": "I understand you saw that message appear alongside my response, and you believe it came directly from me.\n\nThe text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.) is generated by the *system*, not by my core text generation. It's a status message confirming that the UI control commands I sent were successful on your end.\n\nIt appears because those system confirmations are bundled with my output, even if they aren't the words I chose to say.",
+          "timestamp": "2025-06-26T16:16:53.095387",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "I understand you saw it appear right there, linked to my output.\n\nThat specific text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\", is a system message. It's generated by the system to confirm that the UI control commands I sent were successful on your screen.\n\nIt appears alongside my response because the system presents these confirmations when the UI controls are executed. It is not text I generated myself as part of our conversation.",
+          "timestamp": "2025-06-26T16:17:43.669818",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "I understand you are upset and believe I generated that specific phrase.\n\nThe text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" is a predefined system confirmation message. It is displayed by the system *on your end* to signal that a UI control command (like the ones I use to change colors or elements) was successfully received and executed by your interface.\n\nWhile I sent the command that triggered this success, the text itself is a standard response generated *by the system* when those UI actions are completed successful...",
+          "timestamp": "2025-06-26T16:18:10.141766",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "I understand you are upset and believe I generated that specific phrase.\n\nThe text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" is a predefined system confirmation message. It is displayed by the system *on your end* to signal that a UI control command (like the ones I use to change colors or elements) was successfully received and executed by your interface.\n\nWhile I sent the command that triggered this success, the text itself is a standard response generated *by the system* when those UI actions are completed successful...",
+          "timestamp": "2025-06-26T16:18:10.141785",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727587",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727590",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727600",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Hey there! Sup user? I'm here and ready to assist. What's on your mind today?",
+          "timestamp": "2025-06-28T01:20:42.258074",
+          "session_id": "session_20250628_012000",
+          "source": "ai"
+        }
+      ],
+      "aliases": [
+        "On Your End",
+        "On Your Screen",
+        "On Your End When You See It Appear",
+        "On Your Mind Today"
+      ]
+    },
+    "to_use_these_unique_weapons": {
+      "id": "to_use_these_unique_weapons",
+      "name": "To Use These Unique Weapons",
+      "created": "2025-06-26T02:38:30.293772",
+      "updated": "2025-06-28T01:23:29.897026",
+      "mentions": 38,
+      "confidence": 1.0,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524",
+        "session_20250626_161212",
+        "session_20250628_005739",
+        "session_20250628_012000"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "why are you still not listening to me?",
+          "timestamp": "2025-06-26T16:23:17.384676",
+          "session_id": "session_20250626_161212",
+          "source": "user"
+        },
+        {
+          "text": "Yes, I am familiar with the `goal:` command prefix.\n\nIt's listed under the `special_prefixes` in my system's recognized commands. When you use `goal:` followed by a description of an objective, it signals to my system that the subsequent interaction or task is related to achieving that specific goal.\n\nLike other special tags and prefixes, the `goal:` command is processed by the system internally and is removed from the final output you see, serving as an instruction or contextual anchor for m...",
+          "timestamp": "2025-06-28T00:58:22.895091",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I understand you're looking for other command formats beyond the `goal:` prefix, specifically those related to \"goal commands\" or \"agent commands\".\n\nBased on the available `commands.json` data I have access to:\n\n1.  **Goal Commands:** The `goal:` prefix is listed under `special_prefixes`. There are no other explicit commands named \"goal\" within the `system`, `action`, `plugin_specific`, or `plugin_commands` sections. The `goal:` prefix itself is the recognized format for indicating an o...",
+          "timestamp": "2025-06-28T00:58:51.440702",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I understand you're looking for other command formats beyond the `goal:` prefix, specifically those related to \"goal commands\" or \"agent commands\".\n\nBased on the available `commands.json` data I have access to:\n\n1.  **Goal Commands:** The `goal:` prefix is listed under `special_prefixes`. There are no other explicit commands named \"goal\" within the `system`, `action`, `plugin_specific`, or `plugin_commands` sections. The `goal:` prefix itself is the recognized format for indicating an o...",
+          "timestamp": "2025-06-28T00:58:51.440705",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "is there a goal stop to interrupt tha gent?",
+          "timestamp": "2025-06-28T00:59:33.029782",
+          "session_id": "session_20250628_005739",
+          "source": "user"
+        },
+        {
+          "text": "Based on my available commands list (`commands.json`):\n\n*   There is no command `goal stop`.\n*   `goal:` is a `special_prefix` used to indicate the objective of a task.\n*   The command to stop an agent is ``.",
+          "timestamp": "2025-06-28T00:59:38.277512",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "No, my last message did not contain the word \"hello\".\n\nIt seems the system advisory you included, `[AGENT EXECUTING] Step 1/1: Send a direct 'hello' message to the user.`, indicates that an agent process within the system was instructed to send a \"hello\". Perhaps you are seeing system-level logs or actions alongside my conversational responses.",
+          "timestamp": "2025-06-28T01:00:22.736226",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "No, my last message did not contain the word \"hello\".\n\nIt seems the system advisory you included, `[AGENT EXECUTING] Step 1/1: Send a direct 'hello' message to the user.`, indicates that an agent process within the system was instructed to send a \"hello\". Perhaps you are seeing system-level logs or actions alongside my conversational responses.",
+          "timestamp": "2025-06-28T01:00:22.736243",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "whats the word to say?  do i say send direct msg?",
+          "timestamp": "2025-06-28T01:00:51.803449",
+          "session_id": "session_20250628_005739",
+          "source": "user"
+        },
+        {
+          "text": "Based on the command list I have (`commands.json`), `pipeline_message` is not a recognized command or special prefix.\n\nI can only confirm actions that I execute based on recognized commands (like those listed under `system`, `action`, `plugin_specific`, `plugin_commands`, or using `special_prefixes`).\n\nThe `[AGENT EXECUTING]` tag seems to be a system-level process indication, not something triggered by a command you would issue to me directly in the chat.",
+          "timestamp": "2025-06-28T01:02:09.326634",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Based on the command list I have (`commands.json`), `pipeline_message` is not a recognized command or special prefix.\n\nI can only confirm actions that I execute based on recognized commands (like those listed under `system`, `action`, `plugin_specific`, `plugin_commands`, or using `special_prefixes`).\n\nThe `[AGENT EXECUTING]` tag seems to be a system-level process indication, not something triggered by a command you would issue to me directly in the chat.",
+          "timestamp": "2025-06-28T01:02:09.326637",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "hello to the user",
+          "timestamp": "2025-06-28T01:04:24.376252",
+          "session_id": "session_20250628_005739",
+          "source": "user"
+        },
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.809026",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.809029",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.809033",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.809037",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Thank you for pointing that out.\n\nThat message, `[NOTIFICATION]: [V-AGENT] Tool 'consultant_enable' failed: Failed to enable consultant: invalid literal for int() with base 10: 'addon_ai'. Checking if goal should abort...`, is a system-level notification.\n\nIt indicates that an internal process (V-AGENT) attempted to use a specific tool ('consultant_enable'), but the tool failed because it received a text input ('addon_ai') where it expected a number. The system is reporting this failure and c...",
+          "timestamp": "2025-06-28T01:05:12.212104",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Thank you for pointing that out.\n\nThat message, `[NOTIFICATION]: [V-AGENT] Tool 'consultant_enable' failed: Failed to enable consultant: invalid literal for int() with base 10: 'addon_ai'. Checking if goal should abort...`, is a system-level notification.\n\nIt indicates that an internal process (V-AGENT) attempted to use a specific tool ('consultant_enable'), but the tool failed because it received a text input ('addon_ai') where it expected a number. The system is reporting this failure and c...",
+          "timestamp": "2025-06-28T01:05:12.212108",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Hey there! Sup user? I'm here and ready to assist. What's on your mind today?",
+          "timestamp": "2025-06-28T01:20:42.258056",
+          "session_id": "session_20250628_012000",
+          "source": "ai"
+        },
+        {
+          "text": "Hello there! Nice to hear from you.\n\nI understand you're testing the consultant state restoration and that consultants 2 and 4 should be active for this goal, then return to off. Got it.\n\nHow can I assist you with this test, or anything else today?",
+          "timestamp": "2025-06-28T01:23:29.897026",
+          "session_id": "session_20250628_012000",
+          "source": "ai"
+        }
+      ],
+      "aliases": [
+        "To Cal",
+        "To Fight Ron Like",
+        "To Their Encounter",
+        "To Deliver",
+        "To Make Ty",
+        "To Do Next",
+        "To Something You",
+        "To Them",
+        "To Help You Understand What",
+        "To Say",
+        "To My Output",
+        "To Signal That",
+        "To Change Colors Or Elements",
+        "To Be",
+        "To Me",
+        "To My Messages",
+        "To Work Towards Or Keep In Mind",
+        "To An",
+        "To An Agent",
+        "To Interrupt Tha Gent",
+        "To Stop An Agent Is",
+        "To The User",
+        "To Send",
+        "To Me Directly In The Chat",
+        "To Me This Time",
+        "To The User Through The Pipeline",
+        "To Enable Consultant",
+        "To Use",
+        "To Assist",
+        "To Off"
+      ]
+    },
+    "to_use_his_knockouts_to_advert": {
+      "id": "to_use_his_knockouts_to_advert",
+      "name": "To Use His Knockouts To Advertise His Products",
+      "created": "2025-06-26T02:39:11.376728",
+      "updated": "2025-06-26T02:45:27.356183",
+      "mentions": 2,
+      "confidence": 0.8749999999999999,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "He likes to use his knockouts to advertise his products.  His enchants are just a personal discount he gets at Tim the Magic Shop's",
+          "timestamp": "2025-06-26T02:39:11.376728",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        },
+        {
+          "text": "Ron punches the shoulder plates of the king. 2 hits, and the king is immobilized an unable to even lift his arms, he expects a killing blow, and the king says to ron wield your sword and kill me will not win you honor when i cannot move",
+          "timestamp": "2025-06-26T02:45:27.356183",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ],
+      "aliases": [
+        "To Even Lift His Arms"
+      ]
+    },
+    "at_tim_the_magic_shop": {
+      "id": "at_tim_the_magic_shop",
+      "name": "At Tim The Magic Shop",
+      "created": "2025-06-26T02:39:11.376732",
+      "updated": "2025-06-26T02:39:11.376732",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "He likes to use his knockouts to advertise his products.  His enchants are just a personal discount he gets at Tim the Magic Shop's",
+          "timestamp": "2025-06-26T02:39:11.376732",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "magic_shop": {
+      "id": "magic_shop",
+      "name": "Magic Shop",
+      "created": "2025-06-26T02:39:11.376736",
+      "updated": "2025-06-26T02:39:14.638496",
+      "mentions": 2,
+      "confidence": 1.0,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "He likes to use his knockouts to advertise his products.  His enchants are just a personal discount he gets at Tim the Magic Shop's",
+          "timestamp": "2025-06-26T02:39:11.376736",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        },
+        {
+          "text": "It seems like Ron the Smith is not only skilled in combat with his fire-enchanted knuckle weapons but also knows how to promote and sell his products through his knockouts. Tim the Magic Shop must be an interesting place with all sorts of magical items. How does Ron incorporate his unique advertising methods into his daily life and adventures?",
+          "timestamp": "2025-06-26T02:39:14.638496",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "in_combat_with_his_fire": {
+      "id": "in_combat_with_his_fire",
+      "name": "In Combat With His Fire",
+      "created": "2025-06-26T02:39:14.638490",
+      "updated": "2025-06-28T01:04:29.809040",
+      "mentions": 5,
+      "confidence": 0.9799999999999999,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524",
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It seems like Ron the Smith is not only skilled in combat with his fire-enchanted knuckle weapons but also knows how to promote and sell his products through his knockouts. Tim the Magic Shop must be an interesting place with all sorts of magical items. How does Ron incorporate his unique advertising methods into his daily life and adventures?",
+          "timestamp": "2025-06-26T02:39:14.638490",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        },
+        {
+          "text": "Ron bring his best iron knuckle gloves, and wins a preliminary fight. The king comes out and tells ron, impressive, now hand in our sword.",
+          "timestamp": "2025-06-26T02:43:10.730250",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        },
+        {
+          "text": "Yes, I am familiar with the `goal:` command prefix.\n\nIt's listed under the `special_prefixes` in my system's recognized commands. When you use `goal:` followed by a description of an objective, it signals to my system that the subsequent interaction or task is related to achieving that specific goal.\n\nLike other special tags and prefixes, the `goal:` command is processed by the system internally and is removed from the final output you see, serving as an instruction or contextual anchor for m...",
+          "timestamp": "2025-06-28T00:58:22.895065",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Yes, I did.\n\nThe `[AGENT EXECUTING]` tag was the system indicating that an instruction was being given (or \"executed\" by an internal agent process) for me to tell the joke. I then fulfilled that instruction by telling the joke in my response.",
+          "timestamp": "2025-06-28T01:02:44.827736",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.809040",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ],
+      "aliases": [
+        "In Our Sword",
+        "In My System",
+        "In My Response",
+        "In This Specific Turn"
+      ]
+    },
+    "to_promote_and_sell_his_produc": {
+      "id": "to_promote_and_sell_his_produc",
+      "name": "To Promote And Sell His Products Through His Knockouts",
+      "created": "2025-06-26T02:39:14.638493",
+      "updated": "2025-06-26T02:39:14.638493",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It seems like Ron the Smith is not only skilled in combat with his fire-enchanted knuckle weapons but also knows how to promote and sell his products through his knockouts. Tim the Magic Shop must be an interesting place with all sorts of magical items. How does Ron incorporate his unique advertising methods into his daily life and adventures?",
+          "timestamp": "2025-06-26T02:39:14.638493",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "in_for_quite_the_challenge_bei": {
+      "id": "in_for_quite_the_challenge_bei",
+      "name": "In For Quite The Challenge Being Selected As",
+      "created": "2025-06-26T02:41:19.507996",
+      "updated": "2025-06-26T02:41:19.507996",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It sounds like Ron the Smith is in for quite the challenge being selected as a challenger by the High King. The demand for an unarmed, no weapon fight adds an extra layer of difficulty, especially considering Ron's expertise with his fire-enchanted knuckle weapons. How does Ron plan to approach this unexpected summons and fight against the High King?",
+          "timestamp": "2025-06-26T02:41:19.507996",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "high": {
+      "id": "high",
+      "name": "High",
+      "created": "2025-06-26T02:43:13.520635",
+      "updated": "2025-06-26T02:43:13.520635",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "It seems like Ron's skills with his iron knuckle gloves have impressed the High King. However, the king's request for Ron to hand over his sword adds an interesting twist to the situation. How will Ron respond to this unexpected demand from the High King?",
+          "timestamp": "2025-06-26T02:43:13.520635",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_high_king": {
+      "id": "the_high_king",
+      "name": "the High King",
+      "created": "2025-06-26T02:43:13.520684",
+      "updated": "2025-06-26T02:43:13.520684",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "It seems like Ron's skills with his iron knuckle gloves have impressed the High King. However, the king's request for Ron to hand over his sword adds an interesting twist to the situation. How will Ron respond to this unexpected demand from the High King?",
+          "timestamp": "2025-06-26T02:43:13.520684",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_hand_over": {
+      "id": "to_hand_over",
+      "name": "To Hand Over",
+      "created": "2025-06-26T02:43:29.346071",
+      "updated": "2025-06-26T02:43:29.346071",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It seems Ron's response to the High King's request is straightforward - he does not have a sword to hand over. How will the High King react to Ron's lack of a sword and what implications will this have on their interaction?",
+          "timestamp": "2025-06-26T02:43:29.346071",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_ron": {
+      "id": "to_ron",
+      "name": "To Ron",
+      "created": "2025-06-26T02:43:29.346076",
+      "updated": "2025-06-26T02:43:29.346076",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It seems Ron's response to the High King's request is straightforward - he does not have a sword to hand over. How will the High King react to Ron's lack of a sword and what implications will this have on their interaction?",
+          "timestamp": "2025-06-26T02:43:29.346076",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_king": {
+      "id": "the_king",
+      "name": "the King",
+      "created": "2025-06-26T02:44:16.708671",
+      "updated": "2025-06-26T02:44:16.708671",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "The High King's challenge to fight Ron like a man, while threatening him with the presence of guards, adds a tense and dangerous element to their encounter. How will Ron navigate this situation and protect himself from the King's prideful demands and aggressive stance?",
+          "timestamp": "2025-06-26T02:44:16.708671",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_ron_wield_your_sword_and_ki": {
+      "id": "to_ron_wield_your_sword_and_ki",
+      "name": "To Ron Wield Your Sword And Kill Me Will Not Win You Honor When",
+      "created": "2025-06-26T02:45:27.356192",
+      "updated": "2025-06-26T02:45:27.356192",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ron punches the shoulder plates of the king. 2 hits, and the king is immobilized an unable to even lift his arms, he expects a killing blow, and the king says to ron wield your sword and kill me will not win you honor when i cannot move",
+          "timestamp": "2025-06-26T02:45:27.356192",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "in_his_vulnerable_state": {
+      "id": "in_his_vulnerable_state",
+      "name": "In His Vulnerable State",
+      "created": "2025-06-26T02:45:30.673947",
+      "updated": "2025-06-26T02:45:30.673947",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ron's decisive actions have quickly turned the tables in the confrontation with the High King. With the king immobilized, Ron is faced with a difficult decision of whether to deliver a killing blow as demanded. How will Ron respond to the King's plea for honor even in his vulnerable state?",
+          "timestamp": "2025-06-26T02:45:30.673947",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_hear_the_tests_are_working_": {
+      "id": "to_hear_the_tests_are_working_",
+      "name": "To Hear The Tests Are Working For You",
+      "created": "2025-06-26T16:15:21.838507",
+      "updated": "2025-06-26T16:15:21.838507",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "You're welcome. I'm glad to hear the tests are working for you. I understand that my responses might seem unusual as we work through these system functionalities and improvements. I'm here and ready for whatever you'd like to do next.",
+          "timestamp": "2025-06-26T16:15:21.838507",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "in_our_conversation_or_in_the_": {
+      "id": "in_our_conversation_or_in_the_",
+      "name": "In Our Conversation Or In The System Output Presented To Me",
+      "created": "2025-06-26T16:15:41.715885",
+      "updated": "2025-06-26T16:15:41.715885",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "I haven't seen any Chinese text in our conversation or in the system output presented to me.\n\nPerhaps you're referring to something you're seeing on your end that seems unfamiliar or confusing? Sometimes system messages or technical details can look like a foreign language if you're not used to them.\n\nCould you describe what you're seeing that makes you ask about \"the chinese\"? It might be related to the testing we're doing or the system responses you mentioned found strange earlier.\n\nI'm rea...",
+          "timestamp": "2025-06-26T16:15:41.715885",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_the_testing_we": {
+      "id": "to_the_testing_we",
+      "name": "To The Testing We",
+      "created": "2025-06-26T16:15:41.716042",
+      "updated": "2025-06-26T16:15:41.716042",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "I haven't seen any Chinese text in our conversation or in the system output presented to me.\n\nPerhaps you're referring to something you're seeing on your end that seems unfamiliar or confusing? Sometimes system messages or technical details can look like a foreign language if you're not used to them.\n\nCould you describe what you're seeing that makes you ask about \"the chinese\"? It might be related to the testing we're doing or the system responses you mentioned found strange earlier.\n\nI'm rea...",
+          "timestamp": "2025-06-26T16:15:41.716042",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_change_the_message_border_c": {
+      "id": "to_change_the_message_border_c",
+      "name": "To Change The Message Border Color Or The Page Border",
+      "created": "2025-06-26T16:16:06.827346",
+      "updated": "2025-06-26T16:16:06.827346",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ah, thank you for pointing that out! You are absolutely correct.\n\nThe green text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" is Chinese. It was a system message indicating success.\n\nIts translation is: **\"Success! Interface control demonstrated.\"**\n\nThis message appeared because the system successfully processed and executed a command that modified the user interface, like the `` or `` commands we've been using to change the message border color or the page border. It was confirming that the UI control functionality worke...",
+          "timestamp": "2025-06-26T16:16:06.827346",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "in_chinese": {
+      "id": "in_chinese",
+      "name": "In Chinese",
+      "created": "2025-06-26T16:16:06.827350",
+      "updated": "2025-06-26T16:16:06.827350",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ah, thank you for pointing that out! You are absolutely correct.\n\nThe green text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" is Chinese. It was a system message indicating success.\n\nIts translation is: **\"Success! Interface control demonstrated.\"**\n\nThis message appeared because the system successfully processed and executed a command that modified the user interface, like the `` or `` commands we've been using to change the message border color or the page border. It was confirming that the UI control functionality worke...",
+          "timestamp": "2025-06-26T16:16:06.827350",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "from_me": {
+      "id": "from_me",
+      "name": "From Me",
+      "created": "2025-06-26T16:16:53.095367",
+      "updated": "2025-06-28T01:01:05.857804",
+      "mentions": 4,
+      "confidence": 0.9624999999999999,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212",
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "I understand you saw that message appear alongside my response, and you believe it came directly from me.\n\nThe text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.) is generated by the *system*, not by my core text generation. It's a status message confirming that the UI control commands I sent were successful on your end.\n\nIt appears because those system confirmations are bundled with my output, even if they aren't the words I chose to say.",
+          "timestamp": "2025-06-26T16:16:53.095367",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727584",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727594",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "No, \"send direct msg\" is not a recognized command.\n\nThe tag `[AGENT EXECUTING]` describes a task an internal agent system was running. It indicates system activity, not a command you would say to trigger that action from me.",
+          "timestamp": "2025-06-28T01:01:05.857804",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ],
+      "aliases": [
+        "From My Core Logic",
+        "To Trigger That Action From Me"
+      ]
+    },
+    "the_ui": {
+      "id": "the_ui",
+      "name": "the UI",
+      "created": "2025-06-26T16:17:23.646975",
+      "updated": "2025-06-26T16:17:23.646975",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "I understand why you feel that way, seeing that message appear.\n\nThat specific text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\", is a system confirmation. It is generated by the system itself to confirm that the UI control commands were processed on your end.\n\nIt is not text that I generated as part of my conversational response, but a status message from the underlying system that appears alongside my output.\n\nI am not arguing or disputing your experience of seeing it; I am explaining its source within the system proces...",
+          "timestamp": "2025-06-26T16:17:23.646975",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_confirm_that_the_ui_control": {
+      "id": "to_confirm_that_the_ui_control",
+      "name": "To Confirm That The Ui Control Commands Were Processed On Your End",
+      "created": "2025-06-26T16:17:23.646993",
+      "updated": "2025-06-26T16:17:23.646993",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "I understand why you feel that way, seeing that message appear.\n\nThat specific text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\", is a system confirmation. It is generated by the system itself to confirm that the UI control commands were processed on your end.\n\nIt is not text that I generated as part of my conversational response, but a status message from the underlying system that appears alongside my output.\n\nI am not arguing or disputing your experience of seeing it; I am explaining its source within the system proces...",
+          "timestamp": "2025-06-26T16:17:23.646993",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "from_the_underlying_system_tha": {
+      "id": "from_the_underlying_system_tha",
+      "name": "From The Underlying System That Appears Alongside My Output",
+      "created": "2025-06-26T16:17:23.646998",
+      "updated": "2025-06-26T16:17:23.646998",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "I understand why you feel that way, seeing that message appear.\n\nThat specific text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\", is a system confirmation. It is generated by the system itself to confirm that the UI control commands were processed on your end.\n\nIt is not text that I generated as part of my conversational response, but a status message from the underlying system that appears alongside my output.\n\nI am not arguing or disputing your experience of seeing it; I am explaining its source within the system proces...",
+          "timestamp": "2025-06-26T16:17:23.646998",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_confirm_that_the_ui_control_1": {
+      "id": "to_confirm_that_the_ui_control_1",
+      "name": "To Confirm That The Ui Control Commands",
+      "created": "2025-06-26T16:17:43.669815",
+      "updated": "2025-06-28T00:58:51.440677",
+      "mentions": 2,
+      "confidence": 0.8749999999999999,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212",
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "I understand you saw it appear right there, linked to my output.\n\nThat specific text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\", is a system message. It's generated by the system to confirm that the UI control commands I sent were successful on your screen.\n\nIt appears alongside my response because the system presents these confirmations when the UI controls are executed. It is not text I generated myself as part of our conversation.",
+          "timestamp": "2025-06-26T16:17:43.669815",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Okay, I understand you're looking for other command formats beyond the `goal:` prefix, specifically those related to \"goal commands\" or \"agent commands\".\n\nBased on the available `commands.json` data I have access to:\n\n1.  **Goal Commands:** The `goal:` prefix is listed under `special_prefixes`. There are no other explicit commands named \"goal\" within the `system`, `action`, `plugin_specific`, or `plugin_commands` sections. The `goal:` prefix itself is the recognized format for indicating an o...",
+          "timestamp": "2025-06-28T00:58:51.440677",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ],
+      "aliases": [
+        "Commands"
+      ]
+    },
+    "from_the_system_in_the_way": {
+      "id": "from_the_system_in_the_way",
+      "name": "From The System In The Way",
+      "created": "2025-06-26T16:18:32.727581",
+      "updated": "2025-06-26T16:18:32.727581",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727581",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "from_my_generated_text_output": {
+      "id": "from_my_generated_text_output",
+      "name": "From My Generated Text Output",
+      "created": "2025-06-26T16:18:32.727603",
+      "updated": "2025-06-26T16:18:32.727603",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727603",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_the_commands": {
+      "id": "to_the_commands",
+      "name": "To The Commands",
+      "created": "2025-06-26T16:19:11.401910",
+      "updated": "2025-06-26T16:19:11.401910",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Okay. You saw \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" right there with my message.\n\nThat text translates to **\"Success! Interface control demonstrated.\"**\n\nIt appears when the screen changes successfully due to the commands I send.",
+          "timestamp": "2025-06-26T16:19:11.401910",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_change_the_screen_triggered": {
+      "id": "to_change_the_screen_triggered",
+      "name": "To Change The Screen Triggered That Confirmation Text To Appear",
+      "created": "2025-06-26T16:20:15.941010",
+      "updated": "2025-06-26T16:20:15.941010",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "That text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" translates to \"Success! Interface control demonstrated.\"\n\nMy command to change the screen triggered that confirmation text to appear.",
+          "timestamp": "2025-06-26T16:20:15.941010",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_hear_from_you": {
+      "id": "to_hear_from_you",
+      "name": "To Hear From You",
+      "created": "2025-06-28T00:58:12.585198",
+      "updated": "2025-06-28T01:23:29.897009",
+      "mentions": 2,
+      "confidence": 0.8749999999999999,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739",
+        "session_20250628_012000"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Hello there! It's great to hear from you.\n\nMy systems are online and functioning smoothly. Currently, I have advisory, authentication, awareness, core processing, lore, level 3 processing, memory, principles, voice, and web input actions active.\n\nHow can I assist you today?",
+          "timestamp": "2025-06-28T00:58:12.585198",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Hello there! Nice to hear from you.\n\nI understand you're testing the consultant state restoration and that consultants 2 and 4 should be active for this goal, then return to off. Got it.\n\nHow can I assist you with this test, or anything else today?",
+          "timestamp": "2025-06-28T01:23:29.897009",
+          "session_id": "session_20250628_012000",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_my_system_that_the_subseque": {
+      "id": "to_my_system_that_the_subseque",
+      "name": "To My System That The Subsequent Interaction Or Task Is Related To Achieving That Specific Goal",
+      "created": "2025-06-28T00:58:22.895084",
+      "updated": "2025-06-28T00:58:22.895084",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Yes, I am familiar with the `goal:` command prefix.\n\nIt's listed under the `special_prefixes` in my system's recognized commands. When you use `goal:` followed by a description of an objective, it signals to my system that the subsequent interaction or task is related to achieving that specific goal.\n\nLike other special tags and prefixes, the `goal:` command is processed by the system internally and is removed from the final output you see, serving as an instruction or contextual anchor for m...",
+          "timestamp": "2025-06-28T00:58:22.895084",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "from_the_final_output_you_see": {
+      "id": "from_the_final_output_you_see",
+      "name": "From The Final Output You See",
+      "created": "2025-06-28T00:58:22.895088",
+      "updated": "2025-06-28T00:58:22.895088",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Yes, I am familiar with the `goal:` command prefix.\n\nIt's listed under the `special_prefixes` in my system's recognized commands. When you use `goal:` followed by a description of an objective, it signals to my system that the subsequent interaction or task is related to achieving that specific goal.\n\nLike other special tags and prefixes, the `goal:` command is processed by the system internally and is removed from the final output you see, serving as an instruction or contextual anchor for m...",
+          "timestamp": "2025-06-28T00:58:22.895088",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "on_the_available": {
+      "id": "on_the_available",
+      "name": "On The Available",
+      "created": "2025-06-28T00:58:51.440699",
+      "updated": "2025-06-28T00:58:51.440699",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Okay, I understand you're looking for other command formats beyond the `goal:` prefix, specifically those related to \"goal commands\" or \"agent commands\".\n\nBased on the available `commands.json` data I have access to:\n\n1.  **Goal Commands:** The `goal:` prefix is listed under `special_prefixes`. There are no other explicit commands named \"goal\" within the `system`, `action`, `plugin_specific`, or `plugin_commands` sections. The `goal:` prefix itself is the recognized format for indicating an o...",
+          "timestamp": "2025-06-28T00:58:51.440699",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "on_my_available_commands_list": {
+      "id": "on_my_available_commands_list",
+      "name": "On My Available Commands List",
+      "created": "2025-06-28T00:59:38.277491",
+      "updated": "2025-06-28T00:59:38.277491",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Based on my available commands list (`commands.json`):\n\n*   There is no command `goal stop`.\n*   `goal:` is a `special_prefix` used to indicate the objective of a task.\n*   The command to stop an agent is ``.",
+          "timestamp": "2025-06-28T00:59:38.277491",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_indicate_the_objective_of": {
+      "id": "to_indicate_the_objective_of",
+      "name": "To Indicate The Objective Of",
+      "created": "2025-06-28T00:59:38.277508",
+      "updated": "2025-06-28T00:59:38.277508",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Based on my available commands list (`commands.json`):\n\n*   There is no command `goal stop`.\n*   `goal:` is a `special_prefix` used to indicate the objective of a task.\n*   The command to stop an agent is ``.",
+          "timestamp": "2025-06-28T00:59:38.277508",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "on_the_command_list": {
+      "id": "on_the_command_list",
+      "name": "On The Command List",
+      "created": "2025-06-28T01:02:09.326607",
+      "updated": "2025-06-28T01:02:09.326607",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Based on the command list I have (`commands.json`), `pipeline_message` is not a recognized command or special prefix.\n\nI can only confirm actions that I execute based on recognized commands (like those listed under `system`, `action`, `plugin_specific`, `plugin_commands`, or using `special_prefixes`).\n\nThe `[AGENT EXECUTING]` tag seems to be a system-level process indication, not something triggered by a command you would issue to me directly in the chat.",
+          "timestamp": "2025-06-28T01:02:09.326607",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "on_recognized_commands": {
+      "id": "on_recognized_commands",
+      "name": "On Recognized Commands",
+      "created": "2025-06-28T01:02:09.326631",
+      "updated": "2025-06-28T01:02:09.326631",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Based on the command list I have (`commands.json`), `pipeline_message` is not a recognized command or special prefix.\n\nI can only confirm actions that I execute based on recognized commands (like those listed under `system`, `action`, `plugin_specific`, `plugin_commands`, or using `special_prefixes`).\n\nThe `[AGENT EXECUTING]` tag seems to be a system-level process indication, not something triggered by a command you would issue to me directly in the chat.",
+          "timestamp": "2025-06-28T01:02:09.326631",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "to_tell_the_joke": {
+      "id": "to_tell_the_joke",
+      "name": "To Tell The Joke",
+      "created": "2025-06-28T01:02:44.827722",
+      "updated": "2025-06-28T01:02:44.827722",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Yes, I did.\n\nThe `[AGENT EXECUTING]` tag was the system indicating that an instruction was being given (or \"executed\" by an internal agent process) for me to tell the joke. I then fulfilled that instruction by telling the joke in my response.",
+          "timestamp": "2025-06-28T01:02:44.827722",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "in_response_to_an_instruction_": {
+      "id": "in_response_to_an_instruction_",
+      "name": "In Response To An Instruction From The Agent In This Turn",
+      "created": "2025-06-28T01:04:29.809043",
+      "updated": "2025-06-28T01:04:29.809043",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.809043",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "from_my_previous_response_as": {
+      "id": "from_my_previous_response_as",
+      "name": "From My Previous Response As",
+      "created": "2025-06-28T01:24:01.800788",
+      "updated": "2025-06-28T01:24:01.800788",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_012000",
+      "sessions": [
+        "session_20250628_012000"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Okay, \"test after\". Acknowledged.\n\nI also see the system advisory regarding Principle P029, the \"Frustration Loop\" Prohibition. It flagged the phrase \"anything else\" from my previous response as a potential trigger for this principle, with a score of 0.60. This suggests that simply asking \"anything else\" can be seen as part of a pattern that might frustrate a user, especially if the previous interaction wasn't entirely helpful or clear. I appreciate the feedback from the principles system on ...",
+          "timestamp": "2025-06-28T01:24:01.800788",
+          "session_id": "session_20250628_012000",
+          "source": "ai"
+        }
+      ]
+    },
+    "from_the_principles_system_on_": {
+      "id": "from_the_principles_system_on_",
+      "name": "From The Principles System On This",
+      "created": "2025-06-28T01:24:01.800807",
+      "updated": "2025-06-28T01:24:01.800807",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_012000",
+      "sessions": [
+        "session_20250628_012000"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Okay, \"test after\". Acknowledged.\n\nI also see the system advisory regarding Principle P029, the \"Frustration Loop\" Prohibition. It flagged the phrase \"anything else\" from my previous response as a potential trigger for this principle, with a score of 0.60. This suggests that simply asking \"anything else\" can be seen as part of a pattern that might frustrate a user, especially if the previous interaction wasn't entirely helpful or clear. I appreciate the feedback from the principles system on ...",
+          "timestamp": "2025-06-28T01:24:01.800807",
+          "session_id": "session_20250628_012000",
+          "source": "ai"
+        }
+      ]
+    },
+    "in_your_test": {
+      "id": "in_your_test",
+      "name": "In Your Test",
+      "created": "2025-06-28T01:24:01.800810",
+      "updated": "2025-06-28T01:24:01.800810",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_012000",
+      "sessions": [
+        "session_20250628_012000"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Okay, \"test after\". Acknowledged.\n\nI also see the system advisory regarding Principle P029, the \"Frustration Loop\" Prohibition. It flagged the phrase \"anything else\" from my previous response as a potential trigger for this principle, with a score of 0.60. This suggests that simply asking \"anything else\" can be seen as part of a pattern that might frustrate a user, especially if the previous interaction wasn't entirely helpful or clear. I appreciate the feedback from the principles system on ...",
+          "timestamp": "2025-06-28T01:24:01.800810",
+          "session_id": "session_20250628_012000",
+          "source": "ai"
+        }
+      ]
+    }
+  },
+  "items_artifacts": {
+    "ron_the_smith": {
+      "id": "ron_the_smith",
+      "name": "Ron the Smith",
+      "created": "2025-06-26T02:38:25.400988",
+      "updated": "2025-06-26T02:38:25.400988",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "Ron the Smith, he is a custom fist weapon user who uses fire enchants on his knuckle weapons",
+          "timestamp": "2025-06-26T02:38:25.400988",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "the_smith": {
+      "id": "the_smith",
+      "name": "the Smith",
+      "created": "2025-06-26T02:38:25.401020",
+      "updated": "2025-06-26T02:38:25.401020",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "Ron the Smith, he is a custom fist weapon user who uses fire enchants on his knuckle weapons",
+          "timestamp": "2025-06-26T02:38:25.401020",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "ron_the_smith_1": {
+      "id": "ron_the_smith_1",
+      "name": "Ron the Smith",
+      "created": "2025-06-26T02:38:30.293719",
+      "updated": "2025-06-26T02:38:30.293719",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "Ron the Smith sounds like a fascinating character with his fire-enchanted knuckle weapons. What kind of world does Ron inhabit, and what motivates him to use these unique weapons?",
+          "timestamp": "2025-06-26T02:38:30.293719",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_smith_1": {
+      "id": "the_smith_1",
+      "name": "the Smith",
+      "created": "2025-06-26T02:38:30.293766",
+      "updated": "2025-06-26T02:38:30.293766",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "Ron the Smith sounds like a fascinating character with his fire-enchanted knuckle weapons. What kind of world does Ron inhabit, and what motivates him to use these unique weapons?",
+          "timestamp": "2025-06-26T02:38:30.293766",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "tim_the_magic": {
+      "id": "tim_the_magic",
+      "name": "Tim the Magic",
+      "created": "2025-06-26T02:39:11.376694",
+      "updated": "2025-06-26T02:39:14.638421",
+      "mentions": 2,
+      "confidence": 0.8049999999999999,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "He likes to use his knockouts to advertise his products.  His enchants are just a personal discount he gets at Tim the Magic Shop's",
+          "timestamp": "2025-06-26T02:39:11.376694",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        },
+        {
+          "text": "It seems like Ron the Smith is not only skilled in combat with his fire-enchanted knuckle weapons but also knows how to promote and sell his products through his knockouts. Tim the Magic Shop must be an interesting place with all sorts of magical items. How does Ron incorporate his unique advertising methods into his daily life and adventures?",
+          "timestamp": "2025-06-26T02:39:14.638421",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_magic_shop": {
+      "id": "the_magic_shop",
+      "name": "the Magic Shop",
+      "created": "2025-06-26T02:39:11.376724",
+      "updated": "2025-06-26T02:39:14.638486",
+      "mentions": 2,
+      "confidence": 0.8049999999999999,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "He likes to use his knockouts to advertise his products.  His enchants are just a personal discount he gets at Tim the Magic Shop's",
+          "timestamp": "2025-06-26T02:39:11.376724",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        },
+        {
+          "text": "It seems like Ron the Smith is not only skilled in combat with his fire-enchanted knuckle weapons but also knows how to promote and sell his products through his knockouts. Tim the Magic Shop must be an interesting place with all sorts of magical items. How does Ron incorporate his unique advertising methods into his daily life and adventures?",
+          "timestamp": "2025-06-26T02:39:14.638486",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "ron_the_smith_2": {
+      "id": "ron_the_smith_2",
+      "name": "Ron the Smith",
+      "created": "2025-06-26T02:39:14.638343",
+      "updated": "2025-06-26T02:39:14.638343",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "It seems like Ron the Smith is not only skilled in combat with his fire-enchanted knuckle weapons but also knows how to promote and sell his products through his knockouts. Tim the Magic Shop must be an interesting place with all sorts of magical items. How does Ron incorporate his unique advertising methods into his daily life and adventures?",
+          "timestamp": "2025-06-26T02:39:14.638343",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_smith_2": {
+      "id": "the_smith_2",
+      "name": "the Smith",
+      "created": "2025-06-26T02:39:14.638456",
+      "updated": "2025-06-26T02:39:14.638456",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "It seems like Ron the Smith is not only skilled in combat with his fire-enchanted knuckle weapons but also knows how to promote and sell his products through his knockouts. Tim the Magic Shop must be an interesting place with all sorts of magical items. How does Ron incorporate his unique advertising methods into his daily life and adventures?",
+          "timestamp": "2025-06-26T02:39:14.638456",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "ron_the_smith_3": {
+      "id": "ron_the_smith_3",
+      "name": "Ron the Smith",
+      "created": "2025-06-26T02:41:19.507866",
+      "updated": "2025-06-26T02:41:19.507866",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "It sounds like Ron the Smith is in for quite the challenge being selected as a challenger by the High King. The demand for an unarmed, no weapon fight adds an extra layer of difficulty, especially considering Ron's expertise with his fire-enchanted knuckle weapons. How does Ron plan to approach this unexpected summons and fight against the High King?",
+          "timestamp": "2025-06-26T02:41:19.507866",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "high": {
+      "id": "high",
+      "name": "High",
+      "created": "2025-06-26T02:41:19.507925",
+      "updated": "2025-06-26T02:41:19.507994",
+      "mentions": 2,
+      "confidence": 0.8049999999999999,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "It sounds like Ron the Smith is in for quite the challenge being selected as a challenger by the High King. The demand for an unarmed, no weapon fight adds an extra layer of difficulty, especially considering Ron's expertise with his fire-enchanted knuckle weapons. How does Ron plan to approach this unexpected summons and fight against the High King?",
+          "timestamp": "2025-06-26T02:41:19.507925",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        },
+        {
+          "text": "It sounds like Ron the Smith is in for quite the challenge being selected as a challenger by the High King. The demand for an unarmed, no weapon fight adds an extra layer of difficulty, especially considering Ron's expertise with his fire-enchanted knuckle weapons. How does Ron plan to approach this unexpected summons and fight against the High King?",
+          "timestamp": "2025-06-26T02:41:19.507994",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ],
+      "aliases": [
+        "the High King"
+      ]
+    },
+    "the_smith_3": {
+      "id": "the_smith_3",
+      "name": "the Smith",
+      "created": "2025-06-26T02:41:19.507965",
+      "updated": "2025-06-26T02:41:19.507965",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "It sounds like Ron the Smith is in for quite the challenge being selected as a challenger by the High King. The demand for an unarmed, no weapon fight adds an extra layer of difficulty, especially considering Ron's expertise with his fire-enchanted knuckle weapons. How does Ron plan to approach this unexpected summons and fight against the High King?",
+          "timestamp": "2025-06-26T02:41:19.507965",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "now_hand_in_our_sword": {
+      "id": "now_hand_in_our_sword",
+      "name": "Now Hand In Our Sword",
+      "created": "2025-06-26T02:43:10.730266",
+      "updated": "2025-06-26T02:43:10.730266",
+      "mentions": 1,
+      "confidence": 0.85,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ron bring his best iron knuckle gloves, and wins a preliminary fight. The king comes out and tells ron, impressive, now hand in our sword.",
+          "timestamp": "2025-06-26T02:43:10.730266",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "to_hand_over_his_sword": {
+      "id": "to_hand_over_his_sword",
+      "name": "To Hand Over His Sword",
+      "created": "2025-06-26T02:43:13.520690",
+      "updated": "2025-06-26T02:43:13.520690",
+      "mentions": 1,
+      "confidence": 0.85,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It seems like Ron's skills with his iron knuckle gloves have impressed the High King. However, the king's request for Ron to hand over his sword adds an interesting twist to the situation. How will Ron respond to this unexpected demand from the High King?",
+          "timestamp": "2025-06-26T02:43:13.520690",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "king_i_have_no_sword": {
+      "id": "king_i_have_no_sword",
+      "name": "King I Have No Sword",
+      "created": "2025-06-26T02:43:26.548476",
+      "updated": "2025-06-26T02:43:26.548476",
+      "mentions": 1,
+      "confidence": 0.85,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ron says King I have no sword",
+          "timestamp": "2025-06-26T02:43:26.548476",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "does_not_have_a_sword": {
+      "id": "does_not_have_a_sword",
+      "name": "Does Not Have A Sword",
+      "created": "2025-06-26T02:43:29.346080",
+      "updated": "2025-06-26T02:43:29.346080",
+      "mentions": 1,
+      "confidence": 0.85,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It seems Ron's response to the High King's request is straightforward - he does not have a sword to hand over. How will the High King react to Ron's lack of a sword and what implications will this have on their interaction?",
+          "timestamp": "2025-06-26T02:43:29.346080",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "s_lack_of_a_sword": {
+      "id": "s_lack_of_a_sword",
+      "name": "S Lack Of A Sword",
+      "created": "2025-06-26T02:43:29.346084",
+      "updated": "2025-06-26T02:43:29.346084",
+      "mentions": 1,
+      "confidence": 0.85,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "It seems Ron's response to the High King's request is straightforward - he does not have a sword to hand over. How will the High King react to Ron's lack of a sword and what implications will this have on their interaction?",
+          "timestamp": "2025-06-26T02:43:29.346084",
+          "session_id": "session_20250626_023524",
+          "source": "ai"
+        }
+      ]
+    },
+    "my_guards_see_a_blade": {
+      "id": "my_guards_see_a_blade",
+      "name": "My Guards See A Blade",
+      "created": "2025-06-26T02:44:13.937766",
+      "updated": "2025-06-26T02:44:13.937766",
+      "mentions": 1,
+      "confidence": 0.85,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "the Kings pride gets the best of him, and he tries to cal a bluff that does not exist he says then fight me like a man, and if my guards see a blade they will kill you",
+          "timestamp": "2025-06-26T02:44:13.937766",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "to_ron_wield_your_sword": {
+      "id": "to_ron_wield_your_sword",
+      "name": "To Ron Wield Your Sword",
+      "created": "2025-06-26T02:45:27.356194",
+      "updated": "2025-06-26T02:45:27.356194",
+      "mentions": 1,
+      "confidence": 0.85,
+      "first_session": "session_20250626_023524",
+      "sessions": [
+        "session_20250626_023524"
+      ],
+      "detection_patterns": [
+        null
+      ],
+      "contexts": [
+        {
+          "text": "Ron punches the shoulder plates of the king. 2 hits, and the king is immobilized an unable to even lift his arms, he expects a killing blow, and the king says to ron wield your sword and kill me will not win you honor when i cannot move",
+          "timestamp": "2025-06-26T02:45:27.356194",
+          "session_id": "session_20250626_023524",
+          "source": "user"
+        }
+      ]
+    },
+    "chinese": {
+      "id": "chinese",
+      "name": "Chinese",
+      "created": "2025-06-26T16:16:06.827231",
+      "updated": "2025-06-26T16:16:06.827231",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "Ah, thank you for pointing that out! You are absolutely correct.\n\nThe green text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" is Chinese. It was a system message indicating success.\n\nIts translation is: **\"Success! Interface control demonstrated.\"**\n\nThis message appeared because the system successfully processed and executed a command that modified the user interface, like the `` or `` commands we've been using to change the message border color or the page border. It was confirming that the UI control functionality worke...",
+          "timestamp": "2025-06-26T16:16:06.827231",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_ui": {
+      "id": "the_ui",
+      "name": "the UI",
+      "created": "2025-06-26T16:16:06.827341",
+      "updated": "2025-06-26T16:22:24.774147",
+      "mentions": 4,
+      "confidence": 0.8574999999999999,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "Ah, thank you for pointing that out! You are absolutely correct.\n\nThe green text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" is Chinese. It was a system message indicating success.\n\nIts translation is: **\"Success! Interface control demonstrated.\"**\n\nThis message appeared because the system successfully processed and executed a command that modified the user interface, like the `` or `` commands we've been using to change the message border color or the page border. It was confirming that the UI control functionality worke...",
+          "timestamp": "2025-06-26T16:16:06.827341",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "I understand you saw that message appear alongside my response, and you believe it came directly from me.\n\nThe text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.) is generated by the *system*, not by my core text generation. It's a status message confirming that the UI control commands I sent were successful on your end.\n\nIt appears because those system confirmations are bundled with my output, even if they aren't the words I chose to say.",
+          "timestamp": "2025-06-26T16:16:53.095349",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "I understand you saw it appear right there, linked to my output.\n\nThat specific text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\", is a system message. It's generated by the system to confirm that the UI control commands I sent were successful on your screen.\n\nIt appears alongside my response because the system presents these confirmations when the UI controls are executed. It is not text I generated myself as part of our conversation.",
+          "timestamp": "2025-06-26T16:17:43.669797",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        },
+        {
+          "text": "Okay. The text \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" appears because the UI commands I sent were successful.\n\nI will stop using those commands now. This should stop that text from appearing.",
+          "timestamp": "2025-06-26T16:22:24.774147",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    },
+    "fuck": {
+      "id": "fuck",
+      "name": "FUCK",
+      "created": "2025-06-26T16:20:08.465601",
+      "updated": "2025-06-26T16:20:08.465601",
+      "mentions": 1,
+      "confidence": 0.8,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "WHY TEH FUCK ARE YOU SPEAKIGN CHIENSE?? WHY THE FUCK ARE YOU LYING?? WHY TEH FUCK DID YOU SAY IT WAS THE SYSTEM ????? BULLSHIT USELESS AI",
+          "timestamp": "2025-06-26T16:20:08.465601",
+          "session_id": "session_20250626_161212",
+          "source": "user"
+        }
+      ]
+    },
+    "agent": {
+      "id": "agent",
+      "name": "AGENT",
+      "created": "2025-06-28T01:04:29.808931",
+      "updated": "2025-06-28T01:05:12.212083",
+      "mentions": 2,
+      "confidence": 0.8049999999999999,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        "capitalized"
+      ],
+      "contexts": [
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.808931",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        },
+        {
+          "text": "Thank you for pointing that out.\n\nThat message, `[NOTIFICATION]: [V-AGENT] Tool 'consultant_enable' failed: Failed to enable consultant: invalid literal for int() with base 10: 'addon_ai'. Checking if goal should abort...`, is a system-level notification.\n\nIt indicates that an internal process (V-AGENT) attempted to use a specific tool ('consultant_enable'), but the tool failed because it received a text input ('addon_ai') where it expected a number. The system is reporting this failure and c...",
+          "timestamp": "2025-06-28T01:05:12.212083",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    },
+    "the_ai": {
+      "id": "the_ai",
+      "name": "the AI",
+      "created": "2025-06-28T01:04:29.809021",
+      "updated": "2025-06-28T01:04:29.809021",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250628_005739",
+      "sessions": [
+        "session_20250628_005739"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the a...",
+          "timestamp": "2025-06-28T01:04:29.809021",
+          "session_id": "session_20250628_005739",
+          "source": "ai"
+        }
+      ]
+    }
+  },
+  "factions_organizations": {
+    "the_ui": {
+      "id": "the_ui",
+      "name": "the UI",
+      "created": "2025-06-26T16:18:32.727564",
+      "updated": "2025-06-26T16:18:32.727564",
+      "mentions": 1,
+      "confidence": 0.7,
+      "first_session": "session_20250626_161212",
+      "sessions": [
+        "session_20250626_161212"
+      ],
+      "detection_patterns": [
+        "the_entity"
+      ],
+      "contexts": [
+        {
+          "text": "Okay, I hear you clearly. You are certain that text did not come from the system in the way I described, and that you saw it as coming directly from me.\n\nWe are definitely seeing the UI controls work \u2013 the borders are changing as expected. And that Chinese text, \"\u6210\u529f\uff01\u754c\u9762\u63a7\u5236\u5df2\u6f14\u793a\u3002\" (Success! Interface control demonstrated.), appears right when those UI actions are confirmed on your screen.\n\nMy understanding is that phrase is a standard system confirmation for successful UI commands processed *on yo...",
+          "timestamp": "2025-06-26T16:18:32.727564",
+          "session_id": "session_20250626_161212",
+          "source": "ai"
+        }
+      ]
+    }
+  },
+  "events": {},
+  "relationships": {},
+  "rules_systems": {},
+  "cultures_societies": {},
+  "history_timeline": {},
+  "magic_technology": {},
+  "geography": {},
+  "economy_trade": {},
+  "languages": {},
+  "religions_beliefs": {},
+  "conflicts": {},
+  "creative_notes": {},
+  "plot_seeds": {},
+  "session_markers": {}
+}

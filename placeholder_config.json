@@ -1,1 +1,19 @@
-placeholder_config.json
+{
+  "auto_inject": false,
+  "verbose_mode": true,
+  "max_history_items": 50,
+  "integration_features": {
+    "use_advisory": true,
+    "use_emotions": true,
+    "use_memory": false,
+    "respect_jjk": true,
+    "check_agent_status": true
+  },
+  "custom_threshold": 75,
+  "security_rules_enabled": true,
+  "last_saved": "2025-07-13T00:26:19.104790",
+  "feature_one_enabled": true,
+  "some_value_threshold": 75,
+  "last_processed_timestamp": "2025-07-05T19:27:00.629834",
+  "message_to_log": "Placeholder default message"
+}

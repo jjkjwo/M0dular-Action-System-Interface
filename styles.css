@@ -1,1 +1,2455 @@
-styles.css
+/**
+ * =================
+ * M0DULAR PANEL INTERFACE - MAIN STYLESHEET
+ * =================
+ * Version: Desktop layout with percentage widths
+ * Architecture: Modular panel system with AI UI control
+ * 
+ * TABLE OF CONTENTS:
+ * 1. CSS Variables & Design System
+ * 2. Global Reset & Base Styles
+ * 3. Layout Structure
+ * 4. Panel System
+ * 5. Chat Interface
+ * 6. Media Controls & Voice Features
+ * 7. Component-Specific Styles
+ * 8. Overlay & Modal Styles
+ * 9. Utility Classes
+ * 10. Responsive Design
+ * 11. Visibility Controls
+ * 12. Theme & Customization
+ * 13. Developer Messages (NEW - for unhandled addon messages)
+ * --- AUTHENTICATION STYLES MOVED TO auth.css ---
+ * =================
+ */
+
+/* =================
+   1. CSS VARIABLES & DESIGN SYSTEM
+   ================= */
+:root {
+  /* Color System */
+  --color-primary: #4a76a8;
+  --color-primary-dark: #2c4a6b;
+  --color-primary-light: #e3f2fd;
+  --color-secondary: #f0f8ff;
+  --color-background: #f5f5f5;
+  --color-white: #ffffff;
+
+  /* Text Colors */
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-lighter: #999999;
+
+  /* Border Colors */
+  --color-border: #e0e0e0;
+  --color-border-light: #f0f0f0;
+
+  /* Status Colors */
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-error: #f44336;
+
+  /* Spacing */
+  --space-xxs: 2px;
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 15px;
+  --space-lg: 20px;
+  --space-xl: 30px;
+
+  /* Typography */
+  --font-family: Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.2rem;
+
+  /* Border Radius */
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 10px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 0 10px rgba(0,0,0,0.1);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,0.15);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-chat-content: 10;
+  --z-panels: 50;
+  --z-fixed-ui: 200;
+  --z-toggles: 5;
+  --z-toast: 1000;
+  --z-loader: 1010;
+
+  /* Area Dimensions */
+  --top-area-max-height: 40%;
+  --top-area-default-height: 34px;
+  --bottom-area-max-height: 40%;
+  --bottom-area-default-height: 34px;
+  --left-area-active-width: 25%;
+  --left-area-max-width: 300px;
+  --left-area-default-width: 0px;
+  --right-area-active-width: 25%;
+  --right-area-max-width: 300px;
+  --right-area-default-width: 0px;
+  --vertical-toggle-bar-width: 40px;
+}
+
+/* =================
+   2. GLOBAL RESET & BASE STYLES
+   ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base Form Elements */
+button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  transition: background-color var(--transition-fast);
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+input, textarea {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+}
+
+/* =================
+   3. LAYOUT STRUCTURE
+   ================= */
+.app-container {
+  width: 95%;
+  max-width: 1600px;
+  height: 85vh;
+  max-height: calc(100% - 20px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* Panel Areas - Base Styles */
+.panel-area {
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: var(--z-panels);
+}
+
+/* Top and Bottom Areas */
+.top-area, .bottom-area {
+  height: var(--top-area-default-height);
+  transition: height var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.top-area.active {
+  height: var(--top-area-max-height);
+}
+
+.bottom-area {
+  height: var(--bottom-area-default-height);
+}
+
+.bottom-area.active {
+  height: var(--bottom-area-max-height);
+}
+
+/* Middle Section Container */
+.middle-section {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-white);
+  margin: 0;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Sidebar Areas */
+.sidebar-area {
+  width: var(--left-area-default-width);
+  height: 100%;
+  background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: var(--z-panels);
+  transition: width var(--transition-normal);
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+}
+
+.left-area {
+  width: var(--left-area-default-width);
+}
+
+.left-area.active {
+  width: var(--left-area-active-width);
+  max-width: var(--left-area-max-width);
+}
+
+.right-area {
+  width: var(--right-area-default-width);
+  order: 3;
+}
+
+.right-area.active {
+  width: var(--right-area-active-width);
+  max-width: var(--right-area-max-width);
+}
+
+/* =================
+   4. PANEL SYSTEM
+   ================= */
+
+/* Panel Toggle Controls */
+.panel-toggles {
+  display: flex;
+  position: relative;
+  z-index: var(--z-toggles);
+  background-color: var(--color-background);
+  flex-shrink: 0;
+}
+
+.top-toggles, .bottom-toggles {
+  height: 34px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-toggles {
+  border-bottom: none;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Vertical Toggle Bars */
+.vertical-toggles-container {
+  width: var(--vertical-toggle-bar-width);
+  height: 100%;
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: var(--space-md);
+  flex-shrink: 0;
+  z-index: var(--z-toggles);
+}
+
+.vertical-toggles-left {
+  order: -1;
+  border-right: 1px solid var(--color-border);
+}
+
+.vertical-toggles-right {
+  order: 4;
+  border-left: 1px solid var(--color-border);
+}
+
+.left-toggles, .right-toggles {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: none;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  opacity: 1;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  align-items: center;
+}
+
+/* Panel Toggle Buttons */
+.panel-toggle {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: var(--space-xxs);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--border-radius-md);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.vertical-toggles-container .panel-toggle {
+  margin: var(--space-xs) 0;
+}
+
+.panel-toggle:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.1);
+}
+
+.panel-toggle.active {
+  background-color: var(--color-primary-dark);
+}
+
+.toggle-arrow {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Panel Containers */
+.panel-container {
+  background-color: var(--color-white);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: none;
+  border-radius: inherit;
+  box-shadow: var(--shadow-md);
+}
+
+.panel-area.active > .panel-container,
+.sidebar-area.active > .panel-container {
+  display: flex;
+  overflow: visible;
+}
+
+/* Individual Panels */
+.panel {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.panel.active {
+  display: flex;
+}
+
+.panel-header {
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md);
+}
+
+/* Top/Bottom Panel Specific Layouts */
+.top-area .panel-container,
+.bottom-area .panel-container {
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  align-items: stretch;
+  overflow-y: auto;
+}
+
+.top-area .panel,
+.bottom-area .panel {
+  flex: 1 1 200px;
+  min-width: 150px;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-light);
+  margin: 0;
+}
+
+/* Left/Right Panel Specific Layouts */
+.left-area .panel-container,
+.right-area .panel-container {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.left-area .panel,
+.right-area .panel {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* =================
+   5. CHAT INTERFACE
+   ================= */
+
+/* Chat Container */
+.chat-container {
+  flex: 1 1 auto;
+  min-width: 0;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: var(--z-chat-content);
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  order: 2;
+}
+
+/* Connection Status Bar */
+.connection-status {
+  position: relative;
+  top: auto;
+  height: 30px;
+  padding: var(--space-xs) var(--space-md);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  background-color: var(--color-background);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+  z-index: 15;
+}
+
+/* Chat Messages Area */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md);
+  background-color: var(--color-white);
+}
+
+/* Message Styles */
+.message {
+  margin-bottom: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-md);
+  max-width: 90%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  overflow: hidden;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+}
+
+.user-message {
+  background-color: var(--color-primary-light);
+  float: right;
+  clear: both;
+  margin-left: 10%;
+  border-color: var(--color-primary);
+  flex-direction: row-reverse;
+  white-space: pre-wrap;
+}
+
+.system-message {
+  background-color: var(--color-secondary);
+  float: left;
+  clear: both;
+  margin-right: 10%;
+  border-color: var(--color-border);
+  white-space: pre-wrap;
+}
+
+.message-icon {
+  margin-top: 2px;
+}
+
+.system-message .message-icon::before {
+  content: '🤖';
+  line-height: 1.4;
+  opacity: 0.7;
+  display: inline-block;
+}
+
+.user-message .message-icon::before {
+  content: '👤';
+  line-height: 1.4;
+  opacity: 0.7;
+  display: inline-block;
+}
+
+.message-text {
+  flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+/* Log Messages */
+.log-message {
+  display: block;
+  background-color: rgba(245, 245, 245, 0.7);
+  border: 1px dashed var(--color-border);
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  width: 100%;
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+  clear: both;
+  margin: var(--space-xs) 0;
+  padding: var(--space-xs);
+  opacity: 0.7;
+  line-height: 1.3;
+}
+
+.log-message:hover {
+  opacity: 1;
+}
+
+/* Log Message Types */
+.system-info-message {
+  border-color: #b8daff;
+  color: #004085;
+  background-color: rgba(217, 236, 255, 0.7);
+}
+
+.debug-message {
+  border-color: #d6d8db;
+  color: #383d41;
+  background-color: rgba(233, 236, 239, 0.7);
+}
+
+.event-message {
+  border-color: #c3e6cb;
+  color: #155724;
+  background-color: rgba(209, 231, 221, 0.7);
+}
+
+/* Chat Input Area */
+.chat-input {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  flex-shrink: 0;
+  align-items: flex-end;
+  position: relative;
+  gap: var(--space-xs);
+  min-height: 58px; /* Accommodate stacked checkboxes */
+}
+
+#userInput {
+  flex: 1 1 auto;
+  min-width: 150px;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  resize: none;
+  min-height: 38px;
+  max-height: 150px;
+  height: 38px;
+  line-height: 1.4;
+  font-size: var(--font-size-md);
+  overflow-y: auto;
+  margin-right: var(--space-xs);
+}
+
+#sendButton {
+  margin-left: var(--space-xs);
+  padding: 0 var(--space-lg);
+  height: 38px;
+  font-size: var(--font-size-md);
+  flex-shrink: 0;
+}
+
+/* NEW: Chat Footer Controls Styling */
+#chat-footer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 0;
+    margin: 3px 0;
+    font-size: 11px;
+    opacity: 0.5;
+}
+
+#footerToggles a {
+    color: var(--color-primary, #4a76a8);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* =================
+   6. MEDIA CONTROLS & VOICE FEATURES
+   ================= */
+
+/* Media Control Buttons */
+#ttsToggleButton,
+#micToggleButton,
+#soundToggleButton {
+  margin-left: var(--space-xs);
+  margin-right: var(--space-xs);
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+#ttsToggleButton:hover,
+#micToggleButton:hover,
+#soundToggleButton:hover {
+  background-color: var(--color-primary-light);
+  transform: scale(1.05);
+}
+
+#ttsToggleButton.active,
+#micToggleButton.active,
+#soundToggleButton.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+#ttsToggleButton.disabled,
+#micToggleButton.disabled,
+#soundToggleButton.disabled {
+  background-color: #e0e0e0;
+  color: #999999;
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+/* =================
+   STACKED CHECKBOXES ENHANCEMENT
+   Safe implementation for vertical checkbox layout
+   ================= */
+
+/* UI Controls Options Container - Independent from Voice */
+.ui-controls-options {
+    display: flex;
+    align-items: center;
+    transition: opacity var(--transition-fast), pointer-events var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+    flex-shrink: 0;
+    width: 100%; /* Full width like voice options */
+    white-space: nowrap;
+    font-size: 0.85em;
+    color: var(--color-text);
+    user-select: none;
+    padding: 2px 8px;
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+}
+
+/* Hover state for UI Controls */
+.ui-controls-options:not([data-disabled="true"]):hover {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary);
+}
+
+/* Match the checkbox and label styling from voice options */
+.ui-controls-options input[type="checkbox"] {
+    margin-right: 4px;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.ui-controls-options label {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Disabled state for UI Controls when controls addon is inactive */
+.ui-controls-options[data-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: #f5f5f5;
+    border-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.ui-controls-options[data-disabled="true"] input[type="checkbox"] {
+    cursor: not-allowed;
+}
+
+.ui-controls-options[data-disabled="true"] label {
+    cursor: not-allowed;
+    color: var(--color-text-lighter);
+}
+
+/* Checkbox Options Wrapper - Contains both voice and UI controls */
+.checkbox-options-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: var(--space-xs);
+    gap: 4px;
+    flex-shrink: 0;
+    align-self: stretch;
+    padding: 2px 0;
+}
+
+/* Remove bottom margin from last child in wrapper */
+.checkbox-options-wrapper > :last-child {
+    margin-bottom: 0;
+}
+
+/* Voice Options Container - Updated for vertical stacking */
+.voice-options {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: flex-start; /* Left align the checkboxes */
+  justify-content: center; /* Center vertically in the input area */
+  margin-right: var(--space-xs);
+  gap: 4px; /* Small gap between checkboxes */
+  opacity: 1; /* Always visible */
+  transition: opacity var(--transition-fast);
+  pointer-events: auto; /* Always allow interaction */
+  flex-shrink: 0;
+  /* Ensure proper height without expanding input area */
+  align-self: stretch; /* Take full height of parent */
+  padding: 2px 0; /* Minimal vertical padding */
+}
+
+/* Disabled state - greyed out when voice features are not available */
+.voice-options:not(.available) {
+  opacity: 0.5; /* Grey out instead of hiding */
+  pointer-events: none; /* Prevent interaction when disabled */
+}
+
+.voice-options:not(.available) input[type="checkbox"] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.voice-options:not(.available) label,
+.voice-options:not(.available) .hands-free-toggle-container {
+  cursor: not-allowed;
+  color: var(--color-text-lighter);
+}
+
+/* Ensure all children are properly styled when disabled */
+.voice-options:not(.available) * {
+  cursor: not-allowed !important;
+}
+
+.voice-options.available {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ensure each checkbox container takes appropriate space */
+.voice-options label,
+.voice-options .hands-free-toggle-container,
+.voice-options > div {
+  margin: 0; /* Reset any default margins */
+  width: 100%; /* Full width of container */
+  white-space: nowrap; /* Prevent text wrapping */
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust checkbox and label alignment */
+.voice-options input[type="checkbox"] {
+  margin-right: 4px; /* Consistent spacing from label */
+  vertical-align: middle; /* Align with text */
+}
+
+/* Disabled checkbox styling */
+.voice-options:not(.available) input[type="checkbox"]:disabled,
+.voice-options:not(.available) input[type="checkbox"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Style for UI Controls checkbox when voice is disabled */
+.voice-options:not(.available) label[for="uiControlsCheckbox"] {
+  color: var(--color-text-lighter);
+  cursor: not-allowed;
+}
+
+/* Hands-Free Toggle */
+.hands-free-toggle-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 0.85em;
+  color: var(--color-text);
+  user-select: none;
+  padding: 2px 8px;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+/* Hover state for hands-free toggle */
+.voice-options.available .hands-free-toggle-container:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+/* Disabled state for hands-free toggle */
+.voice-options:not(.available) .hands-free-toggle-container {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
+}
+
+.hands-free-toggle-container input[type="checkbox"],
+.ui-controls-options input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+
+.hands-free-label,
+.ui-controls-options label {
+  font-size: var(--font-size-xs);
+}
+
+/* Recording Indicator */
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+  background-color: rgba(239, 83, 80, 0.9);
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: white;
+  box-shadow: var(--shadow-md);
+  z-index: 100;
+}
+
+.recording-indicator.hidden {
+  display: none;
+}
+
+.pulse-ring {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 8px;
+  animation: pulse 2s infinite;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.countdown-timer.hidden {
+  display: none;
+}
+
+.countdown-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.countdown-track {
+  fill: none;
+  stroke: #f1f1f1;
+  stroke-width: 5;
+}
+
+.countdown-progress {
+  fill: none;
+  stroke: #2196f3;
+  stroke-width: 5;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.countdown-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* =================
+   7. COMPONENT-SPECIFIC STYLES
+   ================= */
+
+/* Commands Panel */
+.commands-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panel-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.update-info {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--color-primary);
+  padding: var(--space-xs);
+}
+
+.commands-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-xs);
+}
+
+.command-category {
+  margin-bottom: var(--space-sm);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-background);
+  cursor: pointer;
+  user-select: none;
+}
+
+.category-header:hover {
+  background-color: var(--color-secondary);
+}
+
+.category-icon {
+  margin-right: var(--space-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+}
+
+.category-header h4 {
+  margin: 0;
+  flex: 1;
+  font-size: var(--font-size-sm);
+}
+
+.command-count {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+}
+
+.command-list {
+  padding: var(--space-xs);
+  background-color: var(--color-white);
+}
+
+.command-item {
+  padding: var(--space-xs) var(--space-sm);
+  margin-bottom: var(--space-xxs);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  font-size: var(--font-size-xs);
+}
+
+.command-item:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* File Loader Panel */
+.file-loader-panel .lvl3-note {
+  margin-bottom: var(--space-md);
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: var(--space-sm);
+  border-radius: var(--border-radius-md);
+}
+
+.file-loader-panel .search-container {
+  margin-bottom: var(--space-sm);
+}
+
+.file-loader-panel .search-input {
+  width: 100%;
+}
+
+.file-loader-panel .category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.file-loader-panel .category-filter {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+}
+
+.file-loader-panel .category-filter.active-filter {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.file-loader-panel .category-filter:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.file-loader-panel .files-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: background-color var(--transition-fast);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-item .file-icon {
+  margin-right: var(--space-xs);
+}
+
+.file-item:hover {
+  background-color: var(--color-primary-light);
+}
+
+.file-item.inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Data Display Styles */
+.data-item {
+  margin-bottom: var(--space-xs);
+  padding: var(--space-xs);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.data-item h4 {
+  font-size: var(--font-size-sm);
+  margin-bottom: 2px;
+  color: var(--color-primary);
+}
+
+.data-subitem {
+  margin-left: var(--space-sm);
+  font-size: var(--font-size-xs);
+}
+
+.priority {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  margin-left: var(--space-xs);
+}
+
+.active {
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.inactive {
+  color: var(--color-text-lighter);
+}
+
+/* Silent-Structure Translator Panel */
+#bottom-panel-8-content .sst-translator-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+#bottom-panel-8-content .sst-io-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+#bottom-panel-8-content .sst-io-area label {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--color-primary-dark);
+}
+
+#bottom-panel-8-content .sst-io-area textarea {
+  flex: 1;
+  min-height: 60px;
+  resize: vertical;
+  font-family: monospace;
+  font-size: 0.85em;
+  line-height: 1.4;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  overflow-y: auto;
+}
+
+#bottom-panel-8-content .sst-io-area textarea::placeholder {
+  color: var(--color-text-lighter);
+  font-style: italic;
+}
+
+#bottom-panel-8-content .sst-io-area textarea[readonly] {
+  background-color: #f0f0f0;
+  color: #555;
+  cursor: default;
+}
+
+#bottom-panel-8-content .sst-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  justify-content: center;
+  padding-bottom: 5px;
+  border-top: 1px dashed var(--color-border-light);
+  padding-top: 10px;
+}
+
+#bottom-panel-8-content .sst-translate-button {
+  padding: 8px 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#bottom-panel-8-content .sst-toggle-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--color-text);
+  user-select: none;
+}
+
+#bottom-panel-8-content .sst-toggle-container input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  appearance: none;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  outline: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+#bottom-panel-8-content .sst-toggle-container input[type="checkbox"]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+#bottom-panel-8-content .sst-toggle-container input[type="checkbox"]:checked::before {
+  content: '✓';
+  display: block;
+  color: var(--color-white);
+  font-size: 10px;
+  text-align: center;
+  line-height: 12px;
+}
+
+#bottom-panel-8-content .sst-toggle-label span {
+  font-weight: bold;
+  color: var(--color-primary-dark);
+}
+
+#bottom-panel-8-content .sst-io-area textarea.input-error {
+  border-color: var(--color-error);
+  background-color: #ffebee;
+  outline: 2px solid var(--color-error) !important;
+  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+}
+
+#bottom-panel-8-content .sst-io-area textarea:not(.input-error) {
+  outline: none;
+}
+
+#bottom-panel-8-content .sst-error-message {
+  font-size: 0.8em;
+  color: var(--color-error);
+  margin-top: 4px;
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* =================
+   8. OVERLAY & MODAL STYLES
+   ================= */
+
+/* Panel Overlay Container */
+.panel-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-toast);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  padding: 20px;
+}
+
+.panel-overlay-container.active {
+  opacity: 1;
+}
+
+.overlay-panel {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.panel-overlay-container.active .overlay-panel {
+  transform: translateY(0);
+}
+
+.overlay-header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-md);
+  border-top-left-radius: var(--border-radius-lg);
+  border-top-right-radius: var(--border-radius-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay-header h2 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.overlay-close-button {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 var(--space-sm);
+  line-height: 1;
+}
+
+.overlay-content {
+  padding: var(--space-lg);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.special-overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.welcome-section h2 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+.features-section ul {
+  padding-left: var(--space-lg);
+}
+
+.features-section li {
+  margin-bottom: var(--space-sm);
+}
+
+.getting-started-section {
+  background-color: var(--color-secondary);
+  padding: var(--space-md);
+  border-radius: var(--border-radius-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.start-button {
+  display: block;
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.start-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* =================
+   9. UTILITY CLASSES
+   ================= */
+
+/* Plugin Required Note */
+.plugin-required-note {
+  padding: 15px;
+  margin: 10px;
+  background-color: #fff4e5;
+  border: 1px solid #ffcc80;
+  border-radius: 5px;
+  color: #e65100;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.plugin-required-note code {
+  background-color: #ffe0b2;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  color: #c65a11;
+}
+
+.plugin-required-note strong {
+  color: #c65a11;
+}
+
+/* Status Messages */
+.loading-indicator {
+  text-align: center;
+  padding: var(--space-md);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.error-message {
+  color: var(--color-error);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.no-commands {
+  color: var(--color-text-lighter);
+  text-align: center;
+  padding: var(--space-md);
+  font-style: italic;
+}
+
+.placeholder-text {
+  color: var(--color-text-lighter);
+  font-style: italic;
+  text-align: center;
+  margin-top: var(--space-lg);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+/* Toast Notification */
+#framework-toast {
+  position: fixed;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--color-white);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius-md);
+  z-index: var(--z-toast);
+  transition: opacity var(--transition-normal);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Panel Overlay (Mobile) */
+.panel-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 54; /* Sits below active panels and their toggles */
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* =================
+   10. RESPONSIVE DESIGN
+   ================= */
+
+/* Desktop Layout - Default styles apply */
+
+/* ====== PROBLEM 1: FIX CRAMPED TABLET/NARROW DESKTOP VIEW ====== */
+/* On mid-sized screens, switch from percentage-based sidebar widths to a fixed, 
+   generous width to ensure content is not cramped. JS handles opening one 
+   sidebar at a time; this CSS ensures it's readable when open. */
+@media (max-width: 1100px) {
+  .left-area.active,
+  .right-area.active {
+    width: 320px; /* Use a generous fixed width */
+    flex-shrink: 0; /* Prevent the sidebar from shrinking */
+  }
+
+  .chat-container {
+      min-width: 0; /* Allow chat area to shrink properly */
+  }
+}
+
+/* Tablet/Narrower Desktop */
+@media (max-width: 1200px) {
+  .app-container {
+    width: 98%;
+    height: 95vh;
+  }
+  
+  .top-area .panel,
+  .bottom-area .panel {
+    flex: 1 1 150px;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 900px) {
+  .command-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}
+
+/* ====== PROBLEM 3: FIX CRUSHED MOBILE LANDSCAPE VIEW ====== */
+/* On short, wide screens, prevent top/bottom panels from consuming all 
+   vertical space by capping their max height to a viewport unit. 60vh 
+   ensures two cannot be open at once without leaving chat space. */
+@media (orientation: landscape) and (max-height: 550px) {
+  :root {
+    --top-area-max-height: 60vh;
+    --bottom-area-max-height: 60vh;
+  }
+  
+  /* Landscape orientation - special handling for voice options */
+  .voice-options {
+    /* Keep vertical stacking even in landscape */
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  /* Keep checkbox wrapper vertical in landscape too */
+  .checkbox-options-wrapper {
+    flex-direction: column;
+  }
+  .voice-options label,
+  .voice-options .hands-free-toggle-container,
+  .voice-options > div {
+    width: 100%; /* Full width for vertical stacking */
+  }
+}
+
+/* Tablet responsive adjustments for voice options */
+@media (min-width: 768px) {
+  .voice-options {
+    gap: 6px; /* Slightly more spacing on larger screens */
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+  /* ====== PROBLEM 4: REDUCE SPACING ON SMALL SCREENS ====== */
+  /* Decrease padding and other spacing variables to reclaim screen real estate. */
+  :root {
+    --vertical-toggle-bar-width: 35px;
+    --space-md: 10px;
+    --space-sm: 5px;
+    --space-xs: 3px;
+    --space-xxs: 1px;
+  }
+  
+  /* MOBILE Z-INDEX FIX: Correct the stacking order so the side panels
+     pop out *underneath* the top and bottom bars, which must remain visible. */
+  .top-area, .bottom-area {
+    position: relative;
+    z-index: 60;
+  }
+  .vertical-toggles-container {
+    z-index: 61;
+  }
+
+  /* ====== PROBLEM 2: FIX UNUSABLE MOBILE SIDEBARS ====== */
+  /* Transform sidebars into full-height overlays when active on mobile devices. */
+  .sidebar-area {
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--color-background);
+  }
+
+  .left-area {
+      transform: translateX(-100%);
+  }
+  .right-area {
+      transform: translateX(100%);
+  }
+  
+  .sidebar-area.active {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 85vw;
+    max-width: 320px;
+    z-index: 55; /* ABOVE chat/overlay, BELOW top/bottom bars */
+    box-shadow: var(--shadow-lg);
+    border: none;
+    transform: translateX(0);
+  }
+
+  .left-area.active {
+    left: 0;
+  }
+
+  .right-area.active {
+    right: 0;
+  }
+  
+  .middle-section:has(.sidebar-area.active) > .panel-overlay {
+    display: block;
+  }
+  
+  .vertical-toggles-container .panel-toggle {
+    width: 25px;
+    height: 25px;
+    margin: 4px 0;
+  }
+  
+  .vertical-toggles-container .toggle-arrow {
+    font-size: 12px;
+  }
+  
+  .chat-messages {
+    padding: var(--space-sm);
+  }
+  
+  .chat-input {
+    padding: var(--space-sm);
+  }
+  
+  /* Mobile voice options optimization */
+  .voice-options {
+    gap: 2px; /* Tighter spacing on mobile */
+    font-size: 0.85em; /* Slightly smaller text */
+  }
+  
+  /* Mobile UI controls options */
+  .ui-controls-options {
+    font-size: 0.85em; /* Match voice options size */
+  }
+  
+  /* Mobile checkbox wrapper */
+  .checkbox-options-wrapper {
+    gap: 2px; /* Tighter spacing on mobile */
+  }
+  
+  /* Ensure disabled state is maintained on mobile */
+  .voice-options:not(.available) {
+    opacity: 0.5;
+  }
+  
+  .ui-controls-options[data-disabled="true"] {
+    opacity: 0.5;
+  }
+  
+  /* Adjust label text size */
+  .voice-options .hands-free-label,
+  .voice-options label span,
+  .ui-controls-options label {
+    font-size: var(--font-size-xs);
+  }
+  
+  #userInput {
+    flex-basis: 100%;
+    order: 1;
+    margin-bottom: var(--space-sm);
+    min-width: 0;
+  }
+  
+  .voice-options,
+  .ui-controls-options,
+  .checkbox-options-wrapper,
+  #ttsToggleButton,
+  #micToggleButton,
+  #soundToggleButton,
+  #sendButton {
+    order: 2;
+  }
+  
+  #ttsToggleButton,
+  #micToggleButton,
+  #soundToggleButton {
+    width: 34px;
+    height: 34px;
+    margin: 0 var(--space-xxs);
+  }
+  
+  #sendButton {
+    margin-left: var(--space-xs);
+    padding: 0 var(--space-md);
+  }
+  
+  .recording-indicator {
+    top: -25px;
+    padding: 3px 10px;
+    font-size: var(--font-size-xs);
+  }
+  
+  .pulse-ring {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+  }
+  
+  .countdown-timer {
+    width: 30px;
+    height: 30px;
+    right: 80px;
+  }
+  
+  .countdown-text {
+    font-size: 14px;
+  }
+  
+  .hands-free-toggle-container {
+    padding: 2px 6px;
+    font-size: 0.8em;
+    margin-right: 0;
+  }
+  
+  .ui-controls-options {
+    padding: 2px 6px;
+    font-size: 0.8em;
+  }
+  
+  .hands-free-label,
+  .ui-controls-options label {
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.8em;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 480px) {
+  .app-container {
+    width: 100%;
+    height: calc(100vh - 20px);
+    max-height: none;
+    border-radius: 0;
+    padding: 5px 0;
+  }
+  
+  .top-toggles,
+  .bottom-toggles {
+    position: relative;
+    height: 34px;
+    width: 100%;
+  }
+  
+  :root {
+    --vertical-toggle-bar-width: 30px;
+  }
+  
+  .vertical-toggles-container {
+    padding-top: var(--space-sm);
+  }
+  
+  .vertical-toggles-container .panel-toggle {
+    width: 22px;
+    height: 22px;
+    margin: 3px 0;
+  }
+  
+  .vertical-toggles-container .toggle-arrow {
+    font-size: 10px;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+  
+  #sendButton {
+    padding: 0 var(--space-sm);
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .app-container {
+    height: calc(100vh - 30px);
+    padding: 8px 0;
+  }
+  
+  .top-area {
+    padding-top: 2px;
+  }
+  
+  .bottom-area {
+    padding-bottom: 2px;
+  }
+}
+
+/* Tiny Mobile */
+@media (max-width: 360px) {
+  /* Very small screens - ultra compact voice options */
+  .voice-options {
+    gap: 1px; /* Minimal gap */
+  }
+  
+  .checkbox-options-wrapper {
+    gap: 1px; /* Minimal gap */
+  }
+  
+  /* Even smaller checkbox size if needed */
+  .voice-options input[type="checkbox"],
+  .ui-controls-options input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+  }
+  
+  #ttsToggleButton,
+  #micToggleButton,
+  #soundToggleButton {
+    width: 30px;
+    height: 30px;
+    font-size: 0.95em;
+    margin: 0 2px;
+  }
+  
+  #sendButton {
+    min-width: 45px;
+    padding: 0 4px;
+  }
+  
+  .hands-free-label,
+  .ui-controls-options label {
+    max-width: 50px;
+  }
+}
+
+/* Fallback for browsers that don't support :has() selector */
+@supports not selector(:has(*)) {
+  .chat-input {
+    min-height: 58px; /* Safe minimum height */
+  }
+}
+
+/* Overlay Responsive Styles */
+@media (max-width: 768px) {
+  .overlay-panel {
+    width: 90%;
+  }
+  
+  .overlay-content {
+    padding: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .panel-overlay-container {
+    padding: 10px;
+  }
+  
+  .overlay-panel {
+    width: 100%;
+    max-height: 95vh;
+  }
+  
+  .overlay-header {
+    padding: var(--space-sm);
+  }
+  
+  .overlay-content {
+    padding: var(--space-sm);
+  }
+}
+
+/* ====== FINAL BUG FIX: STICKY HOVER ON MOBILE ====== */
+/* On touch devices, the :hover state can get "stuck" on a button after
+   tapping. This media query targets devices that do not have a fine pointer 
+   (like a mouse) and disables the hover effect for panel toggles, preventing
+   a button from looking "stuck" in its highlighted state after being pressed. */
+@media (hover: none) and (pointer: coarse) {
+  .panel-toggle:hover {
+    background-color: var(--color-primary); /* Revert to the default color */
+    transform: none; /* Disable the scaling effect */
+  }
+
+  .panel-toggle.active:hover {
+      background-color: var(--color-primary-dark); /* Keep the active color */
+      transform: none;
+  }
+}
+
+/* =================
+   11. VISIBILITY CONTROLS
+   ================= */
+
+/* Panel Toggle Button States */
+.panel-toggle {
+  display: flex;
+}
+
+/* Back Button Running State */
+#toggle-right-repeat-reply {
+  transition: opacity var(--transition-fast);
+}
+
+#toggle-right-repeat-reply.action-running {
+  opacity: 0.5 !important;
+  cursor: wait;
+}
+
+/* Global Panel Toggle Visibility */
+body:not(.framework-panel-toggles-visible-override) .panel-toggle {
+  display: none !important;
+}
+
+body:not(.framework-panel-toggles-visible-override) #toggle-right-repeat-reply {
+  display: none !important;
+}
+
+body.framework-panel-toggles-visible-override .panel-toggle {
+  display: flex !important;
+}
+
+/* Log Message Visibility */
+body.framework-logs-hidden .log-message,
+body.framework-logs-hidden .developer-message {
+  display: none !important;
+}
+
+/* =================
+   12. THEME & CUSTOMIZATION
+   ================= */
+
+/* Theme Customizer Panel */
+.theme-customizer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.theme-header {
+  margin-bottom: 10px;
+}
+
+.customizer-title {
+  margin: 0 0 5px 0;
+  color: var(--color-primary);
+}
+
+.customizer-description {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--color-text-light);
+}
+
+/* Theme Tabs */
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.tab-headers {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-secondary);
+}
+
+.tab-header {
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.2s;
+}
+
+.tab-header:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.tab-header.active {
+  background-color: white;
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.tab-icon {
+  font-size: 1.1em;
+}
+
+.tab-label {
+  display: none;
+}
+
+@media (min-width: 420px) {
+  .tab-label {
+    display: inline;
+  }
+}
+
+.tab-contents {
+  background-color: white;
+  padding: 15px;
+}
+
+.tab-content {
+  height: 100%;
+}
+
+/* Color Section */
+.color-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.color-label {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.color-input-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.color-input {
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.color-text-input {
+  width: 70px;
+  padding: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+}
+
+.color-text-input.error {
+  border-color: #f44336;
+  background-color: #ffebee;
+}
+
+/* Contrast Section */
+.contrast-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.contrast-section h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.contrast-checker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contrast-samples {
+  display: flex;
+  gap: 10px;
+}
+
+.contrast-sample {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-radius: var(--border-radius-sm);
+}
+
+.contrast-score {
+  padding: 5px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* Animations Section */
+.animations-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.animations-section h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.animation-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.preset-button {
+  padding: 8px 15px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+}
+
+.preset-button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.preset-button.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.animation-preview-container {
+  margin-top: 10px;
+  padding: 15px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+}
+
+.animation-preview-box {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+}
+
+.preview-animation-button {
+  padding: 8px 15px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+}
+
+/* Component Preview */
+.component-preview {
+  margin-top: 15px;
+}
+
+.component-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.component-tab {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.component-tab.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.component-preview-container {
+  margin-top: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 15px;
+  min-height: 200px;
+}
+
+.preview-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.reset-button,
+.apply-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+}
+
+.reset-button {
+  background-color: var(--color-text-light);
+  color: white;
+}
+
+.apply-button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.apply-button:disabled {
+  background-color: var(--color-text-lighter);
+  cursor: not-allowed;
+}
+
+/* =================
+   13. DEVELOPER MESSAGES (NEW)
+   For unhandled addon messages that don't match
+   any existing patterns in the framework
+   ================= */
+
+/**
+ * Developer message styling for unhandled addon output
+ * 
+ * These styles make unhandled messages clearly visible to developers
+ * while preserving their formatting and providing helpful information
+ * about why they appear and how to properly handle them.
+ * 
+ * Color scheme: Orange/warning colors to indicate "needs attention"
+ * Layout: Similar to other messages but with distinctive styling
+ */
+
+.developer-message {
+  /* Base styling with gradient background and dashed border */
+  background: linear-gradient(135deg, #fff8e1 0%, #fffbf0 100%);
+  border: 2px dashed #ffa726;
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--space-sm);
+  padding: 0;
+  max-width: 90%;
+  float: left;
+  clear: both;
+  margin-right: 10%;
+}
+
+/* Header section with source information */
+.developer-message-header {
+  background: rgba(255, 167, 38, 0.15);
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid rgba(255, 167, 38, 0.3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+/* Icon for developer messages */
+.dev-icon {
+  font-size: 1.2em;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+/* Label indicating this is an unhandled message */
+.dev-label {
+  font-weight: 600;
+  color: #f57c00;
+}
+
+/* Source identifier (addon name, etc.) */
+.dev-source {
+  background: rgba(255, 167, 38, 0.2);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+/* Line count indicator */
+.dev-lines {
+  margin-left: auto;
+  color: #666;
+  font-size: 0.85em;
+}
+
+/* Content area containing the actual message */
+.developer-message-content {
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Preformatted content to preserve original formatting */
+.developer-message-content pre {
+  margin: 0;
+  padding: var(--space-sm);
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius-sm);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+/* Collapsible developer information section */
+.developer-message-info {
+  padding: 0 var(--space-md) var(--space-sm);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Details element for collapsible content */
+.developer-message-info details {
+  background: rgba(255, 167, 38, 0.1);
+  border: 1px solid rgba(255, 167, 38, 0.2);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-xs);
+}
+
+/* Summary (clickable header) for details */
+.developer-message-info summary {
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #f57c00;
+  user-select: none;
+}
+
+/* Hover effect for summary */
+.developer-message-info summary:hover {
+  background: rgba(255, 167, 38, 0.1);
+}
+
+/* Developer details content */
+.dev-details {
+  padding: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Paragraphs within developer details */
+.dev-details p {
+  margin: var(--space-xs) 0;
+}
+
+/* Lists within developer details */
+.dev-details ul {
+  margin: var(--space-xs) 0;
+  padding-left: var(--space-lg);
+}
+
+/* Code snippets within developer details */
+.dev-details code {
+  background: #f5f5f5;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #d84315;
+}
+
+/* Hover effect for entire developer message */
+.developer-message:hover {
+  border-color: #ff9800;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .developer-message {
+    max-width: 95%;
+    margin-right: 5%;
+  }
+  
+  .developer-message-header {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+  
+  .dev-source {
+    font-size: 0.8em;
+  }
+  
+  .developer-message-content pre {
+    font-size: 0.75rem;
+  }
+}
+
+/* Dark mode support (for future implementation) */
+@media (prefers-color-scheme: dark) {
+  .developer-message {
+    background: linear-gradient(135deg, #3e2723 0%, #4e342e 100%);
+    border-color: #ff6f00;
+  }
+  
+  .developer-message-header {
+    background: rgba(255, 111, 0, 0.2);
+  }
+  
+  .dev-label {
+    color: #ffb74d;
+  }
+  
+  .developer-message-content {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .developer-message-content pre {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #e0e0e0;
+  }
+}

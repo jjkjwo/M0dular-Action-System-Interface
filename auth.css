@@ -1,1 +1,299 @@
-auth.css
+/* auth.css - Authentication Styles */
+
+/* ===============================================
+   AUTH MODAL STYLES
+   ==================added loading style============================= */
+
+/* Auth Modal */
+.auth-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.auth-modal-content {
+    background: var(--color-white, #fff);
+    padding: 2rem;
+    border-radius: var(--border-radius-lg, 10px);
+    box-shadow: var(--shadow-lg, 0 4px 20px rgba(0, 0, 0, 0.2));
+    max-width: 400px;
+    width: 90%;
+    color: var(--color-text);
+    position: relative;
+}
+
+/* Close Button */
+.auth-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    color: var(--color-text-light, #666);
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-md, 5px);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    line-height: 1;
+    padding: 0;
+}
+
+.auth-modal-close:hover {
+    background-color: var(--color-background, #f5f5f5);
+    color: var(--color-text, #333);
+}
+
+.auth-modal-close:focus {
+    outline: 2px solid var(--color-primary, #4a76a8);
+    outline-offset: 2px;
+}
+
+.auth-modal h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary, #4a76a8);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.auth-modal .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.auth-modal .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-light, #666);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.auth-modal .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: var(--border-radius-md, 5px);
+    font-size: 1rem;
+    background-color: var(--color-background, #f5f5f5); /* Ensure var or fallback */
+    color: var(--color-text, #333); /* Ensure var or fallback */
+}
+
+.auth-modal .form-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.auth-modal .form-actions button {
+    background: var(--color-primary, #4a76a8);
+    color: var(--color-white, #fff);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius-md, 5px);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.auth-modal .form-actions button:hover {
+    background-color: var(--color-primary-dark, #2c4a6b);
+}
+
+.auth-modal .error-message {
+    color: var(--color-error, #dc3545);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    min-height: 1.2em;
+}
+
+/* ===============================================
+   AUTH STATUS DISPLAY (MODIFIED)
+   =============================================== */
+
+.auth-status-container {
+    /* position, top, right, background, z-index, box-shadow REMOVED */
+    padding: 0;
+    color: inherit; /* Inherit color from parent */
+    border-radius: var(--border-radius-md, 5px);
+    font-size: 11px; /* Match the other footer toggles */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjusted gap */
+}
+
+/* Change username color to fit the new theme */
+.auth-status-container span strong {
+    color: var(--color-primary, #4a76a8);
+}
+
+/* Modified button style to look like a link */
+.auth-status-container button {
+    padding: 0;
+    background: none;
+    color: var(--color-primary, #4a76a8);
+    border: none;
+    cursor: pointer;
+    font-size: inherit; /* Inherit font-size from parent (11px) */
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.auth-status-container button:hover {
+    background: none;
+    color: var(--color-primary-dark, #2c4a6b);
+    text-decoration: none;
+}
+
+
+/* ===============================================
+   LOADER AUTH STYLES
+   =============================================== */
+
+.loader-login-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.loader-login-button .loader-login-icon {
+    font-size: 1.2em;
+}
+
+.loader-login-button:hover,
+.loader-login-button:focus {
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+.loader-login-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Auth Status Text in Loader */
+.loader-auth-status {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-sm);
+    min-height: 1.5em;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.loader-auth-status.status-success {
+    color: var(--color-success);
+    font-weight: 500;
+}
+
+.loader-auth-status.status-error {
+    color: var(--color-error);
+    font-weight: 500;
+}
+
+.loader-auth-status.status-loading {
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+.loader-auth-status.status-loading::before {
+    content: "⏳ ";
+}
+
+/* ===============================================
+   RESPONSIVE AUTH STYLES
+   =============================================== */
+
+@media (max-width: 480px) {
+    .auth-modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .auth-modal h2 {
+        font-size: 1.25rem;
+    }
+    
+    .auth-modal .form-group input {
+        padding: 0.6rem;
+    }
+    
+    .auth-modal .form-actions button {
+        padding: 0.6rem 1.5rem;
+    }
+    
+    .auth-status-container {
+        /* This rule now has no effect, but is safe to leave */
+        top: 5px;
+        right: 5px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Add these styles to auth.css for loading feedback */
+
+/* Loading state for auth form */
+.auth-modal-content #auth-form.auth-loading {
+    opacity: 0.8;
+}
+
+/* Spinner animation */
+.auth-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #4a76a8;
+    border-radius: 50%;
+    animation: auth-spin 1s linear infinite;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@keyframes auth-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success message styling */
+.auth-success {
+    color: #4CAF50;
+    font-weight: 500;
+    padding: 8px 12px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 4px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* Ensure auth modal is accessible from anywhere */
+#auth-modal {
+    z-index: 10000; /* Higher than other elements */
+}

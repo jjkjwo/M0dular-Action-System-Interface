@@ -1,1 +1,23 @@
-jjk_rules.json
+{
+  "progenitor_only_operations": {
+    "api_switch_provider": true,
+    "ai_execute_system_commands": true,
+    
+    "karma_transaction": false,
+    "karma_jjk_reset": false,
+    "karma_modify_base_rate": false,
+    
+    "memory_clear_all": false,
+    "memory_delete_specific": false,
+    
+    "principles_disable": false,
+    "principles_coverage_change": false,
+    
+    "action_force_start": false,
+    "action_emergency_stop": false,
+    
+    "system_file_edit": false,
+    "config_override": false,
+    "audit_disable": false
+  }
+}

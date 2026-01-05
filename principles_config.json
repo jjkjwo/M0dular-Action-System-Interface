@@ -1,1 +1,25 @@
-principles_config.json
+{
+  "mode": "real-time",
+  "addon_ai_provider": "openai",
+  "addon_ai_model": "gpt-3.5-turbo",
+  "severity_thresholds": {
+    "critical": 7,
+    "high": 6,
+    "medium": 5,
+    "low": 4
+  },
+  "max_log_entries": 100,
+  "log_to_file": true,
+  "log_file": "principle_violations.log",
+  "batch_advisories": false,
+  "verbose_logging": false,
+  "check_frequency": 1,
+  "constructive_feedback": true,
+  "check_all_principles": true,
+  "max_principles_to_check": 999,
+  "priority_threshold_to_check": 0,
+  "enable_pattern_detection": true,
+  "enable_keyword_detection": true,
+  "real_time_coverage": "all",
+  "skip_command_responses": true
+}

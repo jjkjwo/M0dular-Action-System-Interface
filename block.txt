@@ -1,1 +1,12 @@
-block.txt
+# Block.txt - List of words to be censored (one per line)
+# Add or remove words as needed
+fuck
+shit
+damn
+ass
+asshole
+bitch
+cunt
+dick
+bastard
+hell

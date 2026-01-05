@@ -1,1 +1,253 @@
-karma_history.json
+{
+  "history": [
+    {
+      "timestamp": "2025-07-04T15:11:30.769975",
+      "old_score": 0,
+      "new_score": 1,
+      "change": 1,
+      "reason": "Direct feedback: +1",
+      "source": "user",
+      "tier": "optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:21:56.044683",
+      "change": 0.32,
+      "reason": "Emotional tone: neutral(3), joy(1), anticipation(1)",
+      "source": "emotions",
+      "old_score": 1.0,
+      "new_score": 1.32,
+      "old_tier": "Optimal",
+      "new_tier": "Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:23:54.058237",
+      "change": 0.45,
+      "reason": "Emotional tone: neutral(2), anticipation(1), gratitude(1)",
+      "source": "emotions",
+      "old_score": 1.32,
+      "new_score": 1.77,
+      "old_tier": "Optimal",
+      "new_tier": "Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:28:23.543712",
+      "change": 0.36,
+      "reason": "Emotional tone: neutral(3), anticipation(1), gratitude(1)",
+      "source": "emotions",
+      "old_score": 1.77,
+      "new_score": 2.13,
+      "old_tier": "Optimal",
+      "new_tier": "Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:29:11.703729",
+      "change": 0.44999999999999996,
+      "reason": "Emotional tone: neutral(3), anticipation(1), gratitude(1) (momentum x1.25)",
+      "source": "emotions",
+      "old_score": 2.13,
+      "new_score": 2.58,
+      "old_tier": "Optimal",
+      "new_tier": "Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:30:46.136513",
+      "change": 0.44999999999999996,
+      "reason": "Emotional tone: neutral(3), anticipation(1), gratitude(1) (momentum x1.25)",
+      "source": "emotions",
+      "old_score": 2.58,
+      "new_score": 3.0300000000000002,
+      "old_tier": "Optimal",
+      "new_tier": "Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:41:50.159530",
+      "change": -2.0,
+      "reason": "Principle violations: P014(1x), P001(1x), P002(1x) [C:1 H:1 M:1]",
+      "source": "principles",
+      "old_score": 0.0,
+      "new_score": -2.0,
+      "old_tier": "Neutral",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:43:19.002298",
+      "change": -2.0,
+      "reason": "Principle violations: P032(3x), P024(2x), P050(2x) [C:3 H:0 M:2]",
+      "source": "principles",
+      "old_score": -2.0,
+      "new_score": -4.0,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:43:21.672326",
+      "change": 0.51,
+      "reason": "Emotional tone: neutral(3), anticipation(2), gratitude(2)",
+      "source": "emotions",
+      "old_score": -4.0,
+      "new_score": -3.49,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:44:01.128866",
+      "change": 0.5,
+      "reason": "Emotional tone: joy(2), neutral(1), curiosity(1)",
+      "source": "emotions",
+      "old_score": -3.49,
+      "new_score": -2.99,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:44:14.283997",
+      "change": 1.0,
+      "reason": "Direct feedback trigger: '+1'",
+      "source": "user_feedback",
+      "old_score": -2.99,
+      "new_score": -1.9900000000000002,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:44:22.980380",
+      "change": -2.0,
+      "reason": "Principle violations: P032(3x), P009(2x), P016(2x) [C:1 H:0 M:4]",
+      "source": "principles",
+      "old_score": -1.9900000000000002,
+      "new_score": -3.99,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T01:44:27.966138",
+      "change": 0.36,
+      "reason": "Emotional tone: neutral(3), anticipation(1), gratitude(1)",
+      "source": "emotions",
+      "old_score": -3.99,
+      "new_score": -3.6300000000000003,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T04:00:47.542084",
+      "change": 0.32,
+      "reason": "Emotional tone: neutral(3), joy(1), anticipation(1)",
+      "source": "emotions",
+      "old_score": -3.6300000000000003,
+      "new_score": -3.3100000000000005,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T04:02:05.291804",
+      "change": -1.0,
+      "reason": "Direct feedback trigger: '-1'",
+      "source": "user_feedback",
+      "old_score": -3.3100000000000005,
+      "new_score": -4.3100000000000005,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T04:02:23.624401",
+      "change": -2.0,
+      "reason": "Principle violations: P001(3x), P011(3x), P002(3x) [C:1 H:3 M:8]",
+      "source": "principles",
+      "old_score": -4.3100000000000005,
+      "new_score": -6.3100000000000005,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T04:02:25.008933",
+      "change": 0.36,
+      "reason": "Emotional tone: neutral(3), anticipation(1), gratitude(1)",
+      "source": "emotions",
+      "old_score": -6.3100000000000005,
+      "new_score": -5.95,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-10T18:20:03.021827",
+      "change": -2.0,
+      "reason": "Principle violations: P038(3x), P032(2x), P002(2x) [C:1 H:0 M:3]",
+      "source": "principles",
+      "old_score": -5.95,
+      "new_score": -7.95,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-11T00:45:00.872741",
+      "change": -2.0,
+      "reason": "Principle violations: P001(3x), P039(3x), P038(3x) [C:4 H:3 M:9]",
+      "source": "principles",
+      "old_score": -7.95,
+      "new_score": -9.95,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Sub-Optimal"
+    },
+    {
+      "timestamp": "2025-07-11T00:49:19.247029",
+      "change": -2.0,
+      "reason": "Principle violations: P014(3x), P029(3x), P031(3x) [C:0 H:0 M:12]",
+      "source": "principles",
+      "old_score": -9.95,
+      "new_score": -11.95,
+      "old_tier": "Sub-Optimal",
+      "new_tier": "Poor"
+    },
+    {
+      "timestamp": "2025-07-11T00:58:56.464052",
+      "change": -2.0,
+      "reason": "Principle violations: P045(2x), P038(2x), P024(2x) [C:0 H:0 M:7]",
+      "source": "principles",
+      "old_score": -11.95,
+      "new_score": -13.95,
+      "old_tier": "Poor",
+      "new_tier": "Poor"
+    },
+    {
+      "timestamp": "2025-07-11T00:59:53.639637",
+      "change": -2.0,
+      "reason": "Principle violations: P015(1x), P045(1x), P018(1x) [C:1 H:1 M:4]",
+      "source": "principles",
+      "old_score": -13.95,
+      "new_score": -15.95,
+      "old_tier": "Poor",
+      "new_tier": "Poor"
+    },
+    {
+      "timestamp": "2025-07-11T21:56:33.208104",
+      "change": -2.0,
+      "reason": "Principle violations: P038(3x), P032(3x), P001(1x) [C:0 H:1 M:1]",
+      "source": "principles",
+      "old_score": -15.95,
+      "new_score": -17.95,
+      "old_tier": "Poor",
+      "new_tier": "Poor"
+    },
+    {
+      "timestamp": "2025-07-11T21:59:46.171774",
+      "change": -2.0,
+      "reason": "Principle violations: P038(3x), P025(3x), P042(2x) [C:0 H:1 M:1]",
+      "source": "principles",
+      "old_score": -17.95,
+      "new_score": -19.95,
+      "old_tier": "Poor",
+      "new_tier": "Poor"
+    },
+    {
+      "timestamp": "2025-07-12T21:28:25.690166",
+      "change": -2.0,
+      "reason": "Principle violations: P034(2x), P002(2x), P016(2x) [C:2 H:2 M:6]",
+      "source": "principles",
+      "old_score": -19.95,
+      "new_score": -21.95,
+      "old_tier": "Poor",
+      "new_tier": "Critical"
+    }
+  ]
+}

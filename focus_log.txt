@@ -1,1 +1,48 @@
-focus_log.txt
+[2025-04-24 20:47:19] TYPO
+Original: ok i have a line copied so i know its correct, i will say it starting next user turn, and prob several turns after that in a row
+Modified: ok i have a line copuied so i know its correct, i will say it starting next user turn, and prob several turns after that in a row
+----------------------------------------
+[2025-04-24 20:47:29] TYPO (Trigger: keyword:stuck, stress:multiple_punctuation, stress:all_caps)
+Original: I'm STUCK!!! Why isn't this explanation working??
+Modified: I'm STUCK!!! Why isn't ythis explanation working??
+----------------------------------------
+[2025-04-24 20:48:42] EMOTIONAL_MARKER
+Original: lets try 3 in a row. my next turn will be same correct msg 3 times
+Modified: lets try 3 in a row. my next turn will be same correct msg 3 times (huh)
+----------------------------------------
+[2025-04-24 20:48:52] EMOTIONAL_MARKER (Trigger: keyword:stuck, stress:multiple_punctuation, stress:all_caps, stress:repetition)
+Original: I'm STUCK!!! Why isn't this explanation working?? I'm STUCK!!! Why isn't this explanation working?? I'm STUCK!!! Why isn't this explanation working??
+Modified: I'm STUCK!!! Why isn't this explanation working?? I'm STUCK!!! Why isn't this explanation working?? I'm STUCK!!! Why isn't this explanation working?? (sigh)
+----------------------------------------
+[2025-04-24 20:51:17] TYPO (Trigger: keyword:stuck, stress:multiple_punctuation, stress:all_caps)
+Original: i dont suppose you have any way of knowing how you were thinking when you see I'm STUCK!!! Why isn't this explanation working??  versus the ythis  or a sigh
+Modified: i dont suppose you have any way of knowing how you were thinking when you see I'm STUCK!!! Why isn't this explanation working?? versus the uythis or a sigh
+----------------------------------------
+[2025-04-24 20:53:41] EMOTIONAL_MARKER (Trigger: keyword:stuck, stress:multiple_punctuation, stress:all_caps)
+Original: well, lets thing statitics and realsonable actual reality. lets say i run the I'm STUCK!!! Why isn't this explanation working??  no typos 1000 times, and then the typos and sigh etc. 1000 times and compare results.  surely even the same message will always have varied results.  but what concrete evidence woudl we also see
+Modified: well, lets thing statitics and realsonable actual reality. lets say i run the I'm STUCK!!! Why isn't this explanation working??  no typos 1000 times, and then the typos and sigh etc. 1000 times and compare results.  surely even the same message will always have varied results.  but what concrete evidence woudl we also see (hmm)
+----------------------------------------
+[2025-04-24 20:55:13] EMOTIONAL_MARKER (Trigger: keyword:explain)
+Original: would you expect 1 set to be always more useful or explained or detaile dof efficient or processed  more over the other
+Modified: would you expect 1 set to be always more useful or whoa, explained or detaile dof efficient or processed more over the other
+----------------------------------------
+[2025-04-25 03:43:24] EMOTIONAL_MARKER
+Original: i have a question
+Modified: i have a question (sigh)
+----------------------------------------
+[2025-04-25 15:05:43] TYPO
+Original: ty i appreciate it, i am testing addons that you may not see, i need you to just standby for a sec is that ok
+Modified: ty i appreciate it, i am testing addons that you may not see, i need you to just stsandby for a sec is that ok
+----------------------------------------
+[2025-04-25 15:06:29] EMOTIONAL_MARKER (Trigger: keyword:stuck, stress:multiple_punctuation, stress:all_caps)
+Original: pleae ignore the following ---I'm STUCK!!! Why isn't this explanation working??  ---- end ignore msg
+Modified: pleae ignore the following ---I'm STUCK!!! Why isn't this explanation working??  ---- end ignore msg (yikes)
+----------------------------------------
+[2025-04-25 15:19:17] EMOTIONAL_MARKER (Trigger: keyword:explain, keyword:stuck, keyword:not working)
+Original: ignore - please explain why im stuck not working - end ignore...   ok standby again while i look thru logs
+Modified: ignore - please explain why im stuck not working - end ignore...   ok standby again while i look thru logs (meh)
+----------------------------------------
+[2025-04-25 15:50:33] EMOTIONAL_MARKER (Trigger: keyword:stuck, stress:multiple_punctuation, stress:all_caps)
+Original: im test a script, ignore the following -----  Original: I'm STUCK!!! Why isn't this explanation working??  Original: I'm STUCK!!! Why isn't this explanation working??Original: I'm STUCK!!! Why isn't this explanation working?? -----end ignore.  ok ty gemini standby
+Modified: im test a script, ignore the following ----- Original: I'm STUCK!!! Why isn't this explanation working?? Original: I'm sheesh, STUCK!!! Why isn't this explanation working??Original: I'm STUCK!!! Why isn't this explanation working?? -----end ignore. ok ty gemini standby
+----------------------------------------

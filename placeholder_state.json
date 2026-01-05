@@ -1,0 +1,361 @@
+{
+  "commands_processed": 0,
+  "injections_made": 0,
+  "errors_caught": 0,
+  "command_history": [
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-10T10:11:58.777418"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752160481.1891432
+      },
+      "timestamp": "2025-07-10T10:14:41.189147"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-10T10:14:45.753720"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752161003.6379423
+      },
+      "timestamp": "2025-07-10T10:23:23.637948"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-10T10:23:25.843764"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752161975.6625938
+      },
+      "timestamp": "2025-07-10T10:39:35.662598"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-10T10:40:38.973932"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752162063.1194358
+      },
+      "timestamp": "2025-07-10T10:41:03.119440"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-10T21:48:01.824996"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752202189.8774986
+      },
+      "timestamp": "2025-07-10T21:49:49.877502"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-10T21:49:56.418862"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752202206.5570529
+      },
+      "timestamp": "2025-07-10T21:50:06.557056"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-10T22:02:10.905270"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752204340.7932274
+      },
+      "timestamp": "2025-07-10T22:25:40.793231"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-11T00:39:36.743066"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752212972.238423
+      },
+      "timestamp": "2025-07-11T00:49:32.238427"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T17:29:44.175964"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752359402.591931
+      },
+      "timestamp": "2025-07-12T17:30:02.591935"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T17:45:59.729776"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752360389.473165
+      },
+      "timestamp": "2025-07-12T17:46:29.473169"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T21:16:18.024596"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752373034.8155005
+      },
+      "timestamp": "2025-07-12T21:17:14.815506"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T21:23:40.822622"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752373811.0084786
+      },
+      "timestamp": "2025-07-12T21:30:11.008482"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T21:30:22.235024"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752373839.9207325
+      },
+      "timestamp": "2025-07-12T21:30:39.920736"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T22:56:47.023683"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752379022.578525
+      },
+      "timestamp": "2025-07-12T22:57:02.578529"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T23:10:56.411547"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752380207.5916462
+      },
+      "timestamp": "2025-07-12T23:16:47.591650"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T23:17:34.807151"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752380675.0236354
+      },
+      "timestamp": "2025-07-12T23:24:35.023639"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T23:24:55.378365"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752380761.4352598
+      },
+      "timestamp": "2025-07-12T23:26:01.435263"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T23:26:54.669417"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752380973.8130763
+      },
+      "timestamp": "2025-07-12T23:29:33.813080"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T23:32:29.455378"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752381243.5610838
+      },
+      "timestamp": "2025-07-12T23:34:03.561087"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T23:40:58.631167"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752381681.667148
+      },
+      "timestamp": "2025-07-12T23:41:21.667152"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-12T23:48:34.728937"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752383030.4652042
+      },
+      "timestamp": "2025-07-13T00:03:50.465209"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-13T00:03:57.174835"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752383148.2504432
+      },
+      "timestamp": "2025-07-13T00:05:48.250446"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-13T00:15:44.357295"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752384066.507053
+      },
+      "timestamp": "2025-07-13T00:21:06.507056"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-13T00:21:18.260613"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752384189.3647258
+      },
+      "timestamp": "2025-07-13T00:23:09.364728"
+    },
+    {
+      "command": "start_action",
+      "details": {
+        "version": "3.2"
+      },
+      "timestamp": "2025-07-13T00:24:12.014029"
+    },
+    {
+      "command": "stop_action",
+      "details": {
+        "runtime_seconds": 1752384379.1047657
+      },
+      "timestamp": "2025-07-13T00:26:19.104770"
+    }
+  ],
+  "ai_interactions": [],
+  "integration_log": [],
+  "multi_turn_operations": {},
+  "agent_interference_avoided": 0
+}

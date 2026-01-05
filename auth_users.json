@@ -1,1 +1,18 @@
-auth_users.json
+{
+  "admin": {
+    "password_hash": "placeholder",
+    "role": "admin",
+    "active": true,
+    "created": "2025-06-05T00:07:37.196452",
+    "created_by": "system",
+    "last_login": null
+  },
+  "user": {
+    "password_hash": "placeholder",
+    "role": "user",
+    "active": true,
+    "created": "2025-06-05T00:22:59.717013",
+    "created_by": "command",
+    "last_login": null
+  }
+}

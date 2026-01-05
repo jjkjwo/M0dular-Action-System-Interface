@@ -1,1 +1,53 @@
-youtube_config.json
+{
+  "auto_suggest": true,
+  "search_history": [
+    "that goign sorry what warned",
+    "testing dont some addons only",
+    "persona your artist",
+    "wiki auto",
+    "panel requires plugin",
+    "wiki hmph auto"
+  ],
+  "recent_videos": [
+    {
+      "id": "_z1feLGG7Hk",
+      "title": "give good \ud83d\ude2d\ud83e\udd70LeoNata family #shorts TikTok",
+      "channel": "LeoNata Family",
+      "published": "2022-01-14T15:00:18Z",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=_z1feLGG7Hk"
+    },
+    {
+      "id": "jZuktUfF0nE",
+      "title": "Everyone Is Stupid Except Me",
+      "channel": "Jacob Epstein",
+      "published": "2012-08-13T02:53:33Z",
+      "description": "Homer the Heretic.",
+      "url": "https://www.youtube.com/watch?v=jZuktUfF0nE"
+    },
+    {
+      "id": "PPkc_a6DHe4",
+      "title": "Hmph//meme// Shu x Alicia #beybladeburst #shukurenai",
+      "channel": "Golden Fairy Afton",
+      "published": "2022-07-24T16:00:55Z",
+      "description": "Salut mes petits dragons ! J'esp\u00e8re que cette nouvelle vid\u00e9o va vous plaire ! Je pourrais pas faire des \u00e9normes videos car mon ...",
+      "url": "https://www.youtube.com/watch?v=PPkc_a6DHe4"
+    },
+    {
+      "id": "k9kE5Wbcp38",
+      "title": "The most beautiful place in the universe? Hmph! Not after you&#39;ve seen a used car lot at sunset.",
+      "channel": "Sophie Bitzinger",
+      "published": "2023-06-09T00:39:49Z",
+      "description": "Uncle Matt, eternal icon.",
+      "url": "https://www.youtube.com/watch?v=k9kE5Wbcp38"
+    },
+    {
+      "id": "Fuc3BrgiOIY",
+      "title": "[Vinesauce] Vinny - Corruption Stockpile 36",
+      "channel": "vinesauce",
+      "published": "2022-07-22T21:25:26Z",
+      "description": "00:00 SEIZURE AND EPILEPSY WARNING 00:25 TimeSplitters: Future Perfect 06:03 Downhill Domination 11:00 Rumble Roses ...",
+      "url": "https://www.youtube.com/watch?v=Fuc3BrgiOIY"
+    }
+  ]
+}

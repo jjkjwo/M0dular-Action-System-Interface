@@ -1,1 +1,13 @@
-advisory_config.json
+{
+  "base_advisory_enabled": true,
+  "base_advisory_text": "[SYSTEM ADVISORY: AI Assistant Enhanced Mode - Multiple subsystems active]",
+  "max_advisories_per_turn": 5,
+  "advisory_format": "minimal",
+  "clear_after_turn": true,
+  "history_size": 10,
+  "priority_threshold": 0,
+  "debug_mode": false,
+  "skip_injection_for_commands": true,
+  "show_categories": false,
+  "skip_ai_triggered_commands": true
+}

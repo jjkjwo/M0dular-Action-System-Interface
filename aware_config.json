@@ -1,1 +1,95 @@
-aware_config.json
+{
+  "_README": "This configuration controls the awareness injection system. Keywords listed here are monitored in USER INPUT ONLY. When detected, the system injects relevant information into the user's message before sending to the AI.",
+  "awareness_configs": {
+    "goal_agent": {
+      "enabled": false,
+      "description": "Goal Agent and v-agent capabilities awareness",
+      "keywords": ["ai", "agent", "goal", "task", "v-agent", "vagent", "goal agent"],
+      "_keywords_note": "These keywords are monitored in USER input only, not AI responses",
+      "cooldown_turns": 3,
+      "injection_content": {
+        "title": "GOAL AGENT AWARENESS INFORMATION",
+        "sections": {
+          "intro": "The system has a powerful goal-oriented agent (v-agent) that can help accomplish complex tasks autonomously.",
+          "how_to_use": {
+            "title": "HOW TO USE THE GOAL AGENT:",
+            "steps": [
+              "Start a goal: Type \"goal <your objective>\"",
+              "Example: \"goal research Python decorators and create a tutorial\"",
+              "Example: \"goal transform the UI to have a cyberpunk theme\"",
+              "Example: \"goal analyze my recent conversations and summarize key topics\""
+            ],
+            "agent_behavior": [
+              "The agent will:",
+              "- Create a step-by-step plan",
+              "- Execute each step using available tools",
+              "- Track progress and handle errors",
+              "- Clean up after completion"
+            ],
+            "control_commands": [
+              "Control commands:",
+              "- \"goal stop\" - Stop the current goal",
+              "- \"goal history off\" - Disable conversation clearing",
+              "- \"goal history status\" - Check history settings"
+            ]
+          },
+          "capabilities": {
+            "title": "KEY CAPABILITIES:",
+            "load_from_file": true,
+            "file_path": "agent_tools.json",
+            "fallback": [
+              "• Research and information gathering",
+              "• UI transformation and styling",
+              "• File operations and content creation",
+              "• System management and configuration",
+              "• Multi-step task automation"
+            ]
+          },
+          "examples": {
+            "title": "EXAMPLE GOALS YOU COULD SUGGEST:",
+            "items": [
+              "\"goal create a comprehensive report about quantum computing\"",
+              "\"goal make the interface look like a retro terminal\"",
+              "\"goal analyze sentiment in our conversation and visualize it\""
+            ]
+          },
+          "footer": "The agent is intelligent and can break down complex requests into manageable steps. It will ask for clarification if needed and can use multiple tools in sequence to achieve the goal."
+        }
+      }
+    },
+    "sound_system": {
+      "enabled": true,
+      "description": "Sound system control and playback awareness",
+      "keywords": ["play", "sound", "music", "song", "audio"],
+      "_keywords_note": "These keywords are monitored in USER input only, not AI responses",
+      "cooldown_turns": 3,
+      "injection_content": {
+        "title": "SOUND SYSTEM AWARENESS INFORMATION",
+        "sections": {
+          "intro": "You can control sound playback using special chat-based triggers. These are NOT [C: ...] commands.\nThey are unique in this system and act as direct frontend triggers. These are written as plain text.",
+          "how_to_use": {
+            "title": "HOW TO USE SOUND TRIGGERS:",
+            "commands": [
+              "- To start a sound: soundstart:https://example.com/audio.mp3",
+              "- To stop the current sound: stopsound",
+              "- To set volume (0-100, e.g., 50 for 50%): soundvolume:50"
+            ]
+          },
+          "important_notes": {
+            "title": "IMPORTANT NOTES:",
+            "items": [
+              "- Write these triggers exactly as shown in your response, as plain text.",
+              "- Do NOT use bold markdown (e.g., **) or 'single quotes' around the triggers or their arguments (like the URL or volume number).",
+              "- Sound files played using 'soundstart:' are logged in the \"memory addon\". This might be relevant if the user asks about recently played sounds or for context.",
+              "- These are chat-based frontend only triggers, processed directly by the user interface, not by you as commands."
+            ]
+          },
+          "critical": {
+            "title": "CRITICAL:",
+            "content": "Since these are chat triggers that execute automatically when typed:\n- ONLY type the actual sound command (like soundstart:URL) if the user explicitly requests or confirms they want to play a sound.\n- Otherwise, just describe what sound commands could be used or ask for confirmation first.\n- Example: If user says \"I want music\", first ask \"Would you like me to play some music for you?\" before typing any soundstart: command.\n- This prevents unwanted automatic sound playback from casual mentions of sound-related topics."
+          }
+        }
+      }
+    }
+  }
+}

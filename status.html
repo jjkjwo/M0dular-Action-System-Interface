@@ -1,1 +1,34 @@
-status.html
+<!-- status.html - Live Status Card -->
+<div class="loader-data-section loader-feature-card loader-live-status-card">
+    <div class="loader-data-header">
+        <span class="loader-data-title">Live Status</span>
+    </div>
+    <div class="loader-data-value" id="liveStatusInfo">
+        <!-- API Configuration Info -->
+        <div class="loader-api-info">
+            <div>
+                <span style="font-weight: 600;">Provider:</span>
+                <span id="apiProviderText" style="color: #4a76a8; font-weight: 600; margin-left: 0.5rem;">Loading...</span>
+            </div>
+            <div>
+                <span style="font-weight: 600;">Model:</span>
+                <span id="apiModelText" style="margin-left: 0.5rem;">Loading...</span>
+            </div>
+        </div>
+        
+        <!-- Original Live Status Content -->
+        <div class="loader-online-status">
+            <span class="loader-status-text" id="onlineUsersText">3 placeholderusers online</span>
+        </div>
+        <div class="loader-message-preview">
+            <div class="loader-message-item">
+                <span class="loader-msg-label">Last User:</span>
+                <span class="loader-msg-content" id="lastUserMessage">Loading...</span>
+            </div>
+            <div class="loader-message-item">
+                <span class="loader-msg-label">Last AI:</span>
+                <span class="loader-msg-content" id="lastAIMessage">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>

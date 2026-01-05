@@ -1,1 +1,16 @@
-jjk_config.json
+{
+  "progenitor_timeout_seconds": 300,
+  "max_auth_attempts": 3,
+  "lockout_duration_minutes": 30,
+  "audit_enabled": true,
+  "require_sms_verification": false,
+  "api_limit_bypass_enabled": false,
+  "file_edit_permissions": false,
+  "principle_modification_allowed": false,
+  "system_override_enabled": false,
+  "backup_on_critical_operations": true,
+  "whitelist_mode": false,
+  "approved_commands": [],
+  "approved_files": [],
+  "security_level": "MAXIMUM"
+}

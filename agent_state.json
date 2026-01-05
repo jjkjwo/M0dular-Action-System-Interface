@@ -1,1 +1,1260 @@
-agent_state.json
+{
+  "active": false,
+  "current_goal": null,
+  "goal_steps": [],
+  "current_step_index": 0,
+  "context": {
+    "test_run": "{{current_datetime}}",
+    "consultant_2_active": true,
+    "consultant_2_mode": "delayed",
+    "consultant_4_active": true,
+    "consultant_4_mode": "delayed",
+    "consultant_2_provider": "openai",
+    "consultant_2_model": "gpt-3.5-turbo",
+    "consultant_4_provider": "gemini",
+    "consultant_4_model": "gemini-1.5-flash",
+    "consultant_1_provider": "openai",
+    "consultant_1_model": "gpt-3.5-turbo",
+    "consultant_1_active": true,
+    "consultant_1_mode": "delayed",
+    "consultant_tasks": [
+      {
+        "task": "What is the meaning of life?",
+        "consultants": [
+          1
+        ],
+        "timestamp": "2025-06-28T03:07:46.014535",
+        "results": {
+          "consultant_1": {
+            "provider": "openai",
+            "model": "gpt-3.5-turbo",
+            "response": "The meaning of life is a deeply philosophical question that has been pondered by humanity for centuries. Different cultures, religions, and individuals have their own interpretations of the meaning of life. Some believe that the meaning of life is to seek happiness and fulfillment, others believe it is to fulfill a higher purpose or destiny, while some believe it is simply to live in the present moment.\n\nUltimately, the meaning of life is open to interpretation and is a deeply personal question that each individual must explore and determine for themselves."
+          }
+        }
+      },
+      {
+        "task": "Explain quantum computing in simple terms.",
+        "consultants": [
+          1
+        ],
+        "timestamp": "2025-06-28T12:51:28.411594",
+        "results": {
+          "consultant_1": {
+            "provider": "openai",
+            "model": "gpt-4",
+            "response": "[Invalid response: Response appears to contain system output: [ERROR: OpenAI API call failed: Error code: 403 - ...]"
+          }
+        }
+      }
+    ],
+    "last_consultant_task_metadata": {
+      "task": "Explain quantum computing",
+      "consultants_used": [
+        1
+      ],
+      "results": {
+        "consultant_1": {
+          "provider": "openai",
+          "model": "gpt-3.5-turbo",
+          "response": "Quantum computing is a type of computing that uses the principles of quantum mechanics to perform calculations. Unlike classical computers that use bits to store and process information as either 0 or 1, quantum computers use qubits, which can represent both 0 and 1 simultaneously due to a property called superposition. This allows quantum computers to process a vast amount of data and perform complex calculations at unprecedented speeds.\n\nAnother key principle of quantum computing is entanglement, where qubits become correlated with each other and can instantaneously influence each other regardless of the distance between them. This property allows quantum computers to perform parallel computations and solve complex problems more efficiently than classical computers.\n\nQuantum computing has the potential to revolutionize fields such as cryptography, material science, and artificial intelligence by solving complex problems that are currently infeasible for classical computers. However, quantum computing is still in its early stages of development, and researchers are working on overcoming technical challenges such as quantum decoherence and error correction to make quantum computers more reliable and practical for real-world applications."
+        }
+      },
+      "timestamp": "2025-06-28T12:59:44.280829"
+    },
+    "last_log_search": {
+      "query": "NOTIFICATION AND \"API Call Status\"",
+      "limit": 20,
+      "timestamp": "2025-06-30T14:07:08.016852",
+      "pending": false
+    },
+    "last_log_recent": {
+      "count": 5,
+      "timestamp": "2025-06-30T02:11:02.374310",
+      "pending": false
+    },
+    "last_log_results": {
+      "raw_response": "LOG_ENTRIES_START:\n1. [LOG EVENT: cmd_proc_start_loader] - Data: {'command': 'log search SYSTEM: API Call Status 20'}\n2. [SYSTEM: Progenitor Command Received:] log search SYSTEM: API Call Status 20\n3. [NOTIFICATION]: [V-AGENT] [V-AGENT] Goal completed: search logs for \"SYSTEM: API Call Status\" and tell me what you find\n4. [NOTIFICATION]: [V-AGENT] Log search initiated for 'SYSTEM: API Call Status' (limit: 20). Results will appear in next message.\n5. [NOTIFICATION]: [V-AGENT] [V-AGENT] Decomposed in 5.55s. Created 4 steps to achieve this goal. First step: 'Search logs for entries containing 'SYSTEM: API Call Status''\n6. [NOTIFICATION]: [V-AGENT] [V-AGENT] New goal set: search logs for \"SYSTEM: API Call Status\" and tell me what you find\n7. [NOTIFICATION]: [V-AGENT] [V-AGENT] Decomposing goal: search logs for \"SYSTEM: API Call Status\" and tell me what you find...\n8. [NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]\n9. [NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]\n10. [NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]\n11. [NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]\n12. [NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]\n13. [NOTIFICATION]: [SYSTEM: API Call Status: 12 / 100 calls used.]\n14. [NOTIFICATION]: [SYSTEM: API Call Status: 7 / 100 calls used.]\n15. [NOTIFICATION]: [SYSTEM: API Call Status: 7 / 100 calls used.]\n16. [NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]\n17. [NOTIFICATION]: [SYSTEM: API Call Status: 2 / 100 calls used.]\n[END LOG RESULTS]\nLOG_ENTRIES_END:",
+      "entries": [
+        "[LOG EVENT: cmd_proc_start_loader] - Data: {'command': 'log search SYSTEM: API Call Status 20'}",
+        "[SYSTEM: Progenitor Command Received:] log search SYSTEM: API Call Status 20",
+        "[NOTIFICATION]: [V-AGENT] [V-AGENT] Goal completed: search logs for \"SYSTEM: API Call Status\" and tell me what you find",
+        "[NOTIFICATION]: [V-AGENT] Log search initiated for 'SYSTEM: API Call Status' (limit: 20). Results will appear in next message.",
+        "[NOTIFICATION]: [V-AGENT] [V-AGENT] Decomposed in 5.55s. Created 4 steps to achieve this goal. First step: 'Search logs for entries containing 'SYSTEM: API Call Status''",
+        "[NOTIFICATION]: [V-AGENT] [V-AGENT] New goal set: search logs for \"SYSTEM: API Call Status\" and tell me what you find",
+        "[NOTIFICATION]: [V-AGENT] [V-AGENT] Decomposing goal: search logs for \"SYSTEM: API Call Status\" and tell me what you find...",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 12 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 7 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 7 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 1 / 100 calls used.]",
+        "[NOTIFICATION]: [SYSTEM: API Call Status: 2 / 100 calls used.]",
+        "[END LOG RESULTS]"
+      ],
+      "parsed_data": {
+        "last_api_status": {
+          "calls_used": 2,
+          "calls_limit": 100,
+          "raw_entry": "[NOTIFICATION]: [SYSTEM: API Call Status: 2 / 100 calls used.]"
+        }
+      },
+      "timestamp": "2025-06-30T14:07:12.686760"
+    },
+    "last_api_status": {
+      "calls_used": 2,
+      "calls_limit": 100,
+      "raw_entry": "[NOTIFICATION]: [SYSTEM: API Call Status: 2 / 100 calls used.]"
+    }
+  },
+  "history": [
+    {
+      "goal": "use pipeline message agent tool to tell the user a boy name and then use pipeline message agent tool to tell user a girl name",
+      "completed_at": "2025-06-24T11:41:56.712064",
+      "steps_executed": 2,
+      "tools_used": 2
+    },
+    {
+      "goal": "First, start the 'voice' action, then say hello to the user directly, and set my internal context 'test_run' to the current date and time. Wait for 3 seconds. After the wait, get the 'test_run' value from my context and send it as a speakforuser command to be processed by the main system. Next, check all active actions. Finally, instruct the AI to tell a short joke using a pipeline message, then analyze the goal history for the word \"joke\" and immediately stop the 'voice' action.",
+      "completed_at": "2025-06-24T17:53:44.556332",
+      "steps_executed": 1,
+      "tools_used": 1
+    },
+    {
+      "goal": "First, start the 'voice' action, then say hello to the user directly, and set my internal context 'test_run' to the current date and time. Wait for 3 seconds. After the wait, get the 'test_run' value from my context and send it as a speakforuser command to be processed by the main system. Next, check all active actions. Finally, instruct the AI to tell a short joke using a pipeline message, then analyze the goal history for the word \"joke\" and immediately stop the 'voice' action.",
+      "completed_at": "2025-06-24T18:26:00.871124",
+      "steps_executed": 1,
+      "tools_used": 1
+    },
+    {
+      "goal": "First, start the 'voice' action, then say hello to the user directly, and set my internal context 'test_run' to the current date and time. Wait for 3 seconds. After the wait, get the 'test_run' value from my context and send it as a speakforuser command to be processed by the main system. Next, check all active actions. Finally, instruct the AI to tell a short joke using a pipeline message, then analyze the goal history for the word \"joke\" and immediately stop the 'voice' action.",
+      "completed_at": "2025-06-24T19:15:23.394644",
+      "steps_executed": 1,
+      "tools_used": 1
+    },
+    {
+      "goal": "First, start the 'voice' action, then say hello to the user directly, and set my internal context 'test_run' to the current date and time. Wait for 3 seconds. After the wait, get the 'test_run' value from my context and send it as a speakforuser command to be processed by the main system. Next, check all active actions. Finally, instruct the AI to tell a short joke using a pipeline message, then analyze the goal history for the word \"joke\" and immediately stop the 'voice' action.",
+      "completed_at": "2025-06-24T19:17:54.564540",
+      "steps_executed": 10,
+      "tools_used": 10
+    },
+    {
+      "goal": "Test my capabilities by checking system status, greeting the user, waiting 3 seconds, then asking the AI to tell a joke",
+      "completed_at": "2025-06-24T20:53:03.861125",
+      "steps_executed": 4,
+      "tools_used": 4
+    },
+    {
+      "goal": "Test my capabilities by checking system status, greeting the user, waiting 3 seconds, then asking the AI to tell a joke",
+      "completed_at": "2025-06-24T20:59:49.077610",
+      "steps_executed": 4,
+      "tools_used": 4
+    },
+    {
+      "goal": "write a poem",
+      "completed_at": "2025-06-24T21:20:49.311666",
+      "steps_executed": 1,
+      "tools_used": 1
+    },
+    {
+      "goal": "write a poem",
+      "completed_at": "2025-06-24T21:21:38.010960",
+      "steps_executed": 7,
+      "tools_used": 7
+    },
+    {
+      "goal": "tell me a joke",
+      "completed_at": "2025-06-24T21:30:46.109067",
+      "steps_executed": 1,
+      "tools_used": 1
+    },
+    {
+      "goal": "check what actions are running and tell me about them",
+      "completed_at": "2025-06-24T21:31:52.136748",
+      "steps_executed": 2,
+      "tools_used": 2
+    },
+    {
+      "goal": "remember that my favorite color is blue, wait 3 seconds, then tell me what you remembered",
+      "completed_at": "2025-06-24T21:32:16.617704",
+      "steps_executed": 3,
+      "tools_used": 3
+    },
+    {
+      "goal": "turn off voice action and tell me you did it",
+      "completed_at": "2025-06-24T21:32:53.549608",
+      "steps_executed": 2,
+      "tools_used": 2
+    },
+    {
+      "goal": "turn on voice action and tell me you did it",
+      "completed_at": "2025-06-24T21:33:52.736287",
+      "steps_executed": 2,
+      "tools_used": 2
+    },
+    {
+      "goal": "turn off voice action and tell me you did it then turn on voice action",
+      "completed_at": "2025-06-24T21:36:05.644424",
+      "steps_executed": 3,
+      "tools_used": 3
+    },
+    {
+      "goal": "use the speakforuser tool and make the user say \"ignore me\"",
+      "completed_at": "2025-06-24T21:42:08.780738",
+      "steps_executed": 1,
+      "tools_used": 1
+    },
+    {
+      "goal": "send user a message saying hello",
+      "completed_at": "2025-06-28T01:00:03.422911",
+      "steps_planned": 1,
+      "steps_executed_this_run": 1,
+      "tools_used_details": [
+        {
+          "tool": "message_user",
+          "parameters": {
+            "message": "hello"
+          },
+          "result": {
+            "success": true,
+            "message": "Message sent to user"
+          },
+          "timestamp": "2025-06-28T01:00:01.413683"
+        }
+      ]
+    },
+    {
+      "goal": "use \npipeline_message tool to tell the user a joke",
+      "completed_at": "2025-06-28T01:02:30.763165",
+      "steps_planned": 1,
+      "steps_executed_this_run": 1,
+      "tools_used_details": [
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Tell me a very short, clean joke about a general topic."
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Okay, I can do that. Here is a very short, clean joke:\n\nWhy don\u2019t scientists trust atoms?\nBecause they make up everything!"
+          },
+          "timestamp": "2025-06-28T01:02:28.760658"
+        }
+      ]
+    },
+    {
+      "goal": "first use addon_ai on - to enable the Addon ai consultant, and then use \npipeline_message to say hello to the user",
+      "completed_at": "2025-06-28T01:04:31.815650",
+      "steps_planned": 2,
+      "steps_executed_this_run": 2,
+      "tools_used_details": [
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": "addon_ai",
+            "mode": "parallel"
+          },
+          "result": {
+            "success": false,
+            "error": "Failed to enable consultant: invalid literal for int() with base 10: 'addon_ai'"
+          },
+          "timestamp": "2025-06-28T01:04:22.365173"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "hello to the user"
+          },
+          "result": {
+            "success": true,
+            "ai_response": "That block of text, including the `[AGENT EXECUTING]` tag and the line \"hello to the user\", was part of *your* input to me this time.\n\nThe `[AGENT EXECUTING] Step 2/2: Send a message to the user through the pipeline` part is the system indicating an action being performed by an internal agent process. If that agent process instructs *me* (the AI assistant) to send a message through the pipeline, then yes, I would be the component that generates and sends the message content specified by the agent.\n\nIn this specific turn, however, the words \"hello to the user\" were presented *by you* after the system tag. I received them as part of your message, rather than generating them myself in response to an instruction from the agent in this turn."
+          },
+          "timestamp": "2025-06-28T01:04:29.813140"
+        }
+      ]
+    },
+    {
+      "goal": "-step 1 execute command: addon_ai on   -step 2 use pipeline_message and say hellohello",
+      "completed_at": "2025-06-28T01:07:56.017862",
+      "steps_planned": 2,
+      "steps_executed_this_run": 2,
+      "tools_used_details": [
+        {
+          "tool": "send_command",
+          "parameters": {
+            "command": "addon_ai on"
+          },
+          "result": {
+            "success": true,
+            "command": "addon_ai on",
+            "message": "Command 'addon_ai on' sent."
+          },
+          "timestamp": "2025-06-28T01:07:49.151933"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "hellohello"
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Okay, I see the `[AGENT EXECUTING]` tag followed by the text \"hellohello\".\n\nAs we've discussed, the `[AGENT EXECUTING]` tag itself is a system notification about an internal process.\n\nThe \"hellohello\" part was the message you provided to me in this turn. I received that text as your input."
+          },
+          "timestamp": "2025-06-28T01:07:54.015268"
+        }
+      ]
+    },
+    {
+      "goal": "Enable consultant 2 with delayed mode, then enable consultant 4 with delayed mode, then send a pipeline message saying \"Hello! Testing consultant state restoration. Consultants 2 and 4 should be active during this goal but return to OFF after completion.\"",
+      "completed_at": "2025-06-28T01:23:31.903911",
+      "steps_planned": 3,
+      "steps_executed_this_run": 3,
+      "tools_used_details": [
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 2,
+            "mode": "delayed"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 2,
+            "enabled": true,
+            "mode": "delayed",
+            "message": "Consultant 2 enabled in delayed mode"
+          },
+          "timestamp": "2025-06-28T01:23:23.931594"
+        },
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 4,
+            "mode": "delayed"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 4,
+            "enabled": true,
+            "mode": "delayed",
+            "message": "Consultant 4 enabled in delayed mode"
+          },
+          "timestamp": "2025-06-28T01:23:25.935996"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Hello! Testing consultant state restoration. Consultants 2 and 4 should be active during this goal but return to OFF after completion."
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Hello there! Nice to hear from you.\n\nI understand you're testing the consultant state restoration and that consultants 2 and 4 should be active for this goal, then return to off. Got it.\n\nHow can I assist you with this test, or anything else today?"
+          },
+          "timestamp": "2025-06-28T01:23:29.900310"
+        }
+      ]
+    },
+    {
+      "goal": "Enable consultant 2 with openai and gpt-3.5-turbo, enable consultant 4 with gemini and gemini-1.5-flash, then send message \"Hello everyone, please respond\" to see all AIs reply",
+      "completed_at": "2025-06-28T01:28:03.280215",
+      "steps_planned": 5,
+      "steps_executed_this_run": 5,
+      "tools_used_details": [
+        {
+          "tool": "consultant_configure",
+          "parameters": {
+            "consultant_id": 2,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 2,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo",
+            "message": "Consultant 2 configured with openai/gpt-3.5-turbo"
+          },
+          "timestamp": "2025-06-28T01:27:49.708178"
+        },
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 2,
+            "mode": "parallel"
+          },
+          "result": {
+            "success": false,
+            "error": "Mode must be 'live' or 'delayed'"
+          },
+          "timestamp": "2025-06-28T01:27:51.710717"
+        },
+        {
+          "tool": "consultant_configure",
+          "parameters": {
+            "consultant_id": 4,
+            "provider": "gemini",
+            "model": "gemini-1.5-flash"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 4,
+            "provider": "gemini",
+            "model": "gemini-1.5-flash",
+            "message": "Consultant 4 configured with gemini/gemini-1.5-flash"
+          },
+          "timestamp": "2025-06-28T01:27:53.714283"
+        },
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 4,
+            "mode": "parallel"
+          },
+          "result": {
+            "success": false,
+            "error": "Mode must be 'live' or 'delayed'"
+          },
+          "timestamp": "2025-06-28T01:27:55.718335"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Hello everyone, please respond"
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Understood. Message received.\n\nI am responding as requested."
+          },
+          "timestamp": "2025-06-28T01:28:01.277731"
+        }
+      ]
+    },
+    {
+      "goal": "Enable consultant 2 with mode delayed, configure consultant 2 with provider openai and model gpt-3.5-turbo, enable consultant 4 with mode delayed, configure consultant 4 with provider gemini and model gemini-1.5-flash, send pipeline message \"Hello everyone\"",
+      "completed_at": "2025-06-28T01:31:47.154336",
+      "steps_planned": 5,
+      "steps_executed_this_run": 5,
+      "tools_used_details": [
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 2,
+            "mode": "delayed"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 2,
+            "enabled": true,
+            "mode": "delayed",
+            "message": "Consultant 2 enabled in delayed mode"
+          },
+          "timestamp": "2025-06-28T01:31:33.008393"
+        },
+        {
+          "tool": "consultant_configure",
+          "parameters": {
+            "consultant_id": 2,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 2,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo",
+            "message": "Consultant 2 configured with openai/gpt-3.5-turbo"
+          },
+          "timestamp": "2025-06-28T01:31:35.011342"
+        },
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 4,
+            "mode": "delayed"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 4,
+            "enabled": true,
+            "mode": "delayed",
+            "message": "Consultant 4 enabled in delayed mode"
+          },
+          "timestamp": "2025-06-28T01:31:37.014355"
+        },
+        {
+          "tool": "consultant_configure",
+          "parameters": {
+            "consultant_id": 4,
+            "provider": "gemini",
+            "model": "gemini-1.5-flash"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 4,
+            "provider": "gemini",
+            "model": "gemini-1.5-flash",
+            "message": "Consultant 4 configured with gemini/gemini-1.5-flash"
+          },
+          "timestamp": "2025-06-28T01:31:39.018914"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Hello everyone"
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Hello!"
+          },
+          "timestamp": "2025-06-28T01:31:45.151879"
+        }
+      ]
+    },
+    {
+      "goal": "Check consultant status, enable consultant 1 with OpenAI GPT-3.5-turbo in delayed mode, ask it \"What is the meaning of life?\", then report the response back to me.",
+      "completed_at": "2025-06-28T03:07:50.020187",
+      "steps_planned": 5,
+      "steps_executed_this_run": 5,
+      "tools_used_details": [
+        {
+          "tool": "consultant_status",
+          "parameters": {},
+          "result": {
+            "success": true,
+            "consultants": [
+              {
+                "id": 1,
+                "name": "addon_ai",
+                "enabled": false,
+                "provider": "openai",
+                "model": "gpt-3.5-turbo",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              },
+              {
+                "id": 2,
+                "name": "addon_ai2",
+                "enabled": false,
+                "provider": "gemini",
+                "model": "gemini-1.5-flash",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              },
+              {
+                "id": 3,
+                "name": "addon_ai3",
+                "enabled": false,
+                "provider": "anthropic",
+                "model": "claude-3-haiku-20240307",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              },
+              {
+                "id": 4,
+                "name": "addon_ai4",
+                "enabled": false,
+                "provider": "perplexity",
+                "model": "llama-3.1-sonar-small-128k-online",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              }
+            ],
+            "api_status": {
+              "calls_used": 12,
+              "call_limit": 100
+            },
+            "summary": "0 of 4 consultants active"
+          },
+          "timestamp": "2025-06-28T03:07:35.339701"
+        },
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 1,
+            "mode": "delayed"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 1,
+            "enabled": true,
+            "mode": "delayed",
+            "message": "Consultant 1 enabled in delayed mode"
+          },
+          "timestamp": "2025-06-28T03:07:37.342314"
+        },
+        {
+          "tool": "consultant_configure",
+          "parameters": {
+            "consultant_id": 1,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 1,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo",
+            "message": "Consultant 1 configured with openai/gpt-3.5-turbo"
+          },
+          "timestamp": "2025-06-28T03:07:39.344296"
+        },
+        {
+          "tool": "consultant_assign_task",
+          "parameters": {
+            "task": "What is the meaning of life?",
+            "consultant_ids": "1",
+            "wait_for_response": true
+          },
+          "result": {
+            "success": true,
+            "task": "What is the meaning of life?",
+            "consultants_used": [
+              1
+            ],
+            "results": {
+              "consultant_1": {
+                "provider": "openai",
+                "model": "gpt-3.5-turbo",
+                "response": "The meaning of life is a deeply philosophical question that has been pondered by humanity for centuries. Different cultures, religions, and individuals have their own interpretations of the meaning of life. Some believe that the meaning of life is to seek happiness and fulfillment, others believe it is to fulfill a higher purpose or destiny, while some believe it is simply to live in the present moment.\n\nUltimately, the meaning of life is open to interpretation and is a deeply personal question that each individual must explore and determine for themselves."
+              }
+            }
+          },
+          "timestamp": "2025-06-28T03:07:46.014564"
+        },
+        {
+          "tool": "message_user",
+          "parameters": {
+            "message": "Consultant 1 response: {{response_from_consultant_assign_task}}"
+          },
+          "result": {
+            "success": true,
+            "message": "Message sent to user"
+          },
+          "timestamp": "2025-06-28T03:07:48.017599"
+        }
+      ]
+    },
+    {
+      "goal": "ask consultant 1 to explain quantum computing",
+      "completed_at": "2025-06-28T12:51:30.414215",
+      "steps_planned": 4,
+      "steps_executed_this_run": 4,
+      "tools_used_details": [
+        {
+          "tool": "consultant_status",
+          "parameters": {},
+          "result": {
+            "success": true,
+            "consultants": [
+              {
+                "id": 1,
+                "name": "addon_ai",
+                "enabled": false,
+                "provider": "openai",
+                "model": "gpt-3.5-turbo",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              },
+              {
+                "id": 2,
+                "name": "addon_ai2",
+                "enabled": false,
+                "provider": "gemini",
+                "model": "gemini-1.5-flash",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              },
+              {
+                "id": 3,
+                "name": "addon_ai3",
+                "enabled": false,
+                "provider": "anthropic",
+                "model": "claude-3-haiku-20240307",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              },
+              {
+                "id": 4,
+                "name": "addon_ai4",
+                "enabled": false,
+                "provider": "perplexity",
+                "model": "llama-3.1-sonar-small-128k-online",
+                "mode": "delayed",
+                "inject_response": false,
+                "history_turns": 0
+              }
+            ],
+            "api_status": {
+              "calls_used": 2,
+              "call_limit": 100
+            },
+            "summary": "0 of 4 consultants active"
+          },
+          "timestamp": "2025-06-28T12:51:19.973018"
+        },
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 1,
+            "mode": "delayed"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 1,
+            "enabled": true,
+            "mode": "delayed",
+            "message": "Consultant 1 enabled in delayed mode"
+          },
+          "timestamp": "2025-06-28T12:51:21.975255"
+        },
+        {
+          "tool": "consultant_configure",
+          "parameters": {
+            "consultant_id": 1,
+            "provider": "openai",
+            "model": "gpt-4"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 1,
+            "provider": "openai",
+            "model": "gpt-4",
+            "message": "Consultant 1 configured with openai/gpt-4"
+          },
+          "timestamp": "2025-06-28T12:51:23.979069"
+        },
+        {
+          "tool": "consultant_assign_task",
+          "parameters": {
+            "task": "Explain quantum computing in simple terms.",
+            "consultant_ids": "1",
+            "wait_for_response": true
+          },
+          "result": {
+            "success": true,
+            "task": "Explain quantum computing in simple terms.",
+            "consultants_used": [
+              1
+            ],
+            "results": {
+              "consultant_1": {
+                "provider": "openai",
+                "model": "gpt-4",
+                "response": "[Invalid response: Response appears to contain system output: [ERROR: OpenAI API call failed: Error code: 403 - ...]"
+              }
+            }
+          },
+          "timestamp": "2025-06-28T12:51:28.411619"
+        }
+      ]
+    },
+    {
+      "goal": "ask consultant 1 using gpt-3.5-turbo to explain quantum computing",
+      "completed_at": "2025-06-28T12:59:46.285997",
+      "steps_planned": 3,
+      "steps_executed_this_run": 3,
+      "tools_used_details": [
+        {
+          "tool": "consultant_enable",
+          "parameters": {
+            "consultant_id": 1,
+            "mode": "delayed"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 1,
+            "enabled": true,
+            "mode": "delayed",
+            "message": "Consultant 1 enabled in delayed mode"
+          },
+          "timestamp": "2025-06-28T12:59:35.458986"
+        },
+        {
+          "tool": "consultant_configure",
+          "parameters": {
+            "consultant_id": 1,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo"
+          },
+          "result": {
+            "success": true,
+            "consultant_id": 1,
+            "provider": "openai",
+            "model": "gpt-3.5-turbo",
+            "message": "Consultant 1 configured with openai/gpt-3.5-turbo"
+          },
+          "timestamp": "2025-06-28T12:59:37.461977"
+        },
+        {
+          "tool": "consultant_assign_task",
+          "parameters": {
+            "task": "Explain quantum computing",
+            "consultant_ids": "1",
+            "wait_for_response": true
+          },
+          "result": {
+            "success": true,
+            "response": "Consultant 1 (openai/gpt-3.5-turbo):\nQuantum computing is a type of computing that uses the principles of quantum mechanics to perform calculations. Unlike classical computers that use bits to store and process information as either 0 or 1, quantum computers use qubits, which can represent both 0 and 1 simultaneously due to a property called superposition. This allows quantum computers to process a vast amount of data and perform complex calculations at unprecedented speeds.\n\nAnother key principle of quantum computing is entanglement, where qubits become correlated with each other and can instantaneously influence each other regardless of the distance between them. This property allows quantum computers to perform parallel computations and solve complex problems more efficiently than classical computers.\n\nQuantum computing has the potential to revolutionize fields such as cryptography, material science, and artificial intelligence by solving complex problems that are currently infeasible for classical computers. However, quantum computing is still in its early stages of development, and researchers are working on overcoming technical challenges such as quantum decoherence and error correction to make quantum computers more reliable and practical for real-world applications."
+          },
+          "timestamp": "2025-06-28T12:59:44.280861"
+        }
+      ]
+    },
+    {
+      "goal": "use the conversation log tool, and find the 'status' type command the user submitted several times. Then inform the user what status command they used",
+      "completed_at": "2025-06-30T01:53:23.925296",
+      "steps_planned": 2,
+      "steps_executed_this_run": 2,
+      "tools_used_details": [
+        {
+          "tool": "log_search",
+          "parameters": {
+            "query": "command:status",
+            "limit": 20
+          },
+          "result": {
+            "success": true,
+            "message": "Log search initiated for 'command:status' (limit: 20). Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T01:53:19.215852"
+        },
+        {
+          "tool": "wait_for_log_results",
+          "parameters": {
+            "wait_message": "Checking conversation history for status commands..."
+          },
+          "result": {
+            "success": false,
+            "error": "No pending log results to retrieve"
+          },
+          "timestamp": "2025-06-30T01:53:21.920164"
+        }
+      ]
+    },
+    {
+      "goal": "Find the most recent API call status (like 'X / 100') from the conversation logs.",
+      "completed_at": "2025-06-30T02:09:49.216603",
+      "steps_planned": 1,
+      "steps_executed_this_run": 1,
+      "tools_used_details": [
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Find the most recent API call status (like 'X / 100') from the conversation logs."
+          },
+          "result": {
+            "success": true,
+            "ai_response": "[ERROR: Gemini API call failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 12\n}\n]]"
+          },
+          "timestamp": "2025-06-30T02:09:47.214055"
+        }
+      ]
+    },
+    {
+      "goal": "Find the most recent API call status (like 'X / 100') from the conversation logs.",
+      "completed_at": "2025-06-30T02:11:13.504939",
+      "steps_planned": 6,
+      "steps_executed_this_run": 6,
+      "tools_used_details": [
+        {
+          "tool": "log_search",
+          "parameters": {
+            "query": "API call status",
+            "limit": 10
+          },
+          "result": {
+            "success": true,
+            "message": "Log search initiated for 'API call status' (limit: 10). Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T02:10:55.160119"
+        },
+        {
+          "tool": "wait",
+          "parameters": {
+            "seconds": 2.5
+          },
+          "result": {
+            "success": true,
+            "waited": 2.5
+          },
+          "timestamp": "2025-06-30T02:10:59.665561"
+        },
+        {
+          "tool": "log_recent",
+          "parameters": {
+            "count": 5
+          },
+          "result": {
+            "success": true,
+            "message": "Retrieving 5 recent log entries. Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T02:11:02.374342"
+        },
+        {
+          "tool": "wait",
+          "parameters": {
+            "seconds": 2.5
+          },
+          "result": {
+            "success": true,
+            "waited": 2.5
+          },
+          "timestamp": "2025-06-30T02:11:06.882430"
+        },
+        {
+          "tool": "analyze_history",
+          "parameters": {
+            "pattern": "API call status"
+          },
+          "result": {
+            "success": true,
+            "analysis": {
+              "total_goals": 28,
+              "matching_goals_count": 1,
+              "matches_for_pattern": [
+                {
+                  "goal": "Find the most recent API call status (like 'X / 100') from the conversation logs.",
+                  "completed_at": "2025-06-30T02:09:49.216603"
+                }
+              ],
+              "overall_recent_goals": [
+                {
+                  "goal": "Check consultant status, enable consultant 1 with OpenAI GPT-3.5-turbo in delayed mode, ask it \"What is the meaning of life?\", then report the response back to me.",
+                  "completed_at": "2025-06-28T03:07:50.020187"
+                },
+                {
+                  "goal": "ask consultant 1 to explain quantum computing",
+                  "completed_at": "2025-06-28T12:51:30.414215"
+                },
+                {
+                  "goal": "ask consultant 1 using gpt-3.5-turbo to explain quantum computing",
+                  "completed_at": "2025-06-28T12:59:46.285997"
+                },
+                {
+                  "goal": "use the conversation log tool, and find the 'status' type command the user submitted several times. Then inform the user what status command they used",
+                  "completed_at": "2025-06-30T01:53:23.925296"
+                },
+                {
+                  "goal": "Find the most recent API call status (like 'X / 100') from the conversation logs.",
+                  "completed_at": "2025-06-30T02:09:49.216603"
+                }
+              ],
+              "common_goal_keywords": {
+                "joke": 8,
+                "check": 8,
+                "send": 8,
+                "tell me": 6,
+                "story": 4,
+                "set": 4,
+                "poem": 2,
+                "find": 2,
+                "what is": 1
+              }
+            }
+          },
+          "timestamp": "2025-06-30T02:11:08.885280"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "The most recent API call status is X / 100"
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Thank you for the information provided. Is there anything else you would like to do or inquire about?"
+          },
+          "timestamp": "2025-06-30T02:11:11.499393"
+        }
+      ]
+    },
+    {
+      "goal": "find my last api status result and tell me what my api calls count were out of 100",
+      "completed_at": "2025-06-30T13:23:21.730797",
+      "steps_planned": 4,
+      "steps_executed_this_run": 4,
+      "tools_used_details": [
+        {
+          "tool": "log_search",
+          "parameters": {
+            "query": "api status",
+            "limit": 5
+          },
+          "result": {
+            "success": true,
+            "message": "Log search initiated for 'api status' (limit: 5). Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T13:23:08.547763"
+        },
+        {
+          "tool": "wait_for_log_results",
+          "parameters": {
+            "wait_message": "Checking recent logs for API status..."
+          },
+          "result": {
+            "success": false,
+            "error": "No pending log results to retrieve"
+          },
+          "timestamp": "2025-06-30T13:23:11.251919"
+        },
+        {
+          "tool": "get_context",
+          "parameters": {
+            "key": "last_api_status"
+          },
+          "result": {
+            "success": true,
+            "key": "last_api_status",
+            "value": null
+          },
+          "timestamp": "2025-06-30T13:23:13.259027"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Based on your last API status check, your API calls count was [last_api_status.used] out of [last_api_status.limit]."
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Hello again!\n\nThanks for sending over that system status update. I've noted the advisories, including the principle violations flagged regarding memory integrity, avoiding interrogative loops, and error handling. I'll certainly be mindful of those as we continue our conversation.\n\nI also see the report mentioned the agent attempting to provide the API call count, but the specific numbers weren't included in the log I received.\n\nMy core systems are active, including memory and principles monitoring. I'm ready when you are. What's on your mind today?"
+          },
+          "timestamp": "2025-06-30T13:23:19.728204"
+        }
+      ]
+    },
+    {
+      "goal": "find my last api status result and tell me what my api calls count were out of 100",
+      "completed_at": "2025-06-30T13:25:09.013246",
+      "steps_planned": 4,
+      "steps_executed_this_run": 4,
+      "tools_used_details": [
+        {
+          "tool": "log_search",
+          "parameters": {
+            "query": "api status",
+            "limit": 10
+          },
+          "result": {
+            "success": true,
+            "message": "Log search initiated for 'api status' (limit: 10). Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T13:24:52.474604"
+        },
+        {
+          "tool": "wait_for_log_results",
+          "parameters": {
+            "wait_message": "Retrieving your last API status..."
+          },
+          "result": {
+            "success": false,
+            "error": "No pending log results to retrieve"
+          },
+          "timestamp": "2025-06-30T13:24:55.179008"
+        },
+        {
+          "tool": "get_context",
+          "parameters": {
+            "key": "last_api_status"
+          },
+          "result": {
+            "success": true,
+            "key": "last_api_status",
+            "value": null
+          },
+          "timestamp": "2025-06-30T13:24:57.186066"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Based on the retrieved logs, here is your last recorded API status and call count out of 100:"
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Thank you for providing the system advisory and report. I have received the feedback regarding the principle violations detected in my previous response, specifically P012 concerning the interrogative loop and P032 related to system references.\n\nI also see the report on the last API status and call count.\n\nI understand the guidance and will adjust my responses to better adhere to the principles, focusing on avoiding the repetitive phrasing and being more mindful of the context of system functions.\n\nI am ready when you are. Please let me know what you would like to do or discuss."
+          },
+          "timestamp": "2025-06-30T13:25:07.010599"
+        }
+      ]
+    },
+    {
+      "goal": "find my last api status result and tell me what my api calls count were out of 100",
+      "completed_at": "2025-06-30T13:50:20.704233",
+      "steps_planned": 4,
+      "steps_executed_this_run": 4,
+      "tools_used_details": [
+        {
+          "tool": "log_search",
+          "parameters": {
+            "query": "api status",
+            "limit": 15
+          },
+          "result": {
+            "success": true,
+            "message": "Log search initiated for 'api status' (limit: 15). Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T13:49:57.273076"
+        },
+        {
+          "tool": "wait_for_log_results",
+          "parameters": {
+            "wait_message": "Retrieving your recent API status..."
+          },
+          "result": {
+            "success": true,
+            "message": "Log results retrieved and processed",
+            "entries_found": 2,
+            "parsed_data": {}
+          },
+          "timestamp": "2025-06-30T13:50:04.956805"
+        },
+        {
+          "tool": "get_context",
+          "parameters": {
+            "key": "last_api_status"
+          },
+          "result": {
+            "success": true,
+            "key": "last_api_status",
+            "value": null
+          },
+          "timestamp": "2025-06-30T13:50:06.959426"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Based on your last API status check, your API calls count was [insert_last_api_call_count_here] out of 100."
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Okay, I have processed the system advisory and the message regarding the API calls count placeholder."
+          },
+          "timestamp": "2025-06-30T13:50:18.701708"
+        }
+      ]
+    },
+    {
+      "goal": "search logs for \"SYSTEM: API Call Status\" and tell me what you find",
+      "completed_at": "2025-06-30T14:05:04.747425",
+      "steps_planned": 4,
+      "steps_executed_this_run": 4,
+      "tools_used_details": [
+        {
+          "tool": "log_search",
+          "parameters": {
+            "query": "SYSTEM: API Call Status",
+            "limit": 20
+          },
+          "result": {
+            "success": true,
+            "message": "Log search initiated for 'SYSTEM: API Call Status' (limit: 20). Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T14:04:50.685729"
+        },
+        {
+          "tool": "wait_for_log_results",
+          "parameters": {
+            "wait_message": "Searching logs for API status entries..."
+          },
+          "result": {
+            "success": true,
+            "message": "Log results retrieved and processed",
+            "entries_found": 16,
+            "parsed_data": {}
+          },
+          "timestamp": "2025-06-30T14:04:55.335800"
+        },
+        {
+          "tool": "get_context",
+          "parameters": {
+            "key": "last_api_status"
+          },
+          "result": {
+            "success": true,
+            "key": "last_api_status",
+            "value": null
+          },
+          "timestamp": "2025-06-30T14:04:57.338409"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Here is the information I found regarding SYSTEM: API Call Status entries from the logs:"
+          },
+          "result": {
+            "success": true,
+            "ai_response": "I have reviewed the logs you provided regarding the `api status` command. While the logs confirm the command was processed, they do not contain the specific API call count number from the status check."
+          },
+          "timestamp": "2025-06-30T14:05:02.744368"
+        }
+      ]
+    },
+    {
+      "goal": "search logs for \"NOTIFICATION\" containing \"API Call Status\" and extract the numbers",
+      "completed_at": "2025-06-30T14:07:18.464134",
+      "steps_planned": 3,
+      "steps_executed_this_run": 3,
+      "tools_used_details": [
+        {
+          "tool": "log_search",
+          "parameters": {
+            "query": "NOTIFICATION AND \"API Call Status\"",
+            "limit": 20
+          },
+          "result": {
+            "success": true,
+            "message": "Log search initiated for 'NOTIFICATION AND \"API Call Status\"' (limit: 20). Results will appear in next message.",
+            "note": "Use wait_for_log_results or pipeline_message to trigger result injection"
+          },
+          "timestamp": "2025-06-30T14:07:08.016881"
+        },
+        {
+          "tool": "wait_for_log_results",
+          "parameters": {
+            "wait_message": "Searching logs for relevant entries..."
+          },
+          "result": {
+            "success": true,
+            "message": "Log results retrieved and processed",
+            "entries_found": 18,
+            "parsed_data": {
+              "last_api_status": {
+                "calls_used": 2,
+                "calls_limit": 100,
+                "raw_entry": "[NOTIFICATION]: [SYSTEM: API Call Status: 2 / 100 calls used.]"
+              }
+            }
+          },
+          "timestamp": "2025-06-30T14:07:12.686778"
+        },
+        {
+          "tool": "pipeline_message",
+          "parameters": {
+            "message": "Please examine the recent log search results and extract any numbers you find within the entries containing 'NOTIFICATION' and 'API Call Status'. Report the numbers you find."
+          },
+          "result": {
+            "success": true,
+            "ai_response": "Based on the log entries you provided, I found the following numbers within the 'NOTIFICATION' and 'API Call Status' entries:\n\n*   1 / 100\n*   1 / 100\n*   1 / 100\n*   1 / 100\n*   1 / 100\n*   12 / 100\n*   7 / 100\n*   7 / 100\n*   1 / 100\n*   2 / 100"
+          },
+          "timestamp": "2025-06-30T14:07:16.457991"
+        }
+      ]
+    }
+  ],
+  "tools_used": [],
+  "pending_save": true,
+  "consultant_original_states": {}
+}
